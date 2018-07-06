@@ -4,7 +4,7 @@
 \name{tidymodels-package}
 \alias{tidymodels}
 \alias{tidymodels-package}
-\title{tidymodels: Easily Install and Load the 'Tidymodels' Packages.}
+\title{tidymodels: Easily Install and Load the 'Tidymodels' Packages}
 \description{
 The tidy modeling "verse" is a collection of package for
 modeling and statistical analysis that share the underlying design
