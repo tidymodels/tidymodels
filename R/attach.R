@@ -1,18 +1,22 @@
 core <- c("ggplot2", "tibble", "purrr", "dplyr", "rsample", "recipes",
           "broom", "yardstick")
 
-core_loaded <- function() {
-  search <- paste0("package:", core)
+pkg_loaded <- function(pkg = NULL) {
+  if (is.null(pkg))
+    pkg <- core
+  search <- paste0("package:", pkg)
   core[search %in% search()]
 }
-core_unloaded <- function() {
-  search <- paste0("package:", core)
+pkg_unloaded <- function(pkg = NULL) {
+  if (is.null(pkg))
+    pkg <- core
+  search <- paste0("package:", pkg)
   core[!search %in% search()]
 }
 
 
 tidymodels_attach <- function() {
-  to_load <- core_unloaded()
+  to_load <- pkg_unloaded()
   if (length(to_load) == 0)
     return(invisible())
 
