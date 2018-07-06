@@ -1,6 +1,10 @@
 tags <- list(
-  "text analysis" = c("tidytext"),
-  "feature engineering" = c("embed"),
+  "Bayesian analysis" =  c("tidyposterior"),
+  "deep learning" = c("keras"),
+  "feature engineering" = c("embed", "keras"),
+  "parallel processing" = c("furrr"),
+  "resampling" = c("infer", "tidyposterior"),
+  "text analysis" = c("tidytext", "keras"),
   "time series" = c("tibbletime")
 )
 
@@ -12,16 +16,18 @@ tags <- list(
 #'  in groups. 
 #'  
 #' @param tag A character strong for the tag. Current options
-#'  are "text analysis", "feature engineering", and "time series".
+#'  are 'Bayesian analysis', 'deep learning', 'feature engineering', 
+#'  'parallel processing', 'resampling', 'text analysis',  and 
+#'  'time series'.
 #'  
 #' @examples 
 #' show_tags()
 #' @aliases tags
 #' @export
-show_tags <- function() {
+tag_show <- function() {
   all_tags <- vapply(
     tags, 
-    function(x) paste0("'", x, "'", collapse = ", "),
+    function(x) quote_pkg(x),
     character(1))
   all_tags <- paste0(names(all_tags), ": ", all_tags, "\n")
   cat("All tags:\n\n")
@@ -30,14 +36,25 @@ show_tags <- function() {
 }
 
 #' @export
-#' @rdname show_tags
-load_tag <- function(tag) {
-  
+#' @rdname tag_show
+tag_attach <- function(tag) {
+  pkgs <- unlist(tags[[tag]])
+  installed <- rownames(installed.packages())
+  is_installed <- pkgs %in% installed
+  if (any(!is_installed)) {
+    stop("Some pacakges are not installed: ",
+         quote_pkg(pkgs[!is_installed]),
+         call. = FALSE)
+  }
+  # tidymodels_attach(pkgs)
+  pkgs
 }
 
 #' @export
-#' @rdname show_tags
-update_tag <- function(tag) {
+#' @rdname tag_show
+tag_update <- function(tag) {
   
 }
 
+quote_pkg <- function(x) 
+  paste0("'", x, "'", collapse = ", ")

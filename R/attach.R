@@ -14,6 +14,7 @@ pkg_unloaded <- function(pkg = NULL) {
   core[!search %in% search()]
 }
 
+# TODO parameterize this as a wrapper
 
 tidymodels_attach <- function() {
   to_load <- pkg_unloaded()
