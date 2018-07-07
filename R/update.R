@@ -42,7 +42,18 @@ tidymodels_update <- function(recursive = FALSE) {
 tidymodels_deps <- function(recursive = FALSE) {
   pkgs <- utils::available.packages()
   deps <- tools::package_dependencies("tidymodels", pkgs, recursive = recursive)
-
+  
+  # NULL before pacakge is on CRAN
+  if (is.null(deps$tidymodels)) {
+    deps$tidymodels <- 
+      c(
+        "broom", "cli", "crayon", "dplyr", "ggplot2", "infer",
+        "magrittr", "pillar", "purrr", "recipes", "rlang",
+        "rsample", "rstudioapi", "tibble", "tidytext",
+        "tidypredict", "tidyposterior", "yardstick"
+      )
+  }
+    
   pkg_deps <- unique(sort(unlist(deps)))
 
   base_pkgs <- c(
