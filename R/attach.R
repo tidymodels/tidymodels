@@ -14,10 +14,8 @@ pkg_unloaded <- function(pkg = NULL) {
   core[!search %in% search()]
 }
 
-# TODO parameterize this as a wrapper
-
-tidymodels_attach <- function() {
-  to_load <- pkg_unloaded()
+tidymodels_attach <- function(pkg = NULL) {
+  to_load <- pkg_unloaded(pkg = pkg)
   if (length(to_load) == 0)
     return(invisible())
 
