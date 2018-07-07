@@ -4,7 +4,7 @@
 \alias{tidymodels_update}
 \title{Update tidymodels packages}
 \usage{
-tidymodels_update(recursive = FALSE)
+tidymodels_update(pkg = "tidymodels", recursive = FALSE)
 }
 \arguments{
 \item{recursive}{If \code{TRUE}, will also check all dependencies of

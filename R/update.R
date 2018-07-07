@@ -11,13 +11,13 @@
 #' \dontrun{
 #' tidymodels_update()
 #' }
-tidymodels_update <- function(recursive = FALSE) {
+tidymodels_update <- function(pkg = "tidymodels", recursive = FALSE) {
 
-  deps <- tidymodels_deps(recursive)
+  deps <- pkg_deps(pkg, recursive)
   behind <- dplyr::filter(deps, behind)
 
   if (nrow(behind) == 0) {
-    cli::cat_line("All tidymodels packages up-to-date")
+    cli::cat_line("All packages up-to-date")
     return(invisible())
   }
 
@@ -34,17 +34,17 @@ tidymodels_update <- function(recursive = FALSE) {
   invisible()
 }
 
-#' List all tidymodels dependencies
+#' List all dependencies
 #'
 #' @param recursive If \code{TRUE}, will also list all dependencies of
 #'   tidymodels packages.
 #' @export
-tidymodels_deps <- function(recursive = FALSE) {
+pkg_deps <- function(x = "tidymodels", recursive = FALSE) {
   pkgs <- utils::available.packages()
-  deps <- tools::package_dependencies("tidymodels", pkgs, recursive = recursive)
+  deps <- tools::package_dependencies(x, pkgs, recursive = recursive)
   
   # NULL before pacakge is on CRAN
-  if (is.null(deps$tidymodels)) {
+  if ("tidymodels" %in% x && is.null(deps$tidymodels)) {
     deps$tidymodels <- 
       c(
         "broom", "cli", "crayon", "dplyr", "ggplot2", "infer",
