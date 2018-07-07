@@ -5,7 +5,7 @@ tags <- list(
   "parallel processing" = c("furrr"),
   "resampling" = c("infer", "tidyposterior"),
   "text analysis" = c("tidytext", "keras"),
-  "time series" = c("tibbletime")
+  "time series" = c("tibbletime", "tidyquant")
 )
 
 
@@ -53,7 +53,8 @@ tag_attach <- function(tag) {
 #' @export
 #' @rdname tag_show
 tag_update <- function(tag) {
-  
+  pkgs <- tags[[tag]]
+  tidymodels_update(unique(unlist(pkgs)))
 }
 
 quote_pkg <- function(x) 

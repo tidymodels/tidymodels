@@ -53,8 +53,10 @@ pkg_deps <- function(x = "tidymodels", recursive = FALSE) {
         "tidypredict", "tidyposterior", "yardstick"
       )
   }
-    
-  pkg_deps <- unique(sort(unlist(deps)))
+  
+  # include self in list
+  pkg_deps <- unique(sort(c(names(deps), unlist(deps))))
+  pkg_deps <- pkg_deps[pkg_deps %in% pkgs]
 
   base_pkgs <- c(
     "base", "compiler", "datasets", "graphics", "grDevices", "grid",
