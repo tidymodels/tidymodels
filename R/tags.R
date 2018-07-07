@@ -38,6 +38,10 @@ tag_show <- function() {
 #' @export
 #' @rdname tag_show
 tag_attach <- function(tag) {
+  if (!is.character(tag) || length(tag) != 1)
+    stop("`tag` should be one of: ",
+         paste0("'", names(tags), "'", collapse = ", "),
+         call. = FALSE)
   pkgs <- unlist(tags[[tag]])
   installed <- rownames(installed.packages())
   is_installed <- pkgs %in% installed
@@ -46,6 +50,7 @@ tag_attach <- function(tag) {
          quote_pkg(pkgs[!is_installed]),
          call. = FALSE)
   }
+  # figure this out; logic is build for tidymodels already loaded
   # tidymodels_attach(pkgs)
   pkgs
 }
@@ -53,6 +58,11 @@ tag_attach <- function(tag) {
 #' @export
 #' @rdname tag_show
 tag_update <- function(tag) {
+  if (!is.character(tag) || length(tag) != 1)
+    stop("`tag` should be one of: ",
+         paste0("'", names(tags), "'", collapse = ", "),
+         call. = FALSE)
+  
   pkgs <- tags[[tag]]
   tidymodels_update(unique(unlist(pkgs)))
 }
