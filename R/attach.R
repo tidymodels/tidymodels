@@ -5,13 +5,13 @@ pkg_loaded <- function(pkg = NULL) {
   if (is.null(pkg))
     pkg <- core
   search <- paste0("package:", pkg)
-  core[search %in% search()]
+  pkg[search %in% search()]
 }
 pkg_unloaded <- function(pkg = NULL) {
   if (is.null(pkg))
     pkg <- core
   search <- paste0("package:", pkg)
-  core[!search %in% search()]
+  pkg[!search %in% search()]
 }
 
 tidymodels_attach <- function(pkg = NULL) {
