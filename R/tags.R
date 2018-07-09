@@ -50,9 +50,8 @@ tag_attach <- function(tag) {
          quote_pkg(pkgs[!is_installed]),
          call. = FALSE)
   }
-  # figure this out; logic is build for tidymodels already loaded
-  # tidymodels_attach(pkgs)
-  pkgs
+  
+  tidymodels_attach(unique(pkgs))
 }
 
 #' @export
