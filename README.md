@@ -23,7 +23,7 @@ It includes a core set of packages that are loaded on startup:
 
 * [`rsample`](https://tidymodels.github.io/rsample/) has infrastructure for _resampling_ data so that models can be assessed and empirically validated. 
 
-* [`purrr`](http::/github.com/tidyverse/tibble) has a modern re-imagining of the data frame.
+* [`tibble`](http::/github.com/tidyverse/tibble) has a modern re-imagining of the data frame.
  
 * [`yardstick`](https://tidymodels.github.io/yardstick/) contains tools for evaluating models (e.g. accuracy, RMSE, etc.)
 
