@@ -3,9 +3,11 @@
 # https://docs.travis-ci.com/user/languages/r/
 
 language: r
-sudo: false
+dist: trusty
+sudo: true
 cache: packages
 warnings_are_errors: false
+
 r:
   - release
 
@@ -32,6 +34,8 @@ r_binary_packages:
  - StanHeaders
  - Rcpp
 
+before_install:
+  - sudo apt-get -y install libnlopt-dev 
  
 after_success:
 - Rscript -e 'covr::codecov()'
