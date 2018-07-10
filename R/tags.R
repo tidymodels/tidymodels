@@ -1,5 +1,5 @@
 tags <- list(
-  "Bayesian analysis" =  c("tidyposterior"),
+  "Bayesian analysis" =  c("tidyposterior", "tidybayes"),
   "deep learning" = c("keras"),
   "feature engineering" = c("embed", "keras"),
   "parallel processing" = c("furrr"),
@@ -21,7 +21,7 @@ tags <- list(
 #'  'time series'.
 #'  
 #' @examples 
-#' show_tags()
+#' tag_show()
 #' @aliases tags
 #' @export
 tag_show <- function() {

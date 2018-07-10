@@ -25,5 +25,5 @@ are 'Bayesian analysis', 'deep learning', 'feature engineering',
  in groups.
 }
 \examples{
-show_tags()
+tag_show()
 }
