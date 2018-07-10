@@ -1,6 +1,7 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
-^\.travis\.yml$
+travis.yml
+codecov.yml
 README.Rmd
 README.md
 ^docs$

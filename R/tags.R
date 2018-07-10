@@ -35,6 +35,7 @@ tag_show <- function() {
   invisible(tags)
 }
 
+#' @importFrom utils installed.packages
 #' @export
 #' @rdname tag_show
 tag_attach <- function(tag) {

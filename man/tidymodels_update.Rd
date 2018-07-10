@@ -7,6 +7,8 @@
 tidymodels_update(pkg = "tidymodels", recursive = FALSE)
 }
 \arguments{
+\item{pkg}{A character string for the model being updated.}
+
 \item{recursive}{If \code{TRUE}, will also check all dependencies of
 tidymodels packages.}
 }

@@ -7,6 +7,8 @@
 pkg_deps(x = "tidymodels", recursive = FALSE)
 }
 \arguments{
+\item{x}{A character string for the packages being evaluated.}
+
 \item{recursive}{If \code{TRUE}, will also list all dependencies of
 tidymodels packages.}
 }

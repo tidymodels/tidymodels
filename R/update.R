@@ -4,6 +4,7 @@
 #' dependencies) are up-to-date, and will install after an interactive
 #' confirmation.
 #'
+#' @param pkg A character string for the model being updated. 
 #' @param recursive If \code{TRUE}, will also check all dependencies of
 #'   tidymodels packages.
 #' @export
@@ -36,6 +37,7 @@ tidymodels_update <- function(pkg = "tidymodels", recursive = FALSE) {
 
 #' List all dependencies
 #'
+#' @param x A character string for the packages being evaluated. 
 #' @param recursive If \code{TRUE}, will also list all dependencies of
 #'   tidymodels packages.
 #' @export
