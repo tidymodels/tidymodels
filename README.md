@@ -17,8 +17,6 @@ It includes a core set of packages that are loaded on startup:
 
 * [`ggplot2`](http::/github.com/tidyverse/ggplot2) implements a grammar of graphics. 
 
-* [`purrr`](http::/github.com/tidyverse/purrr) is a functional programming toolkit.
-
 * [`recipes`](https://tidymodels.github.io/recipes/) is a general data preprocessor with a modern interface. It can create model matrices that incorporate feature engineering, imputation, and other help tools.
 
 * [`rsample`](https://tidymodels.github.io/rsample/) has infrastructure for _resampling_ data so that models can be assessed and empirically validated. 
