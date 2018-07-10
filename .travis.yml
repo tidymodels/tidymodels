@@ -11,6 +11,27 @@ r:
 
 r_packages: 
   - covr
+
+r_binary_packages: 
+ - rstan
+ - rstanarm
+ - dplyr
+ - igraph
+ - RCurl
+ - git2r
+ - glue
+ - magrittr
+ - stringi
+ - stringr
+ - cli
+ - crayon
+ - pillar
+ - scales
+ - tibble
+ - ggplot2
+ - StanHeaders
+ - Rcpp
+
  
 after_success:
 - Rscript -e 'covr::codecov()'
