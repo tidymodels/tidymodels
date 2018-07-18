@@ -5,7 +5,7 @@ tags <- list(
   "parallel processing" = c("furrr"),
   "resampling" = c("infer", "tidyposterior"),
   "text analysis" = c("tidytext", "keras"),
-  "time series" = c("tibbletime", "tidyquant")
+  "time series" = c("timetk", "tidyquant", "sweep")
 )
 
 
