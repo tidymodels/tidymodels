@@ -1,7 +1,7 @@
 tags <- list(
   "Bayesian analysis" =  c("tidyposterior", "tidybayes"),
   "deep learning" = c("keras"),
-  "feature engineering" = c("embed", "keras"),
+  "feature engineering" = c("keras"),
   "parallel processing" = c("furrr"),
   "resampling" = c("infer", "tidyposterior"),
   "text analysis" = c("tidytext", "keras"),
