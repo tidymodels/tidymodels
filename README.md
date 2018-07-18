@@ -17,6 +17,8 @@ It includes a core set of packages that are loaded on startup:
 
 * [`ggplot2`](http::/github.com/tidyverse/ggplot2) implements a grammar of graphics. 
 
+* [`infer`](http://infer.netlify.com/) is a modern approach to statistical inference.
+
 * [`purrr `](http::/github.com/tidyverse/purrr) is a functional programming toolkit.
 
 * [`recipes`](https://tidymodels.github.io/recipes/) is a general data preprocessor with a modern interface. It can create model matrices that incorporate feature engineering, imputation, and other help tools.
@@ -29,7 +31,6 @@ It includes a core set of packages that are loaded on startup:
 
 There are a few modeling packages that are also installed along with `tidymodels` (but are not attached on startup): 
 
-* [`infer`](http://infer.netlify.com/) is a modern approach to statistical inference.
 
 * [`tidypredict`](http://tidypredict.netlify.com/) translates some model prediction equations to SQL for high-performance computing.
 
