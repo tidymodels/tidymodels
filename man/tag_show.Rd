@@ -15,12 +15,12 @@ tag_update(tag)
 }
 \arguments{
 \item{tag}{A character strong for the tag. Current options
-are 'Bayesian analysis', 'deep learning', 'feature engineering', 
-'parallel processing', 'resampling', 'text analysis',  and 
+are 'Bayesian analysis', 'deep learning', 'feature engineering',
+'parallel processing', 'resampling', 'text analysis',  and
 'time series'.}
 }
 \description{
-`tidymodels` contains a set of tags for specific topics in 
+`tidymodels` contains a set of tags for specific topics in
  modeling and analysis. These can be used to load packages
  in groups.
 }
