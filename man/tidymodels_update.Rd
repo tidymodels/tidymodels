@@ -4,13 +4,20 @@
 \alias{tidymodels_update}
 \title{Update tidymodels packages}
 \usage{
-tidymodels_update(pkg = "tidymodels", recursive = FALSE)
+tidymodels_update(pkg = "tidymodels", recursive = FALSE, ...)
 }
 \arguments{
 \item{pkg}{A character string for the model being updated.}
 
 \item{recursive}{If \code{TRUE}, will also check all dependencies of
 tidymodels packages.}
+
+\item{...}{Extra arguments to pass to [utils::install.packages()]}
+}
+\value{
+Nothing is returned but a message is printed to the
+ console about which packages (if any) should be installed along
+ with code to do so.
 }
 \description{
 This will check to see if all tidymodels packages (and optionally, their

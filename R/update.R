@@ -4,17 +4,22 @@
 #' dependencies) are up-to-date, and will install after an interactive
 #' confirmation.
 #'
-#' @param pkg A character string for the model being updated. 
+#' @param pkg A character string for the model being updated.
 #' @param recursive If \code{TRUE}, will also check all dependencies of
 #'   tidymodels packages.
+#' @param ... Extra arguments to pass to [utils::install.packages()]
+#' @return Nothing is returned but a message is printed to the
+#'  console about which packages (if any) should be installed along
+#'  with code to do so.
 #' @export
 #' @examples
 #' \dontrun{
 #' tidymodels_update()
 #' }
-tidymodels_update <- function(pkg = "tidymodels", recursive = FALSE) {
+#' @import rlang
+tidymodels_update <- function(pkg = "tidymodels", recursive = FALSE, ...) {
 
-  deps <- pkg_deps(pkg, recursive)
+  deps <- tidymodels:::pkg_deps(pkg, recursive)
   behind <- dplyr::filter(deps, behind)
 
   if (nrow(behind) == 0) {
@@ -29,25 +34,28 @@ tidymodels_update <- function(pkg = "tidymodels", recursive = FALSE) {
   cli::cat_line()
   cli::cat_line("Start a clean R session then run:")
 
-  pkg_str <- paste0(deparse(behind$package), collapse = "\n")
-  cli::cat_line("install.packages(", pkg_str, ")")
+  install_opt <- quos(...)
+  install_pkg <- behind$package
+  inst_expr <- quo(install.packages(c(!!!install_pkg), !!!install_opt))
+  pkg_str <- deparse(quo_squash(inst_expr))
+  cli::cat_line(pkg_str)
 
   invisible()
 }
 
 #' List all dependencies
 #'
-#' @param x A character string for the packages being evaluated. 
+#' @param x A character string for the packages being evaluated.
 #' @param recursive If \code{TRUE}, will also list all dependencies of
 #'   tidymodels packages.
 #' @export
 pkg_deps <- function(x = "tidymodels", recursive = FALSE) {
   pkgs <- utils::available.packages()
   deps <- tools::package_dependencies(x, pkgs, recursive = recursive)
-  
+
   # NULL before pacakge is on CRAN
   if ("tidymodels" %in% x && is.null(deps$tidymodels)) {
-    deps$tidymodels <- 
+    deps$tidymodels <-
       c(
         "broom", "cli", "crayon", "dplyr", "ggplot2", "infer",
         "magrittr", "pillar", "purrr", "recipes", "rlang",
@@ -55,7 +63,7 @@ pkg_deps <- function(x = "tidymodels", recursive = FALSE) {
         "tidypredict", "tidyposterior", "yardstick"
       )
   }
-  
+
   # include self in list
   pkg_deps <- unique(sort(c(names(deps), unlist(deps))))
   pkg_deps <- pkg_deps[pkg_deps %in% pkgs]
