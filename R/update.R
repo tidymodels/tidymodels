@@ -19,7 +19,7 @@
 #' @import rlang
 tidymodels_update <- function(pkg = "tidymodels", recursive = FALSE, ...) {
 
-  deps <- tidymodels:::pkg_deps(pkg, recursive)
+  deps <- pkg_deps(pkg, recursive)
   behind <- dplyr::filter(deps, behind)
 
   if (nrow(behind) == 0) {
