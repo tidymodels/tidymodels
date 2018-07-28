@@ -6,7 +6,7 @@ Authors@R: c(
     person("Hadley", "Wickham", , "hadley@rstudio.com", role = c("aut")),
     person("RStudio", role = c("cph", "fnd"))
   )
-Description: The tidy modeling "verse" is a collection of package for 
+Description: The tidy modeling "verse" is a collection of packages for 
     modeling and statistical analysis that share the underlying design
     philosophy, grammar, and data structures of the tidyverse.
 License: GPL-3 | file LICENSE
