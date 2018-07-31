@@ -1,0 +1,57 @@
+/* Syntax highlighting ---------------------------------------------------- */
+@import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+@import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+@import url(https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700);
+@import url(https://fonts.googleapis.com/css?family=Source+Code+Pro:300,300i,400,400i,500,500i,700,700i);
+@import url(https://cdn.rawgit.com/tonsky/FiraCode/1.204/distr/fira_code.css);
+@import url(https://fonts.googleapis.com/css?family=Noto+Serif);
+
+body {
+  font-family: 'Fira Sans','Droid Serif', 'Palatino Linotype', 'Book Antiqua', Palatino, 'Microsoft YaHei', 'Songti SC', serif;
+}
+
+
+h1 {
+    font-size: 2.5em;
+    font-family: 'Fira Sans','Droid Serif', 'Palatino Linotype', 'Book Antiqua', Palatino, 'Microsoft YaHei', 'Songti SC', serif;    
+}
+
+h2 {
+    font-size: 1.875em;
+    font-family: 'Fira Sans','Droid Serif', 'Palatino Linotype', 'Book Antiqua', Palatino, 'Microsoft YaHei', 'Songti SC', serif;
+}
+
+
+pre {
+  word-wrap: normal;
+  word-break: normal;
+  border: 1px solid #eee;
+}
+
+pre, code {
+  background-color: #f8f8f8;
+  font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;
+  font-size: 100%; 
+}
+
+pre .img {
+  margin: 5px 0;
+}
+
+pre .img img {
+  background-color: #fff;
+  display: block;
+  height: auto;
+}
+
+.fl      {color: #3b6ac8;}
+.fu      {color: #3b6ac8; font-weight: 500} /* function */
+.ch,.st  {color: #1094a0;} /* string */
+.kw      {color: #a00050;} /* keyword like <- or %>% */
+.fl      {color: #3b6ac8;}
+.no      {color: black;}   /* object and variable names */
+
+.message { color: gray;   font-weight: bolder;}
+.error   { color: red;  font-weight: bolder;}
+.warning { color: purple; font-weight: bolder;}
+
