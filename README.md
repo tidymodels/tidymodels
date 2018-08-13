@@ -1,3 +1,5 @@
+<img src="tidymodels_hex.png" align="center" height = "80px" align = "middle"/>
+
 [![Travis build status](https://travis-ci.org/tidymodels/tidymodels.svg?branch=master)](https://travis-ci.org/tidymodels/tidymodels)
 [![Coverage status](https://codecov.io/gh/tidymodels/tidymodels/branch/master/graph/badge.svg)](https://codecov.io/github/tidymodels/tidymodels?branch=master)
 [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/tidymodels)](http://cran.r-project.org/web/packages/tidymodels)
@@ -35,6 +37,7 @@ There are a few modeling packages that are also installed along with `tidymodels
 
 * [`tidytext`](https://github.com/juliasilge/tidytext) contains tidy tools for quantitative text analysis, including basic text summarization, sentiment analysis, and text modeling.
 
+
 To install:
 
 ```r
@@ -43,6 +46,7 @@ devtools::install_github("tidymodels/tidymodels")
 ```
 
 When loading the package, the versions and conflicts are listed:
+
 
 
 ```r
@@ -54,18 +58,19 @@ library(tidymodels)
 ```
 
 ```
-## ✔ ggplot2   3.0.0     ✔ recipes   0.1.3
-## ✔ tibble    1.4.2     ✔ broom     0.5.0
-## ✔ purrr     0.2.5     ✔ yardstick 0.0.1
-## ✔ dplyr     0.7.6     ✔ infer     0.3.0
+## ✔ ggplot2   3.0.0          ✔ recipes   0.1.3.9000
+## ✔ tibble    1.4.2          ✔ broom     0.5.0     
+## ✔ purrr     0.2.5          ✔ yardstick 0.0.1     
+## ✔ dplyr     0.7.6          ✔ infer     0.3.1     
 ## ✔ rsample   0.0.2
 ```
 
 ```
 ## ── Conflicts ──────────────────────────────────── tidymodels_conflicts() ──
-## ✖ rsample::fill() masks tidyr::fill()
-## ✖ dplyr::filter() masks stats::filter()
-## ✖ dplyr::lag()    masks stats::lag()
-## ✖ recipes::step() masks stats::step()
+## ✖ rsample::fill()    masks tidyr::fill()
+## ✖ dplyr::filter()    masks stats::filter()
+## ✖ dplyr::lag()       masks stats::lag()
+## ✖ recipes::prepper() masks rsample::prepper()
+## ✖ recipes::step()    masks stats::step()
 ```
-
+  
