@@ -1,3 +1,5 @@
+<img src="tidymodels_hex.png" align="center" height = "80px" align = "middle"/>
+
 [![Travis build status](https://travis-ci.org/tidymodels/tidymodels.svg?branch=master)](https://travis-ci.org/tidymodels/tidymodels)
 [![Coverage status](https://codecov.io/gh/tidymodels/tidymodels/branch/master/graph/badge.svg)](https://codecov.io/github/tidymodels/tidymodels?branch=master)
 [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/tidymodels)](http://cran.r-project.org/web/packages/tidymodels)
@@ -35,6 +37,7 @@ There are a few modeling packages that are also installed along with `tidymodels
 
 * [`tidytext`](https://github.com/juliasilge/tidytext) contains tidy tools for quantitative text analysis, including basic text summarization, sentiment analysis, and text modeling.
 
+
 To install:
 
 ```r
@@ -44,7 +47,8 @@ devtools::install_github("tidymodels/tidymodels")
 
 When loading the package, the versions and conflicts are listed:
 
-```{r startup}
+
+```{r}
 library(tidymodels)
 ```
-
+  
