@@ -7,3 +7,5 @@ README.md
 ^docs$
 ^pkgdown$
 .github
+tidymodels_hex.png
+^_pkgdown\.yml$
