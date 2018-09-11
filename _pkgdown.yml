@@ -2,6 +2,8 @@ template:
   package: tidytemplate
   default_assets: false
 
+# https://github.com/tidyverse/tidytemplate for css
+
 development:
   mode: auto
 
