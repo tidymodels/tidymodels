@@ -27,9 +27,9 @@ Imports:
     pillar (>= 1.3.0),
     probably (>= 0.0.0.9000),
     purrr (>= 0.2.5),
-    recipes (>= 0.1.3.9000),
+    recipes (>= 0.1.4),
     rlang (>= 0.3.0.1),
-    rsample (>= 0.0.2),
+    rsample (>= 0.0.3),
     rstudioapi (>= 0.8),
     tibble (>= 1.4.2),
     tidytext (>= 0.2.0),
@@ -43,8 +43,7 @@ Suggests:
     testthat
 Remotes:
     tidymodels/dials,
-    tidymodels/recipes,
     tidymodels/probably
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 6.1.0.9000
+RoxygenNote: 6.1.1
