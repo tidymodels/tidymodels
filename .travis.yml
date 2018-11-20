@@ -44,10 +44,7 @@ r_binary_packages:
  - StanHeaders
  - Rcpp
 
-before_install:
-  - sudo apt-get -y install libnlopt-dev 
  
 after_success:
   - Rscript -e 'covr::codecov()'
-  - travis_wait 59 Rscript -e 'covr::coveralls(line_exclusions="src/init.cpp")'
 
