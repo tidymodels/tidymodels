@@ -28,7 +28,7 @@ Imports:
     purrr (>= 0.2.5),
     recipes (>= 0.1.4),
     rlang (>= 0.3.0.1),
-    rsample (>= 0.0.2),
+    rsample (>= 0.0.3),
     rstudioapi (>= 0.8),
     tibble (>= 1.4.2),
     tidytext (>= 0.2.0),
