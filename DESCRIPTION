@@ -21,7 +21,7 @@ Imports:
     dials (>= 0.0.1),
     dplyr (>= 0.7.8),
     ggplot2 (>= 3.1.0),
-    infer (>= 0.3.1),
+    infer (>= 0.4.0),
     magrittr (>= 1.5),
     parsnip (>= 0.0.1),
     pillar (>= 1.3.0),
@@ -33,7 +33,7 @@ Imports:
     tibble (>= 1.4.2),
     tidytext (>= 0.2.0),
     tidypredict (>= 0.2.0),
-    tidyposterior (>= 0.0.1),
+    tidyposterior (>= 0.0.2),
     yardstick (>= 0.0.2)
 Suggests: 
     covr,
