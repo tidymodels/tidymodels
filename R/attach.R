@@ -1,5 +1,5 @@
-core <- c("ggplot2", "tibble", "purrr", "dplyr", "rsample", "recipes",
-          "broom", "yardstick", "infer", "dials")
+core <- c("broom", "dials", "dplyr", "ggplot2", "infer", "parsnip",
+          "purrr", "recipes", "rsample", "tibble", "yardstick")
 
 pkg_loaded <- function(pkg = NULL) {
   if (is.null(pkg))
