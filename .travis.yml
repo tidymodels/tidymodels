@@ -34,6 +34,8 @@ r_binary_packages:
  - Rcpp
  - RcppEigen
  - BH
+ - scales
+ - dials
 
 
 cache:
