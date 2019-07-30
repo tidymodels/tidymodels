@@ -9,9 +9,6 @@ cran: https://cran.rstudio.com
 warnings_are_errors: false
 
 r:
-  - 3.2
-  - 3.3
-  - 3.4
   - 3.5
   - 3.6
   - devel
@@ -35,6 +32,8 @@ r_binary_packages:
  - ggplot2
  - StanHeaders
  - Rcpp
+ - RcppEigen
+ - BH
 
 
 cache:
