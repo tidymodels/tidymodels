@@ -13,31 +13,6 @@ r:
   - 3.6
   - devel
 
-r_binary_packages:
- - rstan
- - rstanarm
- - dplyr
- - igraph
- - RCurl
- - git2r
- - glue
- - magrittr
- - stringi
- - stringr
- - cli
- - crayon
- - pillar
- - scales
- - tibble
- - ggplot2
- - StanHeaders
- - Rcpp
- - RcppEigen
- - BH
- - scales
- - dials
-
-
 cache:
   packages: true
   directories:
