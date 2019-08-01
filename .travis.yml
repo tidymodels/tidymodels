@@ -1,6 +1,6 @@
 language: r
 
-dist: trusty
+dist: xenial
 sudo: true
 
 cran: https://cran.rstudio.com
