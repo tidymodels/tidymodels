@@ -1,50 +1,27 @@
 language: R
-dist: trusty
-sudo: true
+dist: xenial
 
 cache:
   packages: true
-
 
 env:
   global:
   - MAKEFLAGS="-j 2"
 
-before_install:
-  - sudo apt-get -y install libnlopt-dev
-  - mkdir -p ~/.R
-  - echo "CXX14FLAGS=-O3 -mtune=native -march=native -Wno-unused-variable -Wno-unused-function  -Wno-macro-redefined" >> ~/.R/Makevars
-  - echo "CXX14=g++ -std=c++1y -fPIC" >> ~/.R/Makevars  
+addons:
+  apt:
+    packages:
+    - libnlopt-dev
+    - r-cran-rstanarm
 
 r:
   - oldrel
   - release
   - devel
 
-r_packages: 
+r_packages:
   - covr
 
-r_binary_packages: 
- - rstan
- - rstanarm
- - dplyr
- - igraph
- - RCurl
- - git2r
- - glue
- - magrittr
- - stringi
- - stringr
- - cli
- - crayon
- - pillar
- - scales
- - tibble
- - ggplot2
- - StanHeaders
- - Rcpp
-
- 
 after_success:
   - Rscript -e 'covr::codecov()'
 
