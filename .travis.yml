@@ -13,6 +13,16 @@ r:
   - 3.6
   - devel
 
+r_binary_packages:
+ - rstan
+ - rstanarm
+ - igraph
+ - RCurl
+ - StanHeaders
+ - Rcpp
+ - RcppEigen
+ - BH
+
 cache:
   packages: true
   directories:
