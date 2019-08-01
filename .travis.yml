@@ -15,7 +15,7 @@ addons:
     - r-cran-rstanarm
 
 r:
-  - oldrel
+  - 3.4
   - release
   - devel
 
