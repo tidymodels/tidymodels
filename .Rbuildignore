@@ -9,3 +9,4 @@ README.md
 .github
 tidymodels_hex.png
 ^_pkgdown\.yml$
+^revdep$
