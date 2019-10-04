@@ -19,7 +19,7 @@ Useful links:
 
 }
 \author{
-\strong{Maintainer}: Kuhn Max \email{max@rstudio.com}
+\strong{Maintainer}: Max Kuhn \email{max@rstudio.com}
 
 Authors:
 \itemize{
