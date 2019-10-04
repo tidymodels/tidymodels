@@ -11,4 +11,7 @@
 #' @importFrom tidypredict acceptable_formula
 #' @importFrom tidytext get_sentiments
 #' @importFrom yardstick accuracy
+#' @importFrom parsnip linear_reg
+#' @importFrom dials mtry
+#' @importFrom broom bootstrap
 NULL

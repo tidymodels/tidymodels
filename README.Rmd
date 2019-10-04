@@ -1,7 +1,10 @@
 <img src="tidymodels_hex.png" align="center" height = "80px" align = "middle"/>
 
 [![Travis build status](https://travis-ci.org/tidymodels/tidymodels.svg?branch=master)](https://travis-ci.org/tidymodels/tidymodels)
+[![Azure pipelines build status](https://img.shields.io/azure-devops/build/tidymodels/tidymodels/2)](https://dev.azure.com/tidymodels/tidymodels/_build/latest?definitionId=1&branchName=master)
+[![Azure pipelines test status](https://img.shields.io/azure-devops/tests/tidymodels/tidymodels/2?color=brightgreen&compact_message)](https://dev.azure.com/tidymodels/tidymodels/_build/latest?definitionId=1&branchName=master)
 [![Coverage status](https://codecov.io/gh/tidymodels/tidymodels/branch/master/graph/badge.svg)](https://codecov.io/github/tidymodels/tidymodels?branch=master)
+[![Azure pipelines coverage status](https://img.shields.io/azure-devops/coverage/tidymodels/tidymodels/2)](https://dev.azure.com/tidymodels/tidymodels/_build/latest?definitionId=1&branchName=master)
 [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/tidymodels)](http://cran.r-project.org/web/packages/tidymodels)
 [![Downloads](http://cranlogs.r-pkg.org/badges/tidymodels)](http://cran.rstudio.com/package=tidymodels)
 ![](https://img.shields.io/badge/lifecycle-experimental-orange.svg)

@@ -1,0 +1,60 @@
+variables:
+  R_LIBS_USER: '$(Agent.BuildDirectory)/R/library'
+  CRAN: 'https://cloud.r-project.org'
+
+resources:
+  repositories:
+    - repository: r-azure-pipelines
+      type: github
+      name: r-lib/r-azure-pipelines
+      endpoint: tidymodels
+
+jobs:
+  - job: 'Linux'
+    variables:
+      CRAN: 'https://demo.rstudiopm.com/all/__linux__/xenial/latest'
+      TZ: UTC
+      CI: true
+    pool:
+      vmImage: 'Ubuntu-16.04'
+    strategy:
+      matrix:
+        R-3.4:
+          containerImage: rstudio/r-base:3.4-xenial
+        R-3.5:
+          containerImage: rstudio/r-base:3.5-xenial
+        R-3.6:
+          containerImage: rstudio/r-base:3.6-xenial
+    container: $[ variables['containerImage'] ]
+    steps:
+      - template: templates/r-setup-linux.yml@r-azure-pipelines
+      - template: templates/pkg-workflow.yml@r-azure-pipelines
+        parameters:
+          coverage: false
+
+
+  - job: 'macOS'
+    variables:
+      TZ: UTC
+      CI: true
+    pool:
+      vmImage: 'macOS-10.13'
+    steps:
+      - template: templates/r-setup-macOS.yml@r-azure-pipelines
+      - template: templates/pkg-workflow.yml@r-azure-pipelines
+        parameters:
+          coverage: true
+
+  - job: 'Windows'
+    variables:
+      CI: true
+      TZ: UTC
+    pool:
+      vmImage: 'vs2017-win2016'
+    steps:
+      - template: templates/r-setup-windows.yml@r-azure-pipelines
+      - template: templates/pkg-workflow.yml@r-azure-pipelines
+        parameters:
+          args: "c('--no-manual', '--no-multiarch')"
+          coverage: false
+          cache: false
