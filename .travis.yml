@@ -1,6 +1,6 @@
 language: r
 
-dist: trusty
+dist: xenial
 sudo: true
 
 cran: https://cran.rstudio.com
@@ -13,15 +13,6 @@ r:
   - 3.6
   - devel
 
-r_binary_packages:
- - rstan
- - rstanarm
- - igraph
- - RCurl
- - StanHeaders
- - Rcpp
- - RcppEigen
- - BH
 
 cache:
   packages: true
@@ -33,6 +24,7 @@ env:
   global:
   - KERAS_BACKEND="tensorflow"
   - MAKEFLAGS="-j 2"
+  - RENV_CONFIG_REPOS_OVERRIDE=https://demo.rstudiopm.com/all/__linux__/xenial/latest
 
 addons:
   apt:
