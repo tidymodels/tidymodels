@@ -35,10 +35,12 @@ jobs:
       - task: UsePythonVersion@0
         inputs:
           versionSpec: '3.6'
-      - bash: |
-          python -m pip install --upgrade --ignore-installed --user travis pip setuptools wheel virtualenv
-          python -m pip install --upgrade --ignore-installed --user travis keras h5py pyyaml requests Pillow scipy theano
-          R -e 'tensorflow::install_tensorflow()'
+      - script: python -m pip install pip setuptools wheel virtualenv
+        displayName: 'Install python tools'
+      - script: python -m pip install keras h5py pyyaml requests Pillow scipy theano
+        displayName: 'Install python packages'
+      - script: R -e 'install.packages("tensorflow")' -e 'tensorflow::install_tensorflow()'
+        displayName: 'Install tensorflow'
       - template: templates/pkg-rcmd_check.yml@r-azure-pipelines
       - template: templates/pkg-coverage.yml@r-azure-pipelines
         parameters:
