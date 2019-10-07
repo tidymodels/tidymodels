@@ -32,7 +32,7 @@ jobs:
       - template: templates/pkg-library.yml@r-azure-pipelines
       - script: sudo apt-get -y install libnlopt-dev
         displayName: 'Install libnlopt'
-      - script: R -e 'install.packages(c("rstan", "rstanarm", "rstan", "rstantools", "StanHeaders")'
+      - script: R -e 'install.packages(c("rstan", "rstanarm", "rstan", "rstantools", "StanHeaders"))'
       - template: templates/pkg-rcmd_check.yml@r-azure-pipelines
       - template: templates/pkg-coverage.yml@r-azure-pipelines
         parameters:
