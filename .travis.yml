@@ -3,7 +3,7 @@ language: r
 dist: xenial
 sudo: true
 
-cran: https://cran.rstudio.com
+cran: https://demo.rstudiopm.com/all/__linux__/xenial/latest
 
 # until generics is finalized
 warnings_are_errors: false
@@ -24,7 +24,6 @@ env:
   global:
   - KERAS_BACKEND="tensorflow"
   - MAKEFLAGS="-j 2"
-  - RENV_CONFIG_REPOS_OVERRIDE=https://demo.rstudiopm.com/all/__linux__/xenial/latest
 
 addons:
   apt:
