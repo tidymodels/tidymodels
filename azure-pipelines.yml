@@ -15,6 +15,7 @@ jobs:
       CRAN: 'https://demo.rstudiopm.com/all/__linux__/xenial/latest'
       TZ: UTC
       CI: true
+      KERAS_BACKEND: 'tensorflow'
     pool:
       vmImage: 'Ubuntu-16.04'
     strategy:
@@ -28,33 +29,17 @@ jobs:
     container: $[ variables['containerImage'] ]
     steps:
       - template: templates/r-setup-linux.yml@r-azure-pipelines
-      - template: templates/pkg-workflow.yml@r-azure-pipelines
+      - template: pkg-library.yml
+      - sudo apt-get -y install libnlopt-dev
+      - template: pkg-install_dependencies.yml
+      - task: UsePythonVersion@0
+        inputs:
+          versionSpec: '3.6'
+      - bash: |
+          python -m pip install --upgrade --ignore-installed --user travis pip setuptools wheel virtualenv
+          python -m pip install --upgrade --ignore-installed --user travis keras h5py pyyaml requests Pillow scipy theano
+          R -e 'tensorflow::install_tensorflow()'
+      - template: pkg-rcmd_check.yml
+      - template: pkg-coverage.yml
         parameters:
           coverage: false
-
-
-  - job: 'macOS'
-    variables:
-      TZ: UTC
-      CI: true
-    pool:
-      vmImage: 'macOS-10.13'
-    steps:
-      - template: templates/r-setup-macOS.yml@r-azure-pipelines
-      - template: templates/pkg-workflow.yml@r-azure-pipelines
-        parameters:
-          coverage: true
-
-  - job: 'Windows'
-    variables:
-      CI: true
-      TZ: UTC
-    pool:
-      vmImage: 'vs2017-win2016'
-    steps:
-      - template: templates/r-setup-windows.yml@r-azure-pipelines
-      - template: templates/pkg-workflow.yml@r-azure-pipelines
-        parameters:
-          args: "c('--no-manual', '--no-multiarch')"
-          coverage: false
-          cache: false
