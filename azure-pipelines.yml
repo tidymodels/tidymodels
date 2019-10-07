@@ -33,9 +33,7 @@ jobs:
       - script: sudo apt-get -y install libnlopt-dev
         displayName: 'Install libnlopt'
       - template: templates/pkg-install_dependencies.yml@r-azure-pipelines
-      - script: |
-          sudo apt-get -y install python3 python3-pip
-          python3 -m pip install pip setuptools wheel virtualenv
+      - script: sudo apt-get -y install python3 python3-pip
         displayName: 'Install python tools'
       - script: pip3 install keras h5py pyyaml requests Pillow scipy theano
         displayName: 'Install python packages'
