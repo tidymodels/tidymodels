@@ -29,9 +29,9 @@ jobs:
     container: $[ variables['containerImage'] ]
     steps:
       - template: templates/r-setup-linux.yml@r-azure-pipelines
-      - template: pkg-library.yml
+      - template: templates/pkg-library.yml@r-azure-pipelines
       - bash: sudo apt-get -y install libnlopt-dev
-      - template: pkg-install_dependencies.yml
+      - template: templates/pkg-install_dependencies.yml@r-azure-pipelines
       - task: UsePythonVersion@0
         inputs:
           versionSpec: '3.6'
@@ -39,7 +39,7 @@ jobs:
           python -m pip install --upgrade --ignore-installed --user travis pip setuptools wheel virtualenv
           python -m pip install --upgrade --ignore-installed --user travis keras h5py pyyaml requests Pillow scipy theano
           R -e 'tensorflow::install_tensorflow()'
-      - template: pkg-rcmd_check.yml
-      - template: pkg-coverage.yml
+      - template: templates/pkg-rcmd_check.yml@r-azure-pipelines
+      - template: templates/pkg-coverage.yml@r-azure-pipelines
         parameters:
           coverage: false
