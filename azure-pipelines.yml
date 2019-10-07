@@ -32,9 +32,6 @@ jobs:
       - template: templates/pkg-library.yml@r-azure-pipelines
       - bash: sudo apt-get -y install libnlopt-dev
       - template: templates/pkg-install_dependencies.yml@r-azure-pipelines
-      - task: UsePythonVersion@0
-        inputs:
-          versionSpec: '3.6'
       - script: python -m pip install pip setuptools wheel virtualenv
         displayName: 'Install python tools'
       - script: python -m pip install keras h5py pyyaml requests Pillow scipy theano
