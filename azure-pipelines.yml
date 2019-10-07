@@ -30,7 +30,7 @@ jobs:
     steps:
       - template: templates/r-setup-linux.yml@r-azure-pipelines
       - template: pkg-library.yml
-      - sudo apt-get -y install libnlopt-dev
+      - bash: sudo apt-get -y install libnlopt-dev
       - template: pkg-install_dependencies.yml
       - task: UsePythonVersion@0
         inputs:
