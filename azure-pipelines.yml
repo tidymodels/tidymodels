@@ -30,8 +30,9 @@ jobs:
     steps:
       - template: templates/r-setup-linux.yml@r-azure-pipelines
       - template: templates/pkg-library.yml@r-azure-pipelines
-      - bash: sudo apt-get -y install libnlopt-dev
+      - script: sudo apt-get -y install libnlopt-dev
       - template: templates/pkg-install_dependencies.yml@r-azure-pipelines
+      - script: sudo apt-get -y install python
       - script: python -m pip install pip setuptools wheel virtualenv
         displayName: 'Install python tools'
       - script: python -m pip install keras h5py pyyaml requests Pillow scipy theano
