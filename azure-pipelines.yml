@@ -20,10 +20,10 @@ jobs:
       vmImage: 'Ubuntu-16.04'
     strategy:
       matrix:
-        R-3.4:
-          containerImage: rstudio/r-base:3.4-xenial
-        R-3.5:
-          containerImage: rstudio/r-base:3.5-xenial
+        #R-3.4:
+          #containerImage: rstudio/r-base:3.4-xenial
+        #R-3.5:
+          #containerImage: rstudio/r-base:3.5-xenial
         R-3.6:
           containerImage: rstudio/r-base:3.6-xenial
     container: $[ variables['containerImage'] ]
