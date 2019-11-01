@@ -1,12 +1,43 @@
-language: R
+language: r
+
 dist: xenial
+sudo: true
+
+
+cran: https://cran.rstudio.com
+
+# until generics is finalized
+warnings_are_errors: false
+
+r:
+  - 3.5
+  - 3.6
+  - devel
+
 
 cache:
   packages: true
+  directories:
+    - $HOME/.keras
+    - $HOME/.cache/pip
 
 env:
   global:
+  - KERAS_BACKEND="tensorflow"
   - MAKEFLAGS="-j 2"
+  - RENV_CONFIG_REPOS_OVERRIDE=https://demo.rstudiopm.com/all/__linux__/xenial/latest
+
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+    packages:
+      g++-6
+
+before_script:
+  - python -m pip install --upgrade --ignore-installed --user travis pip setuptools wheel virtualenv
+  - python -m pip install --upgrade --ignore-installed --user travis keras h5py pyyaml requests Pillow scipy theano
+  - R -e 'tensorflow::install_tensorflow()'
 
 addons:
   apt:
@@ -19,9 +50,19 @@ r:
   - release
   - devel
 
-r_packages:
-  - covr
+before_install:
+  - sudo apt-get -y install libnlopt-dev
+  - sudo apt-get update
+  - sudo apt-get -y install python3
+  - mkdir -p ~/.R && echo "CXX14=g++-6" > ~/.R/Makevars
+  - echo "CXX14FLAGS += -fPIC" >> ~/.R/Makevars
 
 after_success:
   - Rscript -e 'covr::codecov()'
 
+before_cache: Rscript -e 'remotes::install_cran("pkgdown")'
+
+deploy:
+  provider: script
+  script: Rscript -e 'pkgdown::deploy_site_github()'
+  skip_cleanup: true
