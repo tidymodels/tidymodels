@@ -14,4 +14,6 @@
 #' @importFrom parsnip linear_reg
 #' @importFrom dials mtry
 #' @importFrom broom bootstrap
+#' @importFrom tune tune
+#' @importFrom discrim discrim_flexible
 NULL
