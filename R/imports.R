@@ -13,5 +13,5 @@
 #' @importFrom yardstick accuracy
 #' @importFrom parsnip linear_reg
 #' @importFrom dials mtry
-#' @importFrom broom bootstrap
+#' @importFrom broom tidy
 NULL
