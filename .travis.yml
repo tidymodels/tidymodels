@@ -13,6 +13,12 @@ r:
   - 3.6
   - devel
 
+# almost always times out so use GH actions to do the real testing
+allow_failures:
+  - 3.5
+  - 3.6
+  - devel
+
 r_packages:
  - tensorflow
 
