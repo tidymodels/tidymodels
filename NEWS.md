@@ -2,7 +2,9 @@
 
  * Updated versions
  
- * Added  `discrim` and `tune` to the core package list. 
+ * Added  `discrim`, `workflows`, and `tune` to the core package list. 
+ 
+ * Moved away form testing via `travis`
 
 # `tidymodels` 0.0.3
 
