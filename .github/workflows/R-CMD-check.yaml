@@ -53,6 +53,10 @@ jobs:
           sysreqs=$(Rscript -e "cat(sysreqs::sysreq_commands('DESCRIPTION'))")
           sudo -s eval "$sysreqs"
 
+      - name: Install glpk
+        if: runner.os == 'Linux'
+        run: sudo apt-get update && sudo apt-get install -y glpk-utils libglpk-dev
+
       - name: Install dependencies
         run: Rscript -e "install.packages('remotes')" -e "remotes::install_deps(dependencies = TRUE)" -e "remotes::install_cran('rcmdcheck')"
 
