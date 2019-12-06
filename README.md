@@ -1,10 +1,7 @@
 <img src="tidymodels_hex.png" align="center" height = "80px" align = "middle"/>
 
-[![Travis build status](https://travis-ci.org/tidymodels/tidymodels.svg?branch=master)](https://travis-ci.org/tidymodels/tidymodels)
-[![Azure pipelines build status](https://img.shields.io/azure-devops/build/tidymodels/tidymodels/2)](https://dev.azure.com/tidymodels/tidymodels/_build/latest?definitionId=1&branchName=master)
-[![Azure pipelines test status](https://img.shields.io/azure-devops/tests/tidymodels/tidymodels/2?color=brightgreen&compact_message)](https://dev.azure.com/tidymodels/tidymodels/_build/latest?definitionId=1&branchName=master)
+[![R build status](https://github.com/tidymodels/tidymodels/workflows/R-CMD-check/badge.svg)](https://github.com/tidymodels/tidymodels)
 [![Coverage status](https://codecov.io/gh/tidymodels/tidymodels/branch/master/graph/badge.svg)](https://codecov.io/github/tidymodels/tidymodels?branch=master)
-[![Azure pipelines coverage status](https://img.shields.io/azure-devops/coverage/tidymodels/tidymodels/2)](https://dev.azure.com/tidymodels/tidymodels/_build/latest?definitionId=1&branchName=master)
 [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/tidymodels)](http://cran.r-project.org/web/packages/tidymodels)
 [![Downloads](http://cranlogs.r-pkg.org/badges/tidymodels)](http://cran.rstudio.com/package=tidymodels)
 ![](https://img.shields.io/badge/lifecycle-experimental-orange.svg)
@@ -15,6 +12,8 @@
 It includes a core set of packages that are loaded on startup:
 
 * [`broom`](https://broom.tidyverse.org/) takes the messy output of built-in functions in R, such as `lm`, `nls`, or `t.test`, and turns them into tidy data frames.
+
+* [`dials`](https://tidymodels.github.io/dials/) has tools to create and manage values of tuning parameters.
 
 * [`dplyr`](http://dplyr.tidyverse.org) contains a grammar for data manipulation. 
 
@@ -30,6 +29,10 @@ It includes a core set of packages that are loaded on startup:
 
 * [`tibble`](http://tibble.tidyverse.org) has a modern re-imagining of the data frame.
  
+* [`tune`](https://tidymodels.github.io/tune/) contains the functions to optimize model hyper-parameters.
+ 
+* [`workflows`](https://tidymodels.github.io/workflows/) has methods to combine pre-processing steps and models into a single object. 
+
 * [`yardstick`](https://tidymodels.github.io/yardstick/) contains tools for evaluating models (e.g. accuracy, RMSE, etc.)
 
 There are a few modeling packages that are also installed along with `tidymodels` (but are not attached on startup): 
@@ -57,23 +60,32 @@ library(tidymodels)
 ```
 
 ```
-## ── Attaching packages ───────────────────────────────── tidymodels 0.0.1 ──
+## Registered S3 method overwritten by 'xts':
+##   method     from
+##   as.zoo.xts zoo
 ```
 
 ```
-## ✔ ggplot2   3.0.0          ✔ recipes   0.1.3.9000
-## ✔ tibble    1.4.2          ✔ broom     0.5.0     
-## ✔ purrr     0.2.5          ✔ yardstick 0.0.1     
-## ✔ dplyr     0.7.6          ✔ infer     0.3.1     
-## ✔ rsample   0.0.2
+## ── Attaching packages ─────────────────────────────────────────────────────────────────────────────────────────────── tidymodels 0.0.3 ──
 ```
 
 ```
-## ── Conflicts ──────────────────────────────────── tidymodels_conflicts() ──
-## ✖ rsample::fill()    masks tidyr::fill()
-## ✖ dplyr::filter()    masks stats::filter()
-## ✖ dplyr::lag()       masks stats::lag()
-## ✖ recipes::prepper() masks rsample::prepper()
-## ✖ recipes::step()    masks stats::step()
+## ✔ broom     0.5.2          ✔ purrr     0.3.3     
+## ✔ dials     0.0.3.9001     ✔ recipes   0.1.7.9001
+## ✔ discrim   0.0.1          ✔ rsample   0.0.5     
+## ✔ dplyr     0.8.3          ✔ tibble    2.1.3     
+## ✔ ggplot2   3.2.1          ✔ tune      0.0.0.9003
+## ✔ infer     0.5.0          ✔ yardstick 0.0.4     
+## ✔ parsnip   0.0.3.9001
+```
+
+```
+## ── Conflicts ────────────────────────────────────────────────────────────────────────────────────────────────── tidymodels_conflicts() ──
+## ✖ purrr::discard()  masks scales::discard()
+## ✖ dplyr::filter()   masks stats::filter()
+## ✖ dplyr::lag()      masks stats::lag()
+## ✖ ggplot2::margin() masks dials::margin()
+## ✖ dials::offset()   masks stats::offset()
+## ✖ recipes::step()   masks stats::step()
 ```
   

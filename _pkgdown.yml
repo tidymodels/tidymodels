@@ -14,3 +14,10 @@ home:
 figures:
   fig.width: 8
   fig.height: 5.75
+
+navbar:
+  left:
+  - text: List of Package Functions
+    href: articles/extras/Functions.html
+  - text: News
+    href: news/index.html
