@@ -51,4 +51,5 @@ RoxygenNote: 7.0.1.9000
 Remotes:
     tidymodels/tune,
     tidymodels/workflows,
-    tidymodels/modeldata
+    tidymodels/modeldata,
+    tidymodels/recipes
