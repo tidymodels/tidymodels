@@ -16,4 +16,5 @@
 #' @importFrom broom bootstrap
 #' @importFrom tune tune
 #' @importFrom discrim discrim_flexible
+#' @importFrom workflows workflow
 NULL
