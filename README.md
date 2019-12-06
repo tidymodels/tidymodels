@@ -29,6 +29,10 @@ It includes a core set of packages that are loaded on startup:
 
 * [`tibble`](http://tibble.tidyverse.org) has a modern re-imagining of the data frame.
  
+* [`tune`](https://tidymodels.github.io/tune/) contains the functions to optimize model hyper-parameters.
+ 
+* [`workflows`](https://tidymodels.github.io/workflows/) has methods to combine pre-processing steps and models into a single object. 
+
 * [`yardstick`](https://tidymodels.github.io/yardstick/) contains tools for evaluating models (e.g. accuracy, RMSE, etc.)
 
 There are a few modeling packages that are also installed along with `tidymodels` (but are not attached on startup): 
