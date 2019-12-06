@@ -82,6 +82,9 @@ and other packages that you have loaded." />
   <a href="../articles/extras/Functions.html">List of Package Functions</a>
 </li>
 <li>
+  <a href="../articles/Tags.html">Using Tags</a>
+</li>
+<li>
   <a href="../news/index.html">News</a>
 </li>
         <li>
@@ -124,12 +127,12 @@ make the base equivalents generic, so shouldn't negatively affect any
 existing code.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>tidymodels_conflicts</span>()</div><div class='output co'>#&gt; ── <span style='font-weight: bold;'>Conflicts</span><span> ────────────────────────────────────────────────────────────────────────── tidymodels_conflicts() ──
-#&gt; </span><span style='color: #BB0000;'>✖</span><span> </span><span style='color: #0000BB;'>purrr</span><span>::</span><span style='color: #00BB00;'>discard()</span><span>  masks </span><span style='color: #0000BB;'>scales</span><span>::discard()
-#&gt; </span><span style='color: #BB0000;'>✖</span><span> </span><span style='color: #0000BB;'>dplyr</span><span>::</span><span style='color: #00BB00;'>filter()</span><span>   masks </span><span style='color: #0000BB;'>stats</span><span>::filter()
-#&gt; </span><span style='color: #BB0000;'>✖</span><span> </span><span style='color: #0000BB;'>dplyr</span><span>::</span><span style='color: #00BB00;'>lag()</span><span>      masks </span><span style='color: #0000BB;'>stats</span><span>::lag()
-#&gt; </span><span style='color: #BB0000;'>✖</span><span> </span><span style='color: #0000BB;'>ggplot2</span><span>::</span><span style='color: #00BB00;'>margin()</span><span> masks </span><span style='color: #0000BB;'>dials</span><span>::margin()
-#&gt; </span><span style='color: #BB0000;'>✖</span><span> </span><span style='color: #0000BB;'>recipes</span><span>::</span><span style='color: #00BB00;'>step()</span><span>   masks </span><span style='color: #0000BB;'>stats</span><span>::step()</div></span></pre>
+    <pre class="examples"><div class='input'><span class='fu'>tidymodels_conflicts</span>()</div><div class='output co'>#&gt; ── <span style='font-weight: bold;'>Conflicts</span><span> ───────────────────────────────────────────────────────────────────── tidymodels_conflicts() ──
+#&gt; </span><span style='color: #BB0000;'>x</span><span> </span><span style='color: #0000BB;'>purrr</span><span>::</span><span style='color: #00BB00;'>discard()</span><span>  masks </span><span style='color: #0000BB;'>scales</span><span>::discard()
+#&gt; </span><span style='color: #BB0000;'>x</span><span> </span><span style='color: #0000BB;'>dplyr</span><span>::</span><span style='color: #00BB00;'>filter()</span><span>   masks </span><span style='color: #0000BB;'>stats</span><span>::filter()
+#&gt; </span><span style='color: #BB0000;'>x</span><span> </span><span style='color: #0000BB;'>dplyr</span><span>::</span><span style='color: #00BB00;'>lag()</span><span>      masks </span><span style='color: #0000BB;'>stats</span><span>::lag()
+#&gt; </span><span style='color: #BB0000;'>x</span><span> </span><span style='color: #0000BB;'>ggplot2</span><span>::</span><span style='color: #00BB00;'>margin()</span><span> masks </span><span style='color: #0000BB;'>dials</span><span>::margin()
+#&gt; </span><span style='color: #BB0000;'>x</span><span> </span><span style='color: #0000BB;'>recipes</span><span>::</span><span style='color: #00BB00;'>step()</span><span>   masks </span><span style='color: #0000BB;'>stats</span><span>::step()</div></span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <h2>Contents</h2>
