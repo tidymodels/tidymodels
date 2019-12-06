@@ -3,6 +3,7 @@ language: r
 dist: xenial
 sudo: true
 
+
 cran: https://cran.rstudio.com
 
 # until generics is finalized
@@ -38,6 +39,16 @@ before_script:
   - python -m pip install --upgrade --ignore-installed --user travis keras h5py pyyaml requests Pillow scipy theano
   - R -e 'tensorflow::install_tensorflow()'
 
+addons:
+  apt:
+    packages:
+    - libnlopt-dev
+    - r-cran-rstanarm
+
+r:
+  - 3.4
+  - release
+  - devel
 
 before_install:
   - sudo apt-get -y install libnlopt-dev
@@ -45,7 +56,6 @@ before_install:
   - sudo apt-get -y install python3
   - mkdir -p ~/.R && echo "CXX14=g++-6" > ~/.R/Makevars
   - echo "CXX14FLAGS += -fPIC" >> ~/.R/Makevars
-
 
 after_success:
   - Rscript -e 'covr::codecov()'
