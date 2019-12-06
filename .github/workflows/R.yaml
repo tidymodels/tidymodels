@@ -13,14 +13,12 @@ jobs:
       - uses: r-lib/actions/setup-r@master
         with:
           r-version: ${{ matrix.r }}
-      - uses: r-lib/actions/setup-pandoc@master
-      - uses: r-lib/actions/setup-tinytex@master
       - name: Install dependencies
         env:
           R_REMOTES_NO_ERRORS_FROM_WARNINGS: true
         run: Rscript -e "install.packages(c('remotes', 'rcmdcheck'))" -e "remotes::install_deps(dependencies = TRUE)"
       - name: Check
-        run: Rscript -e "rcmdcheck::rcmdcheck(error_on = 'error')"
+        run: Rscript -e "rcmdcheck::rcmdcheck(args = '--no-manual', error_on = 'error')"
       - name: Test coverage
         if: matrix.r == '3.6'
         run: |
@@ -37,23 +35,19 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - uses: r-lib/actions/setup-r@master
-      - uses: r-lib/actions/setup-pandoc@master
-      - uses: r-lib/actions/setup-tinytex@master
       - name: Install system dependencies
         run: sudo apt-get update && sudo apt-get install -y libxml2-dev libssl-dev
       - name: Install dependencies
         run: Rscript -e "install.packages(c('remotes', 'rcmdcheck'))" -e "remotes::install_deps(dependencies = TRUE)"
       - name: Check
-        run: Rscript -e "rcmdcheck::rcmdcheck(error_on = 'error')"
+        run: Rscript -e "rcmdcheck::rcmdcheck(args = '--no-manual', error_on = 'error')"
 
   windows:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v1
       - uses: r-lib/actions/setup-r@master
-      - uses: r-lib/actions/setup-pandoc@master
-      - uses: r-lib/actions/setup-tinytex@master
       - name: Install dependencies
         run: Rscript -e "install.packages(c('remotes', 'rcmdcheck'))" -e "remotes::install_deps(dependencies = TRUE)"
       - name: Check
-        run: Rscript -e "rcmdcheck::rcmdcheck(error_on = 'error')"
+        run: Rscript -e "rcmdcheck::rcmdcheck(args = '--no-manual', error_on = 'error')"
