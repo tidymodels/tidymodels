@@ -21,6 +21,8 @@ It includes a core set of packages that are loaded on startup:
 
 * [`infer`](http://infer.netlify.com/) is a modern approach to statistical inference.
 
+* [`parsnip`](https://tidymodels.github.io/parsnip/) is a tidy, unified interface to creating models. 
+
 * [`purrr`](http://purrr.tidyverse.org) is a functional programming toolkit.
 
 * [`recipes`](https://tidymodels.github.io/recipes/) is a general data preprocessor with a modern interface. It can create model matrices that incorporate feature engineering, imputation, and other help tools.
