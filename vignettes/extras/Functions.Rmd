@@ -1,0 +1,91 @@
+---
+title: "An Omnibus List of functions from {tidymodels} Packages"
+vignette: >
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteIndexEntry{An Omnibus List of functions from {tidymodel} Packages}
+output:
+  knitr:::html_vignette:
+    toc: yes
+---
+
+```{r ex_setup, include=FALSE}
+knitr::opts_chunk$set(
+  message = FALSE,
+  digits = 3,
+  collapse = TRUE,
+  comment = "#>"
+  )
+options(digits = 3)
+library(tidyverse)
+library(fs)
+library(httr)
+library(rlang)
+library(cli)
+library(pkgdown)
+library(glue)
+library(stringr)
+library(DT)
+
+pkgs <- c("dials", "recipes", "parsnip", "butcher", "rsample", "embed", "broom",
+          "yardstick", "modeldata", "infer", "discrim", "textrecipes", "tidypredict",
+          "applicable", "modeldb", "corrr", "probably", "tidyposterior")
+
+tmp_path <- tempdir()
+```
+
+
+This table lists the functions in CRAN versions of the tidymodels packages. 
+
+```{r table-compute, include = FALSE}
+get_pkgdown_urls <- function(x, pth) {
+  base_url <- "https://tidymodels.github.io/{pkg}/reference/{file}"
+  null_res <- tibble(topic = na_chr, title = na_chr, url = na_chr, pkg = x)
+  src_file <- download.packages(x, destdir = pth, repos = "https://cran.rstudio.com/")
+  if (nrow(src_file) == 0) {
+    cli::cli_alert_warning(paste(x, "was not downloaded"))
+    return(null_res)
+  }
+  untar_res <- untar(src_file[1,2], exdir = pth)
+  if (!(fs::path(pth, x) %in% fs::dir_ls(pth))) {
+    cli::cli_alert_warning(paste(x, "was not unpacked"))
+    return(null_res)
+  }
+  pkg_info <- pkgdown::as_pkgdown(fs::path(pth, x))
+  topic_info <-
+    pkg_info$topics %>%
+    unnest(cols = c(alias)) %>%
+    mutate(url = map_chr(file_out, ~ glue::glue(base_url, file = .x, pkg = x))) %>%
+    select(topic = alias, title, url) %>%
+    mutate(
+      pkg = x,
+      title = str_replace(title, "\\n", " ")
+    )
+
+  topic_info
+}
+
+pkg_urls_raw <-
+  map_dfr(pkgs, get_pkgdown_urls, pth = tmp_path)
+
+pkg_urls <-
+  pkg_urls_raw %>%
+  na.omit() %>%
+  filter(
+    str_detect(topic, "reexport", negate = TRUE),
+    str_detect(topic, "-package$", negate = TRUE),
+    str_detect(title, "^Internal", negate = TRUE),
+    topic != "_PACKAGE",
+    title != "Pipe",
+    topic != "%>%",
+    title != "Objects exported from other packages"
+  ) %>%
+  arrange(topic, pkg) %>%
+  mutate(
+    topic = paste0("<a href='", url,"'><tt>", topic, "</tt></a>")
+  ) %>%
+  select(topic, package = pkg, title)
+```
+
+```{r table-display, echo = FALSE, results = "asis"}
+DT::datatable(pkg_urls, escape = FALSE, filter = "top", style = 'bootstrap', width = 1000)
+```
