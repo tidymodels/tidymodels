@@ -13,8 +13,9 @@
 #' @importFrom yardstick accuracy
 #' @importFrom parsnip linear_reg
 #' @importFrom dials mtry
-#' @importFrom broom bootstrap
+#' @importFrom broom tidy
 #' @importFrom tune tune
 #' @importFrom discrim discrim_flexible
 #' @importFrom workflows workflow
+
 NULL
