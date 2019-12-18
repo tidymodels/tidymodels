@@ -26,9 +26,10 @@ library(glue)
 library(stringr)
 library(DT)
 
-pkgs <- c("dials", "recipes", "parsnip", "butcher", "rsample", "embed", "broom",
-          "yardstick", "modeldata", "infer", "discrim", "textrecipes", "tidypredict",
-          "applicable", "modeldb", "corrr", "probably", "tidyposterior")
+pkgs <- c("applicable", "broom", "butcher", "corrr", "dials", "discrim", 
+          "embed", "hardhat", "infer", "modeldata", "modeldb", "parsnip", 
+          "probably", "recipes", "rsample", "textrecipes", "tidyposterior", 
+          "tidypredict", "yardstick")
 
 tmp_path <- tempdir()
 ```
@@ -55,7 +56,7 @@ get_pkgdown_urls <- function(x, pth) {
     pkg_info$topics %>%
     unnest(cols = c(alias)) %>%
     mutate(url = map_chr(file_out, ~ glue::glue(base_url, file = .x, pkg = x))) %>%
-    select(topic = alias, title, url) %>%
+    dplyr::select(topic = alias, title, url) %>%
     mutate(
       pkg = x,
       title = str_replace(title, "\\n", " ")
@@ -70,7 +71,7 @@ pkg_urls_raw <-
 pkg_urls <-
   pkg_urls_raw %>%
   na.omit() %>%
-  filter(
+  dplyr::filter(
     str_detect(topic, "reexport", negate = TRUE),
     str_detect(topic, "-package$", negate = TRUE),
     str_detect(title, "^Internal", negate = TRUE),
@@ -79,11 +80,11 @@ pkg_urls <-
     topic != "%>%",
     title != "Objects exported from other packages"
   ) %>%
-  arrange(topic, pkg) %>%
+  dplyr::arrange(topic, pkg) %>%
   mutate(
     topic = paste0("<a href='", url,"'><tt>", topic, "</tt></a>")
   ) %>%
-  select(topic, package = pkg, title)
+  dplyr::select(topic, package = pkg, title)
 ```
 
 ```{r table-display, echo = FALSE, results = "asis"}
