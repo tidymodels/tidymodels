@@ -52,5 +52,5 @@ VignetteBuilder: knitr
 Remotes:
     tidymodels/tune,
     tidymodels/workflows,
-    tidymodels/modeldata
+    tidymodels/recipes
 
