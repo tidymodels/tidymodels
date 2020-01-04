@@ -5,8 +5,11 @@ tags <- list(
   "parallel processing" = c("furrr"),
   "resampling" = c("infer", "tidyposterior"),
   "text analysis" = c("tidytext", "keras", "textrecipes"),
-  "time series" = c("timetk", "tidyquant", "sweep")
+  "time series" = c("timetk", "tidyquant", "sweep"),
+  "extra recipes" = c("embed", "textrecipes"),
+  "extra models" = c("discrim")
 )
+# cat(paste0("'", sort(names(tags)), "'", collapse = ", "))
 
 
 #' Facilities for loading and updating other packages
@@ -15,9 +18,9 @@ tags <- list(
 #'  modeling and analysis. These can be used to load packages
 #'  in groups.
 #'
-#' @param tag A character strong for the tag. Current options
-#'  are 'Bayesian analysis', 'deep learning', 'feature engineering',
-#'  'parallel processing', 'resampling', 'text analysis',  and
+#' @param tag A character strong for the tag. Current options are 'Bayesian
+#'  analysis', 'deep learning', 'extra models', 'extra recipes', 'feature
+#'  engineering', 'parallel processing', 'resampling', 'text analysis', and
 #'  'time series'.
 #'
 #' @examples
