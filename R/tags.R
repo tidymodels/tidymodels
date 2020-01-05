@@ -6,7 +6,7 @@ tags <- list(
   "resampling" = c("infer", "tidyposterior"),
   "text analysis" = c("tidytext", "keras", "textrecipes"),
   "time series" = c("timetk", "tidyquant", "sweep"),
-  "extra recipes" = c("embed", "textrecipes"),
+  "extra recipes" = c("embed", "textrecipes", "themis"),
   "extra models" = c("discrim")
 )
 # cat(paste0("'", sort(names(tags)), "'", collapse = ", "))

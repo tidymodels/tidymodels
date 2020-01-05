@@ -29,7 +29,7 @@ library(DT)
 pkgs <- c("applicable", "broom", "butcher", "corrr", "dials", "discrim", 
           "embed", "hardhat", "infer", "modeldata", "modeldb", "parsnip", 
           "probably", "recipes", "rsample", "textrecipes", "tidyposterior", 
-          "tidypredict", "yardstick")
+          "tidypredict", "yardstick", "workflows")
 
 tmp_path <- tempdir()
 ```
@@ -82,7 +82,7 @@ pkg_urls <-
   ) %>%
   dplyr::arrange(topic, pkg) %>%
   mutate(
-    topic = paste0("<a href='", url,"'><tt>", topic, "</tt></a>")
+    topic = paste0("<a href='", url,"'  target='_blank'><tt>", topic, "</tt></a>")
   ) %>%
   dplyr::select(topic, package = pkg, title)
 ```

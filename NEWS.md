@@ -2,7 +2,7 @@
 
  * Updated versions
  
- * Added  `discrim`, `workflows`, and `tune` to the core package list. 
+ * Added `workflows`, and `tune` to the core package list. 
  
  * Moved away form testing via `travis`
 
