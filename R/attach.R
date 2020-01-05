@@ -1,4 +1,4 @@
-core <- c("broom", "dials", "discrim", "dplyr", "ggplot2", "infer", "parsnip",
+core <- c("broom", "dials", "dplyr", "ggplot2", "infer", "parsnip",
           "purrr", "recipes", "rsample", "tibble", "tune", "workflows", "yardstick")
 
 pkg_loaded <- function(pkg = NULL) {
