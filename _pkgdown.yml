@@ -17,7 +17,7 @@ figures:
 
 navbar:
   left:
-  - text: List of Package Functions
+  - text: All tidymodels Functions Across Packages
     href: articles/extras/Functions.html
   - text: Using Tags
     href: articles/Tags.html
