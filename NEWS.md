@@ -1,10 +1,10 @@
 # `tidymodels` 0.0.4
 
  * Updated versions
- 
+
  * Added `workflows`, and `tune` to the core package list. 
- 
- * Moved away form testing via `travis`
+
+ * Moved away from testing via `travis`
 
 # `tidymodels` 0.0.3
 
@@ -13,7 +13,7 @@
 # `tidymodels` 0.0.2
 
  * Added  `parsnip` and `dials` to the core package list. 
- 
+
  * Package requirements bumped to current versions.
 
 
