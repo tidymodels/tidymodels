@@ -15,11 +15,11 @@ BugReports: https://github.com/tidymodels/tidymodels/issues
 Depends: 
     R (>= 3.1)
 Imports: 
-    broom (>= 0.5.3),
-    cli (>= 2.0.0),
+    broom (>= 0.5.4),
+    cli (>= 2.0.1),
     crayon (>= 1.3.4),
     dials (>= 0.0.4),
-    dplyr (>= 0.8.3),
+    dplyr (>= 0.8.4),
     ggplot2 (>= 3.2.1),
     infer (>= 0.5.1),
     magrittr (>= 1.5),
@@ -27,9 +27,9 @@ Imports:
     pillar (>= 1.4.3),
     purrr (>= 0.3.3),
     recipes (>= 0.1.9),
-    rlang (>= 0.4.0),
+    rlang (>= 0.4.4),
     rsample (>= 0.0.5),
-    rstudioapi (>= 0.10),
+    rstudioapi (>= 0.11),
     tibble (>= 2.1.3),
     tidytext (>= 0.2.2),
     tidypredict (>= 0.4.3),
@@ -48,5 +48,3 @@ Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.0.2.9000
 VignetteBuilder: knitr
-Remotes: 
-    tidymodels/tune

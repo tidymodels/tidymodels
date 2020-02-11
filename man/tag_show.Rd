@@ -14,9 +14,9 @@ tag_attach(tag)
 tag_update(tag)
 }
 \arguments{
-\item{tag}{A character strong for the tag. Current options
-are 'Bayesian analysis', 'deep learning', 'feature engineering',
-'parallel processing', 'resampling', 'text analysis',  and
+\item{tag}{A character strong for the tag. Current options are 'Bayesian
+analysis', 'deep learning', 'extra models', 'extra recipes', 'feature
+engineering', 'parallel processing', 'resampling', 'text analysis', and
 'time series'.}
 }
 \description{
