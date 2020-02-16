@@ -29,7 +29,7 @@ library(DT)
 pkgs <- c("applicable", "broom", "butcher", "corrr", "dials", "discrim", 
           "embed", "hardhat", "infer", "modeldata", "modeldb", "parsnip", 
           "probably", "recipes", "rsample", "textrecipes", "tidyposterior", 
-          "tidypredict", "yardstick", "workflows")
+          "tidypredict", "tune", "yardstick", "workflows")
 
 tmp_path <- tempdir()
 ```

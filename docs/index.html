@@ -37,14 +37,17 @@
         <a class="navbar-brand" href="index.html">tidymodels</a>
         <div class="info">
           <span class="partof">part of <a href="https://github.com/tidymodels">tidymodels</a></span>
-          <span class="version version-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.3</span>
+          <span class="version version-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.0</span>
         </div>
       </div>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav navbar-right">
 <li>
-  <a href="articles/extras/Functions.html">List of Package Functions</a>
+  <a href="articles/extras/Functions.html">All tidymodels Functions Across Packages</a>
+</li>
+<li>
+  <a href="articles/Tags.html">Using Tags</a>
 </li>
 <li>
   <a href="news/index.html">News</a>
@@ -78,10 +81,13 @@
 <li><p><a href="http://dplyr.tidyverse.org"><code>dplyr</code></a> contains a grammar for data manipulation.</p></li>
 <li><p><a href="http://ggplot2.tidyverse.org"><code>ggplot2</code></a> implements a grammar of graphics.</p></li>
 <li><p><a href="http://infer.netlify.com/"><code>infer</code></a> is a modern approach to statistical inference.</p></li>
+<li><p><a href="https://tidymodels.github.io/parsnip/"><code>parsnip</code></a> is a tidy, unified interface to creating models.</p></li>
 <li><p><a href="http://purrr.tidyverse.org"><code>purrr</code></a> is a functional programming toolkit.</p></li>
 <li><p><a href="https://tidymodels.github.io/recipes/"><code>recipes</code></a> is a general data preprocessor with a modern interface. It can create model matrices that incorporate feature engineering, imputation, and other help tools.</p></li>
 <li><p><a href="https://tidymodels.github.io/rsample/"><code>rsample</code></a> has infrastructure for <em>resampling</em> data so that models can be assessed and empirically validated.</p></li>
 <li><p><a href="http://tibble.tidyverse.org"><code>tibble</code></a> has a modern re-imagining of the data frame.</p></li>
+<li><p><a href="https://tidymodels.github.io/tune/"><code>tune</code></a> contains the functions to optimize model hyper-parameters.</p></li>
+<li><p><a href="https://tidymodels.github.io/workflows/"><code>workflows</code></a> has methods to combine pre-processing steps and models into a single object.</p></li>
 <li><p><a href="https://tidymodels.github.io/yardstick/"><code>yardstick</code></a> contains tools for evaluating models (e.g. accuracy, RMSE, etc.)</p></li>
 </ul>
 <p>There are a few modeling packages that are also installed along with <code>tidymodels</code> (but are not attached on startup):</p>
@@ -91,21 +97,22 @@
 <li><p><a href="https://github.com/juliasilge/tidytext"><code>tidytext</code></a> contains tidy tools for quantitative text analysis, including basic text summarization, sentiment analysis, and text modeling.</p></li>
 </ul>
 <p>To install:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="kw"><a href="https://rdrr.io/r/base/library.html">require</a></span>(devtools)</a>
-<a class="sourceLine" id="cb1-2" data-line-number="2">devtools<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/devtools/man/remote-reexports.html">install_github</a></span>(<span class="st">"tidymodels/tidymodels"</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw"><a href="https://rdrr.io/r/base/library.html">require</a></span>(devtools)</span>
+<span id="cb1-2"><a href="#cb1-2"></a>devtools<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/devtools/man/remote-reexports.html">install_github</a></span>(<span class="st">"tidymodels/tidymodels"</span>)</span></code></pre></div>
 <p>When loading the package, the versions and conflicts are listed:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(tidymodels)</a></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(tidymodels)</span></code></pre></div>
 <pre><code>## Registered S3 method overwritten by 'xts':
 ##   method     from
 ##   as.zoo.xts zoo</code></pre>
 <pre><code>## ── Attaching packages ─────────────────────────────────────────────────────────────────────────────────────────────── tidymodels 0.0.3 ──</code></pre>
-<pre><code>## ✔ broom     0.5.2          ✔ purrr     0.3.3     
-## ✔ dials     0.0.3.9001     ✔ recipes   0.1.7.9001
-## ✔ discrim   0.0.1          ✔ rsample   0.0.5     
-## ✔ dplyr     0.8.3          ✔ tibble    2.1.3     
-## ✔ ggplot2   3.2.1          ✔ tune      0.0.0.9003
-## ✔ infer     0.5.0          ✔ yardstick 0.0.4     
-## ✔ parsnip   0.0.3.9001</code></pre>
+<pre><code>
+## ✓ broom     0.5.4     ✓ recipes   0.1.9
+## ✓ dials     0.0.4     ✓ rsample   0.0.5
+## ✓ dplyr     0.8.4     ✓ tibble    2.1.3
+## ✓ ggplot2   3.2.1     ✓ tune      0.0.1
+## ✓ infer     0.5.1     ✓ workflows 0.1.0
+## ✓ parsnip   0.0.5     ✓ yardstick 0.0.5
+## ✓ purrr     0.3.3 </code></pre>
 <pre><code>## ── Conflicts ────────────────────────────────────────────────────────────────────────────────────────────────── tidymodels_conflicts() ──
 ## ✖ purrr::discard()  masks scales::discard()
 ## ✖ dplyr::filter()   masks stats::filter()
