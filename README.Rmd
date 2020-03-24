@@ -39,7 +39,7 @@ It includes a core set of packages that are loaded on startup:
 
 There are a few modeling packages that are also installed along with `tidymodels` (but are not attached on startup): 
 
-* [`tidypredict`](http://tidypredict.netlify.com/) translates some model prediction equations to SQL for high-performance computing.
+* [`tidypredict`](https://tidymodels.github.io/tidypredict/) translates some model prediction equations to SQL for high-performance computing.
 
 * [`tidyposterior`](https://tidymodels.github.io/tidyposterior/) can be used to compare models using resampling and Bayesian analysis.
 
