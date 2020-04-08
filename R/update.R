@@ -60,7 +60,7 @@ pkg_deps <- function(x = "tidymodels", recursive = FALSE) {
       c(
         "broom", "cli", "crayon", "dplyr", "ggplot2", "infer",
         "magrittr", "pillar", "purrr", "recipes", "rlang",
-        "rsample", "rstudioapi", "tibble", "tidytext",
+        "rsample", "rstudioapi", "tibble", "tidyr", "tidytext",
         "tidypredict", "tidyposterior", "yardstick"
       )
   }
