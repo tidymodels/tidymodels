@@ -30,7 +30,9 @@ It includes a core set of packages that are loaded on startup:
 * [`rsample`](https://tidymodels.github.io/rsample/) has infrastructure for _resampling_ data so that models can be assessed and empirically validated. 
 
 * [`tibble`](http://tibble.tidyverse.org) has a modern re-imagining of the data frame.
- 
+
+* [`tidyr`](http://tidyr.tidyverse.org) provides tools for reshaping data. 
+
 * [`tune`](https://tidymodels.github.io/tune/) contains the functions to optimize model hyper-parameters.
  
 * [`workflows`](https://tidymodels.github.io/workflows/) has methods to combine pre-processing steps and models into a single object. 
@@ -39,7 +41,7 @@ It includes a core set of packages that are loaded on startup:
 
 There are a few modeling packages that are also installed along with `tidymodels` (but are not attached on startup): 
 
-* [`tidypredict`](http://tidypredict.netlify.com/) translates some model prediction equations to SQL for high-performance computing.
+* [`tidypredict`](https://tidymodels.github.io/tidypredict/) translates some model prediction equations to SQL for high-performance computing.
 
 * [`tidyposterior`](https://tidymodels.github.io/tidyposterior/) can be used to compare models using resampling and Bayesian analysis.
 
@@ -62,32 +64,25 @@ library(tidymodels)
 ```
 
 ```
-## Registered S3 method overwritten by 'xts':
-##   method     from
-##   as.zoo.xts zoo
+## ── Attaching packages ──────────────────────────────────────────────────────────────────────── tidymodels 0.1.0 ──
 ```
 
 ```
-## ── Attaching packages ─────────────────────────────────────────────────────────────────────────────────────────────── tidymodels 0.0.3 ──
+## ✓ broom     0.5.5           ✓ recipes   0.1.10.9000
+## ✓ dials     0.0.4.9000      ✓ rsample   0.0.6      
+## ✓ dplyr     0.8.5           ✓ tibble    3.0.0      
+## ✓ ggplot2   3.3.0           ✓ tune      0.1.0      
+## ✓ infer     0.5.1           ✓ workflows 0.1.1.9000 
+## ✓ parsnip   0.0.5.9001      ✓ yardstick 0.0.6      
+## ✓ purrr     0.3.3
 ```
 
 ```
-## ✔ broom     0.5.2          ✔ purrr     0.3.3     
-## ✔ dials     0.0.3.9001     ✔ recipes   0.1.7.9001
-## ✔ discrim   0.0.1          ✔ rsample   0.0.5     
-## ✔ dplyr     0.8.3          ✔ tibble    2.1.3     
-## ✔ ggplot2   3.2.1          ✔ tune      0.0.0.9003
-## ✔ infer     0.5.0          ✔ yardstick 0.0.4     
-## ✔ parsnip   0.0.3.9001
-```
-
-```
-## ── Conflicts ────────────────────────────────────────────────────────────────────────────────────────────────── tidymodels_conflicts() ──
-## ✖ purrr::discard()  masks scales::discard()
-## ✖ dplyr::filter()   masks stats::filter()
-## ✖ dplyr::lag()      masks stats::lag()
-## ✖ ggplot2::margin() masks dials::margin()
-## ✖ dials::offset()   masks stats::offset()
-## ✖ recipes::step()   masks stats::step()
+## ── Conflicts ─────────────────────────────────────────────────────────────────────────── tidymodels_conflicts() ──
+## x purrr::discard()  masks scales::discard()
+## x dplyr::filter()   masks stats::filter()
+## x dplyr::lag()      masks stats::lag()
+## x ggplot2::margin() masks dials::margin()
+## x recipes::step()   masks stats::step()
 ```
   

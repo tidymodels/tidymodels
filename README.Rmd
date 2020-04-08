@@ -30,7 +30,9 @@ It includes a core set of packages that are loaded on startup:
 * [`rsample`](https://tidymodels.github.io/rsample/) has infrastructure for _resampling_ data so that models can be assessed and empirically validated. 
 
 * [`tibble`](http://tibble.tidyverse.org) has a modern re-imagining of the data frame.
- 
+
+* [`tidyr`](http://tidyr.tidyverse.org) provides tools for reshaping data. 
+
 * [`tune`](https://tidymodels.github.io/tune/) contains the functions to optimize model hyper-parameters.
  
 * [`workflows`](https://tidymodels.github.io/workflows/) has methods to combine pre-processing steps and models into a single object. 
