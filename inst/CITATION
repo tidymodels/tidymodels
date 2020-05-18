@@ -1,0 +1,8 @@
+bibentry(
+  "Manual",
+  title = "Tidymodels: a collection of packages for modeling and machine learning using tidyverse principles.",
+  author = "Max Kuhn, Hadley Wickham",
+  url = "https://www.tidymodels.org",
+  year = 2020,
+  textVersion = "Kuhn et al., (2020). Tidymodels: a collection of packages for modeling and machine learning using tidyverse principles. https://www.tidymodels.org"
+)
