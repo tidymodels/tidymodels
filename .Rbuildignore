@@ -13,3 +13,5 @@ tidymodels_hex.png
 ^azure-pipelines\.yml$
 ^\.github/workflows/R\.yaml$
 ^\.github/workflows/R-CMD-check\.yaml$
+^codecov\.yml$
+^\.github$
