@@ -7,7 +7,6 @@
 #' @importFrom ggplot2 ggplot
 #' @importFrom recipes prep
 #' @importFrom rsample analysis
-#' @importFrom tidyposterior Fisher_trans
 #' @importFrom tidypredict acceptable_formula
 #' @importFrom tidytext get_sentiments
 #' @importFrom yardstick accuracy
