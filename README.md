@@ -11,9 +11,9 @@
 
 It includes a core set of packages that are loaded on startup:
 
-* [`broom`](https://broom.tidyverse.org/) takes the messy output of built-in functions in R, such as `lm`, `nls`, or `t.test`, and turns them into tidy data frames.
+* [`broom`](https://broom.tidymodels.org/) takes the messy output of built-in functions in R, such as `lm`, `nls`, or `t.test`, and turns them into tidy data frames.
 
-* [`dials`](https://tidymodels.github.io/dials/) has tools to create and manage values of tuning parameters.
+* [`dials`](https://dials.tidymodels.org) has tools to create and manage values of tuning parameters.
 
 * [`dplyr`](http://dplyr.tidyverse.org) contains a grammar for data manipulation. 
 
@@ -21,25 +21,25 @@ It includes a core set of packages that are loaded on startup:
 
 * [`infer`](http://infer.netlify.com/) is a modern approach to statistical inference.
 
-* [`parsnip`](https://tidymodels.github.io/parsnip/) is a tidy, unified interface to creating models. 
+* [`parsnip`](https://parsnip.tidymodels.org) is a tidy, unified interface to creating models. 
 
 * [`purrr`](http://purrr.tidyverse.org) is a functional programming toolkit.
 
-* [`recipes`](https://tidymodels.github.io/recipes/) is a general data preprocessor with a modern interface. It can create model matrices that incorporate feature engineering, imputation, and other help tools.
+* [`recipes`](https://recipes.tidymodels.org) is a general data preprocessor with a modern interface. It can create model matrices that incorporate feature engineering, imputation, and other help tools.
 
-* [`rsample`](https://tidymodels.github.io/rsample/) has infrastructure for _resampling_ data so that models can be assessed and empirically validated. 
+* [`rsample`](https://rsample.tidymodels.org) has infrastructure for _resampling_ data so that models can be assessed and empirically validated. 
 
 * [`tibble`](http://tibble.tidyverse.org) has a modern re-imagining of the data frame.
  
-* [`tune`](https://tidymodels.github.io/tune/) contains the functions to optimize model hyper-parameters.
+* [`tune`](https://tune.tidymodels.org) contains the functions to optimize model hyper-parameters.
  
-* [`workflows`](https://tidymodels.github.io/workflows/) has methods to combine pre-processing steps and models into a single object. 
+* [`workflows`](https://workflows.tidymodels.org) has methods to combine pre-processing steps and models into a single object. 
 
-* [`yardstick`](https://tidymodels.github.io/yardstick/) contains tools for evaluating models (e.g. accuracy, RMSE, etc.)
+* [`yardstick`](https://yardstick.tidymodels.org) contains tools for evaluating models (e.g. accuracy, RMSE, etc.)
 
 There are a few modeling packages that are also installed along with `tidymodels` (but are not attached on startup): 
 
-* [`tidypredict`](http://tidypredict.netlify.com/) translates some model prediction equations to SQL for high-performance computing.
+* [`tidypredict`](https://tidypredict.tidymodels.org) translates some model prediction equations to SQL for high-performance computing.
 
 * [`tidytext`](https://github.com/juliasilge/tidytext) contains tidy tools for quantitative text analysis, including basic text summarization, sentiment analysis, and text modeling.
 
