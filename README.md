@@ -15,7 +15,7 @@ status](https://codecov.io/gh/tidymodels/tidymodels/branch/master/graph/badge.sv
 <!-- badges: end -->
 
 [tidymodels](https://www.tidymodels.org/) is a “metapackage” for
-modeling and statistical analysis that share the underlying design
+modeling and statistical analysis that shares the underlying design
 philosophy, grammar, and data structures of the
 [tidyverse](https://www.tidyverse.org/).
 
