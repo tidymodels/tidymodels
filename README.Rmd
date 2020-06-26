@@ -1,13 +1,29 @@
-<img src="tidymodels_hex.png" align="center" height = "80px" align = "middle"/>
+---
+output: github_document
+---
 
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# tidymodels <a href='https://tidymodels.tidymodels.org'><img src='tidymodels_hex.png' align="right" height="139" /></a>
+
+<!-- badges: start -->
 [![R build status](https://github.com/tidymodels/tidymodels/workflows/R-CMD-check/badge.svg)](https://github.com/tidymodels/tidymodels)
 [![Coverage status](https://codecov.io/gh/tidymodels/tidymodels/branch/master/graph/badge.svg)](https://codecov.io/github/tidymodels/tidymodels?branch=master)
 [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/tidymodels)](http://cran.r-project.org/web/packages/tidymodels)
 [![Downloads](http://cranlogs.r-pkg.org/badges/tidymodels)](http://cran.rstudio.com/package=tidymodels)
 ![](https://img.shields.io/badge/lifecycle-experimental-orange.svg)
+<!-- badges: end -->
 
-
-`tidymodels` is a "meta-package" for modeling and statistical analysis that share the underlying design philosophy, grammar, and data structures of the tidyverse.
+[tidymodels](https://www.tidymodels.org/) is a "metapackage" for modeling and statistical analysis that share the underlying design philosophy, grammar, and data structures of the [tidyverse](https://www.tidyverse.org/).
 
 It includes a core set of packages that are loaded on startup:
 
@@ -48,11 +64,19 @@ There are a few modeling packages that are also installed along with `tidymodels
 * [`tidytext`](https://juliasilge.github.io/tidytext) contains tidy tools for quantitative text analysis, including basic text summarization, sentiment analysis, and text modeling.
 
 
-To install:
+## Installation
 
-```r
-require(devtools)
-devtools::install_github("tidymodels/tidymodels")
+You can install the released version of tidymodels from [CRAN](https://CRAN.R-project.org) with:
+
+``` r
+install.packages("tidymodels")
+```
+
+Install the development version from GitHub with:
+
+``` r
+require("devtools")
+install_github("tidymodels/tidymodels")
 ```
 
 When loading the package, the versions and conflicts are listed:
@@ -61,4 +85,15 @@ When loading the package, the versions and conflicts are listed:
 ```{r}
 library(tidymodels)
 ```
-  
+
+## Contributing
+
+This project is released with a [Contributor Code of Conduct](https://contributor-covenant.org/version/2/0/CODE_OF_CONDUCT.html). By contributing to this project, you agree to abide by its terms.
+
+- For questions and discussions about tidymodels packages, modeling, and machine learning, [join us on RStudio Community](https://rstd.io/tidymodels-community).
+
+- Most issues will likely belong on the GitHub repo of an individual package. If you think you have encountered a bug with the tidymodels metapackage itself, please [submit an issue](https://github.com/tidymodels/tidymodels/issues).
+
+- Either way, learn how to create and share a [reprex](https://rstd.io/reprex) (a minimal, reproducible example), to clearly communicate about your code.
+
+- Check out further details on [contributing guidelines for tidymodels packages](https://www.tidymodels.org/contribute/) and [how to get help](https://www.tidymodels.org/help/).
