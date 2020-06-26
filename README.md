@@ -100,15 +100,15 @@ When loading the package, the versions and conflicts are listed:
 
 ``` r
 library(tidymodels)
-#> ── Attaching packages ───────────────────────────────────────────── tidymodels 0.1.0 ──
-#> ✓ broom     0.5.6      ✓ recipes   0.1.12
+#> ── Attaching packages ────────────────────── tidymodels 0.1.0 ──
+#> ✓ broom     0.5.6      ✓ recipes   0.1.13
 #> ✓ dials     0.0.7      ✓ rsample   0.0.7 
 #> ✓ dplyr     1.0.0      ✓ tibble    3.0.1 
 #> ✓ ggplot2   3.3.2      ✓ tune      0.1.0 
 #> ✓ infer     0.5.2      ✓ workflows 0.1.1 
 #> ✓ parsnip   0.1.1      ✓ yardstick 0.0.6 
 #> ✓ purrr     0.3.4
-#> ── Conflicts ──────────────────────────────────────────────── tidymodels_conflicts() ──
+#> ── Conflicts ───────────────────────── tidymodels_conflicts() ──
 #> x purrr::discard() masks scales::discard()
 #> x dplyr::filter()  masks stats::filter()
 #> x dplyr::lag()     masks stats::lag()
@@ -122,7 +122,7 @@ Conduct](https://contributor-covenant.org/version/2/0/CODE_OF_CONDUCT.html).
 By contributing to this project, you agree to abide by its terms.
 
   - For questions and discussions about tidymodels packages, modeling,
-    and machine learning, [join us on RStudio
+    and machine learning, please [post on RStudio
     Community](https://rstd.io/tidymodels-community).
 
   - Most issues will likely belong on the GitHub repo of an individual
