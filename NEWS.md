@@ -1,5 +1,7 @@
 # tidymodels (development version)
 
+ * `tidyposterior` was removed from the imports list. 
+
 # `tidymodels` 0.0.4
 
  * Updated versions

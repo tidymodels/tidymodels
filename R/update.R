@@ -54,14 +54,14 @@ pkg_deps <- function(x = "tidymodels", recursive = FALSE) {
   pkgs <- utils::available.packages()
   deps <- tools::package_dependencies(x, pkgs, recursive = recursive)
 
-  # NULL before pacakge is on CRAN
+  # NULL before package is on CRAN
   if ("tidymodels" %in% x && is.null(deps$tidymodels)) {
     deps$tidymodels <-
       c(
         "broom", "cli", "crayon", "dplyr", "ggplot2", "infer",
         "magrittr", "pillar", "purrr", "recipes", "rlang",
-        "rsample", "rstudioapi", "tibble", "tidyr", "tidytext",
-        "tidypredict", "tidyposterior", "yardstick"
+        "rsample", "rstudioapi", "tibble", "tidytext",
+        "tidypredict", "yardstick"
       )
   }
 

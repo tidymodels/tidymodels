@@ -15,9 +15,8 @@ knitr::opts_chunk$set(
 
 # tidymodels <a href='https://tidymodels.tidymodels.org'><img src='tidymodels_hex.png' align="right" height="139" /></a>
 
-<!-- badges: start -->
-[![R build status](https://github.com/tidymodels/tidymodels/workflows/R-CMD-check/badge.svg)](https://github.com/tidymodels/tidymodels)
-[![Coverage status](https://codecov.io/gh/tidymodels/tidymodels/branch/master/graph/badge.svg)](https://codecov.io/github/tidymodels/tidymodels?branch=master)
+[![R build status](https://github.com/tidymodels/tidymodels/workflows/R-CMD-check/badge.svg)](https://github.com/tidymodels/tidymodels/actions)
+[![Codecov test coverage](https://codecov.io/gh/tidymodels/tidymodels/branch/master/graph/badge.svg)](https://codecov.io/gh/tidymodels/tidymodels?branch=master)
 [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/tidymodels)](http://cran.r-project.org/web/packages/tidymodels)
 [![Downloads](http://cranlogs.r-pkg.org/badges/tidymodels)](http://cran.rstudio.com/package=tidymodels)
 ![](https://img.shields.io/badge/lifecycle-experimental-orange.svg)
@@ -49,6 +48,8 @@ It includes a core set of packages that are loaded on startup:
 
 * [`tidyr`](http://tidyr.tidyverse.org) provides tools for reshaping data. 
 
+* [`tune`](https://tune.tidymodels.org) contains the functions to optimize model hyper-parameters.
+ 
 * [`tune`](https://tune.tidymodels.org) contains the functions to optimize model hyper-parameters.
  
 * [`workflows`](https://workflows.tidymodels.org) has methods to combine pre-processing steps and models into a single object. 

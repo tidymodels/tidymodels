@@ -54,7 +54,7 @@
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -71,7 +71,7 @@
         <a class="navbar-brand" href="../index.html">tidymodels</a>
         <div class="info">
           <span class="partof">part of <a href="https://github.com/tidymodels">tidymodels</a></span>
-          <span class="version version-danger" data-toggle="tooltip" data-placement="bottom" title="In-development version">0.0.3.9000</span>
+          <span class="version version-danger" data-toggle="tooltip" data-placement="bottom" title="In-development version">0.1.0.9000</span>
         </div>
       </div>
     </div>
@@ -87,7 +87,7 @@
   <a href="../news/index.html">News</a>
 </li>
         <li>
-  <a href="https://github.com/tidymodels/tidymodels">
+  <a href="https://github.com/tidymodels/tidymodels/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -127,20 +127,16 @@
 
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>tidymodels_packages</span>()</div><div class='output co'>#&gt;  [1] "broom"         "cli"           "crayon"        "dials"        
-#&gt;  [5] "dplyr"         "ggplot2"       "infer"         "magrittr"     
-#&gt;  [9] "parsnip"       "pillar"        "purrr"         "recipes"      
-#&gt; [13] "rlang"         "rsample"       "rstudioapi"    "tibble"       
-#&gt; [17] "tidytext"      "tidypredict"   "tidyposterior" "tune"         
-#&gt; [21] "workflows"     "yardstick"     "tidymodels"   </div></pre>
+    <pre class="examples"><div class='input'><span class='fu'>tidymodels_packages</span>()</div><div class='output co'>#&gt;  [1] "broom"       "cli"         "crayon"      "dials"       "dplyr"      
+#&gt;  [6] "ggplot2"     "infer"       "magrittr"    "parsnip"     "pillar"     
+#&gt; [11] "purrr"       "recipes"     "rlang"       "rsample"     "rstudioapi" 
+#&gt; [16] "tibble"      "tidytext"    "tidypredict" "tune"        "workflows"  
+#&gt; [21] "yardstick"   "tidymodels" </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      <li><a href="#arguments">Arguments</a></li>
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 

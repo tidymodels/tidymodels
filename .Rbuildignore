@@ -14,3 +14,6 @@ tidymodels_hex.png
 ^\.github/workflows/R\.yaml$
 ^\.github/workflows/R-CMD-check\.yaml$
 ^CODE_OF_CONDUCT\.md$
+^codecov\.yml$
+^\.github$
+

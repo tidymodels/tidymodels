@@ -22,7 +22,7 @@
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
 </head>
-<body>
+<body data-spy="scroll" data-target="#toc">
     <div class="container template-home">
       <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -38,7 +38,7 @@
         <a class="navbar-brand" href="index.html">tidymodels</a>
         <div class="info">
           <span class="partof">part of <a href="https://github.com/tidymodels">tidymodels</a></span>
-          <span class="version version-danger" data-toggle="tooltip" data-placement="bottom" title="In-development version">0.0.3.9000</span>
+          <span class="version version-danger" data-toggle="tooltip" data-placement="bottom" title="In-development version">0.1.0.9000</span>
         </div>
       </div>
     </div>
@@ -54,7 +54,7 @@
   <a href="news/index.html">News</a>
 </li>
         <li>
-  <a href="https://github.com/tidymodels/tidymodels">
+  <a href="https://github.com/tidymodels/tidymodels/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -73,35 +73,34 @@
   <div class="contents col-md-9">
 
 <p><img src="tidymodels_hex.png" align="center" height="80px"></p>
-<p><a href="https://github.com/tidymodels/tidymodels"><img src="https://github.com/tidymodels/tidymodels/workflows/R-CMD-check/badge.svg" alt="R build status"></a> <a href="https://codecov.io/github/tidymodels/tidymodels?branch=master"><img src="https://codecov.io/gh/tidymodels/tidymodels/branch/master/graph/badge.svg" alt="Coverage status"></a> <a href="http://cran.r-project.org/web/packages/tidymodels"><img src="http://www.r-pkg.org/badges/version/tidymodels" alt="CRAN_Status_Badge"></a> <a href="http://cran.rstudio.com/package=tidymodels"><img src="http://cranlogs.r-pkg.org/badges/tidymodels" alt="Downloads"></a> <img src="https://img.shields.io/badge/lifecycle-experimental-orange.svg"></p>
+<p><a href="https://github.com/tidymodels/tidymodels/actions"><img src="https://github.com/tidymodels/tidymodels/workflows/R-CMD-check/badge.svg" alt="R build status"></a> <a href="https://codecov.io/gh/tidymodels/tidymodels?branch=master"><img src="https://codecov.io/gh/tidymodels/tidymodels/branch/master/graph/badge.svg" alt="Codecov test coverage"></a> <a href="http://cran.r-project.org/web/packages/tidymodels"><img src="http://www.r-pkg.org/badges/version/tidymodels" alt="CRAN_Status_Badge"></a> <a href="http://cran.rstudio.com/package=tidymodels"><img src="http://cranlogs.r-pkg.org/badges/tidymodels" alt="Downloads"></a> <img src="https://img.shields.io/badge/lifecycle-experimental-orange.svg"></p>
 <p><code>tidymodels</code> is a “meta-package” for modeling and statistical analysis that share the underlying design philosophy, grammar, and data structures of the tidyverse.</p>
 <p>It includes a core set of packages that are loaded on startup:</p>
 <ul>
-<li><p><a href="https://broom.tidyverse.org/"><code>broom</code></a> takes the messy output of built-in functions in R, such as <code>lm</code>, <code>nls</code>, or <code>t.test</code>, and turns them into tidy data frames.</p></li>
-<li><p><a href="https://tidymodels.github.io/dials/"><code>dials</code></a> has tools to create and manage values of tuning parameters.</p></li>
+<li><p><a href="https://broom.tidymodels.org/"><code>broom</code></a> takes the messy output of built-in functions in R, such as <code>lm</code>, <code>nls</code>, or <code>t.test</code>, and turns them into tidy data frames.</p></li>
+<li><p><a href="https://dials.tidymodels.org"><code>dials</code></a> has tools to create and manage values of tuning parameters.</p></li>
 <li><p><a href="http://dplyr.tidyverse.org"><code>dplyr</code></a> contains a grammar for data manipulation.</p></li>
 <li><p><a href="http://ggplot2.tidyverse.org"><code>ggplot2</code></a> implements a grammar of graphics.</p></li>
 <li><p><a href="http://infer.netlify.com/"><code>infer</code></a> is a modern approach to statistical inference.</p></li>
-<li><p><a href="https://tidymodels.github.io/parsnip/"><code>parsnip</code></a> is a tidy, unified interface to creating models.</p></li>
+<li><p><a href="https://parsnip.tidymodels.org"><code>parsnip</code></a> is a tidy, unified interface to creating models.</p></li>
 <li><p><a href="http://purrr.tidyverse.org"><code>purrr</code></a> is a functional programming toolkit.</p></li>
-<li><p><a href="https://tidymodels.github.io/recipes/"><code>recipes</code></a> is a general data preprocessor with a modern interface. It can create model matrices that incorporate feature engineering, imputation, and other help tools.</p></li>
-<li><p><a href="https://tidymodels.github.io/rsample/"><code>rsample</code></a> has infrastructure for <em>resampling</em> data so that models can be assessed and empirically validated.</p></li>
+<li><p><a href="https://recipes.tidymodels.org"><code>recipes</code></a> is a general data preprocessor with a modern interface. It can create model matrices that incorporate feature engineering, imputation, and other help tools.</p></li>
+<li><p><a href="https://rsample.tidymodels.org"><code>rsample</code></a> has infrastructure for <em>resampling</em> data so that models can be assessed and empirically validated.</p></li>
 <li><p><a href="http://tibble.tidyverse.org"><code>tibble</code></a> has a modern re-imagining of the data frame.</p></li>
-<li><p><a href="https://tidymodels.github.io/tune/"><code>tune</code></a> contains the functions to optimize model hyper-parameters.</p></li>
-<li><p><a href="https://tidymodels.github.io/workflows/"><code>workflows</code></a> has methods to combine pre-processing steps and models into a single object.</p></li>
-<li><p><a href="https://tidymodels.github.io/yardstick/"><code>yardstick</code></a> contains tools for evaluating models (e.g. accuracy, RMSE, etc.)</p></li>
+<li><p><a href="https://tune.tidymodels.org"><code>tune</code></a> contains the functions to optimize model hyper-parameters.</p></li>
+<li><p><a href="https://workflows.tidymodels.org"><code>workflows</code></a> has methods to combine pre-processing steps and models into a single object.</p></li>
+<li><p><a href="https://yardstick.tidymodels.org"><code>yardstick</code></a> contains tools for evaluating models (e.g. accuracy, RMSE, etc.)</p></li>
 </ul>
 <p>There are a few modeling packages that are also installed along with <code>tidymodels</code> (but are not attached on startup):</p>
 <ul>
-<li><p><a href="http://tidypredict.netlify.com/"><code>tidypredict</code></a> translates some model prediction equations to SQL for high-performance computing.</p></li>
-<li><p><a href="https://tidymodels.github.io/tidyposterior/"><code>tidyposterior</code></a> can be used to compare models using resampling and Bayesian analysis.</p></li>
+<li><p><a href="https://tidypredict.tidymodels.org"><code>tidypredict</code></a> translates some model prediction equations to SQL for high-performance computing.</p></li>
 <li><p><a href="https://github.com/juliasilge/tidytext"><code>tidytext</code></a> contains tidy tools for quantitative text analysis, including basic text summarization, sentiment analysis, and text modeling.</p></li>
 </ul>
 <p>To install:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw"><a href="https://rdrr.io/r/base/library.html">require</a></span>(devtools)</span>
-<span id="cb1-2"><a href="#cb1-2"></a>devtools<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/devtools/man/remote-reexports.html">install_github</a></span>(<span class="st">"tidymodels/tidymodels"</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/library.html">require</a></span>(<span class="no">devtools</span>)
+<span class="kw pkg">devtools</span><span class="kw ns">::</span><span class="fu"><a href="https://devtools.r-lib.org//reference/remote-reexports.html">install_github</a></span>(<span class="st">"tidymodels/tidymodels"</span>)</pre></div>
 <p>When loading the package, the versions and conflicts are listed:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(tidymodels)</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">tidymodels</span>)</pre></div>
 <pre><code>## Registered S3 method overwritten by 'xts':
 ##   method     from
 ##   as.zoo.xts zoo</code></pre>
@@ -129,7 +128,7 @@
 <ul class="list-unstyled">
 <li>Download from CRAN at <br><a href="https://cloud.r-project.org/package=tidymodels">https://​cloud.r-project.org/​package=tidymodels</a>
 </li>
-<li>Browse source code at <br><a href="https://github.com/tidymodels/tidymodels">https://​github.com/​tidymodels/​tidymodels</a>
+<li>Browse source code at <br><a href="https://github.com/tidymodels/tidymodels/">https://​github.com/​tidymodels/​tidymodels/​</a>
 </li>
 <li>Report a bug at <br><a href="https://github.com/tidymodels/tidymodels/issues">https://​github.com/​tidymodels/​tidymodels/​issues</a>
 </li>

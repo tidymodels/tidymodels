@@ -13,6 +13,7 @@ The tidy modeling "verse" is a collection of packages for
 \seealso{
 Useful links:
 \itemize{
+  \item \url{https://tidymodels.tidymodels.org}
   \item \url{https://github.com/tidymodels/tidymodels}
   \item Report bugs at \url{https://github.com/tidymodels/tidymodels/issues}
 }

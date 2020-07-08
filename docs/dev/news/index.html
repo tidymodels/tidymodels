@@ -52,7 +52,7 @@
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-news">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -69,7 +69,7 @@
         <a class="navbar-brand" href="../index.html">tidymodels</a>
         <div class="info">
           <span class="partof">part of <a href="https://github.com/tidymodels">tidymodels</a></span>
-          <span class="version version-danger" data-toggle="tooltip" data-placement="bottom" title="In-development version">0.0.3.9000</span>
+          <span class="version version-danger" data-toggle="tooltip" data-placement="bottom" title="In-development version">0.1.0.9000</span>
         </div>
       </div>
     </div>
@@ -85,7 +85,7 @@
   <a href="../news/index.html">News</a>
 </li>
         <li>
-  <a href="https://github.com/tidymodels/tidymodels">
+  <a href="https://github.com/tidymodels/tidymodels/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -103,28 +103,37 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-      <h1>Changelog <small></small></h1>
+      <h1 data-toc-skip>Changelog <small></small></h1>
       <small>Source: <a href='https://github.com/tidymodels/tidymodels/blob/master/NEWS.md'><code>NEWS.md</code></a></small>
     </div>
 
+    <div id="tidymodels-development-version" class="section level1">
+<h1 class="page-header" data-toc-text="development version">
+<a href="#tidymodels-development-version" class="anchor"></a>tidymodels (development version)<small> Unreleased </small>
+</h1>
+<ul>
+<li>
+<code>tidyposterior</code> was removed from the imports list.</li>
+</ul>
+</div>
     <div id="tidymodels-004" class="section level1">
-<h1 class="page-header">
+<h1 class="page-header" data-toc-text="0.0.4">
 <a href="#tidymodels-004" class="anchor"></a><small> Unreleased </small><code>tidymodels</code> 0.0.4</h1>
 <ul>
 <li><p>Updated versions</p></li>
 <li><p>Added <code>workflows</code>, and <code>tune</code> to the core package list.</p></li>
-<li><p>Moved away form testing via <code>travis</code></p></li>
+<li><p>Moved away from testing via <code>travis</code></p></li>
 </ul>
 </div>
     <div id="tidymodels-003" class="section level1">
-<h1 class="page-header">
+<h1 class="page-header" data-toc-text="0.0.3">
 <a href="#tidymodels-003" class="anchor"></a><small> 2019-10-04 </small><code>tidymodels</code> 0.0.3</h1>
 <ul>
 <li>Updated versions</li>
 </ul>
 </div>
     <div id="tidymodels-002" class="section level1">
-<h1 class="page-header">
+<h1 class="page-header" data-toc-text="0.0.2">
 <a href="#tidymodels-002" class="anchor"></a><small> 2018-11-27 </small><code>tidymodels</code> 0.0.2</h1>
 <ul>
 <li><p>Added <code>parsnip</code> and <code>dials</code> to the core package list.</p></li>
@@ -132,22 +141,16 @@
 </ul>
 </div>
     <div id="tidymodels-001" class="section level1">
-<h1 class="page-header">
+<h1 class="page-header" data-toc-text="0.0.1">
 <a href="#tidymodels-001" class="anchor"></a><small> 2018-07-27 </small><code>tidymodels</code> 0.0.1</h1>
 <p>First CRAN version.</p>
 </div>
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
-    <div id="tocnav">
-      <h2>Contents</h2>
-      <ul class="nav nav-pills nav-stacked">
-        <li><a href="#tidymodels-004">0.0.4</a></li>
-        <li><a href="#tidymodels-003">0.0.3</a></li>
-        <li><a href="#tidymodels-002">0.0.2</a></li>
-        <li><a href="#tidymodels-001">0.0.1</a></li>
-      </ul>
-    </div>
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 
 </div>

@@ -10,6 +10,9 @@ status](https://github.com/tidymodels/tidymodels/workflows/R-CMD-check/badge.svg
 [![Coverage
 status](https://codecov.io/gh/tidymodels/tidymodels/branch/master/graph/badge.svg)](https://codecov.io/github/tidymodels/tidymodels?branch=master)
 [![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/tidymodels)](http://cran.r-project.org/web/packages/tidymodels)
+[![R build status](https://github.com/tidymodels/tidymodels/workflows/R-CMD-check/badge.svg)](https://github.com/tidymodels/tidymodels/actions)
+[![Codecov test coverage](https://codecov.io/gh/tidymodels/tidymodels/branch/master/graph/badge.svg)](https://codecov.io/gh/tidymodels/tidymodels?branch=master)
+[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/tidymodels)](http://cran.r-project.org/web/packages/tidymodels)
 [![Downloads](http://cranlogs.r-pkg.org/badges/tidymodels)](http://cran.rstudio.com/package=tidymodels)
 ![](https://img.shields.io/badge/lifecycle-experimental-orange.svg)
 <!-- badges: end -->
@@ -21,15 +24,10 @@ philosophy, grammar, and data structures of the
 
 It includes a core set of packages that are loaded on startup:
 
-  - [`broom`](https://broom.tidymodels.org) takes the messy output of
-    built-in functions in R, such as `lm`, `nls`, or `t.test`, and turns
-    them into tidy data frames.
 
-  - [`dials`](https://dials.tidymodels.org) has tools to create and
-    manage values of tuning parameters.
+* [`broom`](https://broom.tidymodels.org/) takes the messy output of built-in functions in R, such as `lm`, `nls`, or `t.test`, and turns them into tidy data frames.
 
-  - [`dplyr`](http://dplyr.tidyverse.org) contains a grammar for data
-    manipulation.
+* [`dials`](https://dials.tidymodels.org) has tools to create and manage values of tuning parameters.
 
   - [`ggplot2`](http://ggplot2.tidyverse.org) implements a grammar of
     graphics.
@@ -40,45 +38,26 @@ It includes a core set of packages that are loaded on startup:
   - [`parsnip`](https://parsnip.tidymodels.org) is a tidy, unified
     interface to creating models.
 
-  - [`purrr`](http://purrr.tidyverse.org) is a functional programming
-    toolkit.
+* [`parsnip`](https://parsnip.tidymodels.org) is a tidy, unified interface to creating models. 
+
 
   - [`recipes`](https://recipes.tidymodels.org) is a general data
     preprocessor with a modern interface. It can create model matrices
     that incorporate feature engineering, imputation, and other help
     tools.
 
-  - [`rsample`](https://rsample.tidymodels.org) has infrastructure for
-    *resampling* data so that models can be assessed and empirically
-    validated.
+* [`recipes`](https://recipes.tidymodels.org) is a general data preprocessor with a modern interface. It can create model matrices that incorporate feature engineering, imputation, and other help tools.
 
-  - [`tibble`](http://tibble.tidyverse.org) has a modern re-imagining of
-    the data frame.
+* [`rsample`](https://rsample.tidymodels.org) has infrastructure for _resampling_ data so that models can be assessed and empirically validated. 
 
-  - [`tidyr`](http://tidyr.tidyverse.org) provides tools for reshaping
-    data.
+* [`tibble`](http://tibble.tidyverse.org) has a modern re-imagining of the data frame.
+ 
+* [`tune`](https://tune.tidymodels.org) contains the functions to optimize model hyper-parameters.
+ 
+* [`workflows`](https://workflows.tidymodels.org) has methods to combine pre-processing steps and models into a single object. 
 
-  - [`tune`](https://tune.tidymodels.org) contains the functions to
-    optimize model hyper-parameters.
+* [`yardstick`](https://yardstick.tidymodels.org) contains tools for evaluating models (e.g. accuracy, RMSE, etc.)
 
-  - [`workflows`](https://workflows.tidymodels.org) has methods to
-    combine pre-processing steps and models into a single object.
-
-  - [`yardstick`](https://yardstick.tidymodels.org) contains tools for
-    evaluating models (e.g. accuracy, RMSE, etc.)
-
-There are a few modeling packages that are also installed along with
-`tidymodels` (but are not attached on startup):
-
-  - [`tidypredict`](https://tidypredict.tidymodels.org) translates some
-    model prediction equations to SQL for high-performance computing.
-
-  - [`tidyposterior`](https://tidyposterior.tidymodels.org) can be used
-    to compare models using resampling and Bayesian analysis.
-
-  - [`tidytext`](https://juliasilge.github.io/tidytext) contains tidy
-    tools for quantitative text analysis, including basic text
-    summarization, sentiment analysis, and text modeling.
 
 ## Installation
 
