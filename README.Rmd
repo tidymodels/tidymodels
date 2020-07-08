@@ -37,13 +37,6 @@ It includes a core set of packages that are loaded on startup:
 
 * [`yardstick`](https://yardstick.tidymodels.org) contains tools for evaluating models (e.g. accuracy, RMSE, etc.)
 
-There are a few modeling packages that are also installed along with `tidymodels` (but are not attached on startup): 
-
-* [`tidypredict`](https://tidypredict.tidymodels.org) translates some model prediction equations to SQL for high-performance computing.
-
-* [`tidytext`](https://github.com/juliasilge/tidytext) contains tidy tools for quantitative text analysis, including basic text summarization, sentiment analysis, and text modeling.
-
-
 To install:
 
 ```r

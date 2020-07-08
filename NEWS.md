@@ -1,6 +1,8 @@
 # tidymodels 0.2.0
 
- * `tidyposterior` was removed from the imports list. 
+ * Updated versions
+ 
+ * `tidyposterior`, `pillar`, `tidypredict`, `tidytext` were removed from the imports list due to an `R CMD check` warning about the number of imports.  
  
  * `tidyr` and `modeldata` were added to the imports list. 
 

@@ -4,6 +4,7 @@ travis.yml
 codecov.yml
 README.Rmd
 README.md
+README.html
 ^docs$
 ^pkgdown$
 .github
