@@ -5,9 +5,9 @@ tags <- list(
   "parallel processing" = c("furrr"),
   "resampling" = c("infer", "tidyposterior"),
   "text analysis" = c("tidytext", "keras", "textrecipes"),
-  "time series" = c("timetk", "tidyquant", "sweep"),
+  "time series" = c("timetk", "tidyquant", "sweep", "modeltime"),
   "extra recipes" = c("embed", "textrecipes", "themis"),
-  "extra models" = c("discrim")
+  "extra models" = c("discrim", "plsmod", "rules", "poissonreg", "baguette")
 )
 # cat(paste0("'", sort(names(tags)), "'", collapse = ", "))
 
