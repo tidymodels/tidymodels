@@ -1,6 +1,8 @@
-core <- c("broom", "dials", "dplyr", "ggplot2", "infer", "parsnip",
-          "purrr", "recipes", "rsample", "tibble", "tidyr", "tune",
-          "workflows", "yardstick")
+core <- c(
+  "broom", "dials", "dplyr", "ggplot2", "infer", "modeldata", "parsnip",
+  "purrr", "recipes", "rsample",  "tibble",  "tidyr",  "tune", "workflows",
+  "yardstick"
+)
 
 pkg_loaded <- function(pkg = NULL) {
   if (is.null(pkg))
