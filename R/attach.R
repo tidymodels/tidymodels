@@ -4,6 +4,7 @@ core <- c(
   "yardstick"
 )
 
+
 pkg_loaded <- function(pkg = NULL) {
   if (is.null(pkg))
     pkg <- core

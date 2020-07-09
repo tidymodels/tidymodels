@@ -37,11 +37,17 @@ It includes a core set of packages that are loaded on startup:
 
 * [`yardstick`](https://yardstick.tidymodels.org) contains tools for evaluating models (e.g. accuracy, RMSE, etc.)
 
-To install:
+You can install the released version of tidymodels from [CRAN](https://CRAN.R-project.org) with:
 
-```r
-require(devtools)
-devtools::install_github("tidymodels/tidymodels")
+``` r
+install.packages("tidymodels")
+```
+
+Install the development version from GitHub with:
+
+``` r
+require("remotes")
+install_github("tidymodels/tidymodels")
 ```
 
 When loading the package, the versions and conflicts are listed:
@@ -51,3 +57,14 @@ When loading the package, the versions and conflicts are listed:
 library(tidymodels)
 ```
   
+## Contributing
+
+This project is released with a [Contributor Code of Conduct](https://contributor-covenant.org/version/2/0/CODE_OF_CONDUCT.html). By contributing to this project, you agree to abide by its terms.
+
+- For questions and discussions about tidymodels packages, modeling, and machine learning, please [post on RStudio Community](https://rstd.io/tidymodels-community).
+
+- Most issues will likely belong on the GitHub repo of an individual package. If you think you have encountered a bug with the tidymodels metapackage itself, please [submit an issue](https://github.com/tidymodels/tidymodels/issues).
+
+- Either way, learn how to create and share a [reprex](https://rstd.io/reprex) (a minimal, reproducible example), to clearly communicate about your code.
+
+- Check out further details on [contributing guidelines for tidymodels packages](https://www.tidymodels.org/contribute/) and [how to get help](https://www.tidymodels.org/help/).
