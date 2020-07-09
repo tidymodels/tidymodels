@@ -1,4 +1,4 @@
-# tidymodels 0.2.0
+# tidymodels 0.1.1
 
  * Updated versions
  
