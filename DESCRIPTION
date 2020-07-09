@@ -33,6 +33,8 @@ Imports:
     tibble (>= 2.1.3),
     tidytext (>= 0.2.2),
     tidypredict (>= 0.4.3),
+    tidyposterior (>= 0.0.2),
+    tidyr (>= 1.0.1),
     tune (>= 0.0.1),
     workflows (>= 0.1.0),
     yardstick (>= 0.0.4)
@@ -45,5 +47,5 @@ Suggests:
     xml2
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 7.1.0.9000
+RoxygenNote: 7.1.0
 VignetteBuilder: knitr
