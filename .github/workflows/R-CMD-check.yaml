@@ -63,6 +63,8 @@ jobs:
           sudo -s eval "$sysreqs"
 
       - name: Install dependencies
+        with:
+          R_COMPILE_AND_INSTALL_PACKAGES: 'always'
         run: |
           remotes::install_deps(dependencies = TRUE)
           remotes::install_cran("rcmdcheck")
