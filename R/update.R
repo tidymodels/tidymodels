@@ -58,10 +58,10 @@ pkg_deps <- function(x = "tidymodels", recursive = FALSE) {
   if ("tidymodels" %in% x && is.null(deps$tidymodels)) {
     deps$tidymodels <-
       c(
-        "broom", "cli", "crayon", "dplyr", "ggplot2", "infer",
-        "magrittr", "pillar", "purrr", "recipes", "rlang",
-        "rsample", "rstudioapi", "tibble", "tidytext",
-        "tidypredict", "yardstick"
+        "broom", "cli", "crayon", "dials", "dplyr", "ggplot2", "infer",
+        "magrittr", "modeldata", "parsnip", "pillar", "purrr", "recipes",
+        "rlang", "rsample", "rstudioapi", "tibble", "tidyr", "tune",
+        "workflows", "yardstick"
       )
   }
 
