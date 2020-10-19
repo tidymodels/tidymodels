@@ -1,13 +1,31 @@
-<img src="tidymodels_hex.png" align="center" height = "80px" align = "middle"/>
+---
+output: github_document
+---
 
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, echo = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# tidymodels <a href='https://tidymodels.tidymodels.org'><img src='tidymodels_hex.png' align="right" height="139" /></a>
+
+<!-- badges: start -->
 [![R build status](https://github.com/tidymodels/tidymodels/workflows/R-CMD-check/badge.svg)](https://github.com/tidymodels/tidymodels/actions)
 [![Codecov test coverage](https://codecov.io/gh/tidymodels/tidymodels/branch/master/graph/badge.svg)](https://codecov.io/gh/tidymodels/tidymodels?branch=master)
-[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/tidymodels)](http://cran.r-project.org/web/packages/tidymodels)
-[![Downloads](http://cranlogs.r-pkg.org/badges/tidymodels)](http://cran.rstudio.com/package=tidymodels)
-![](https://img.shields.io/badge/lifecycle-experimental-orange.svg)
+[![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/tidymodels)](https://cran.r-project.org/web/packages/tidymodels)
+[![Downloads](https://cranlogs.r-pkg.org/badges/tidymodels)](https://cran.rstudio.com/package=tidymodels)
+[![lifecycle](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
+<!-- badges: end -->
 
+## Overview
 
-`tidymodels` is a "meta-package" for modeling and statistical analysis that share the underlying design philosophy, grammar, and data structures of the tidyverse.
+[tidymodels](https://www.tidymodels.org/) is a "meta-package" for modeling and statistical analysis that share the underlying design philosophy, grammar, and data structures of the [tidyverse](https://www.tidyverse.org/).
 
 It includes a core set of packages that are loaded on startup:
 
@@ -30,9 +48,9 @@ It includes a core set of packages that are loaded on startup:
 * [`rsample`](https://rsample.tidymodels.org) has infrastructure for _resampling_ data so that models can be assessed and empirically validated. 
 
 * [`tibble`](http://tibble.tidyverse.org) has a modern re-imagining of the data frame.
- 
+
 * [`tune`](https://tune.tidymodels.org) contains the functions to optimize model hyper-parameters.
- 
+
 * [`workflows`](https://workflows.tidymodels.org) has methods to combine pre-processing steps and models into a single object. 
 
 * [`yardstick`](https://yardstick.tidymodels.org) contains tools for evaluating models (e.g. accuracy, RMSE, etc.)
@@ -46,7 +64,7 @@ install.packages("tidymodels")
 Install the development version from GitHub with:
 
 ``` r
-require("remotes")
+library("devtools")
 install_github("tidymodels/tidymodels")
 ```
 
@@ -56,7 +74,7 @@ When loading the package, the versions and conflicts are listed:
 ```{r}
 library(tidymodels)
 ```
-  
+
 ## Contributing
 
 This project is released with a [Contributor Code of Conduct](https://contributor-covenant.org/version/2/0/CODE_OF_CONDUCT.html). By contributing to this project, you agree to abide by its terms.
