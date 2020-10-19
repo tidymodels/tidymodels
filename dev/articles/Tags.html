@@ -44,7 +44,7 @@
         <a class="navbar-brand" href="../index.html">tidymodels</a>
         <div class="info hidden-xs hidden-sm">
           <span class="partof">part of <a href="https://github.com/tidymodels">tidymodels</a></span>
-          <span class="version version-danger" data-toggle="tooltip" data-placement="bottom" title="In-development version">0.1.0.9000</span>
+          <span class="version version-danger" data-toggle="tooltip" data-placement="bottom" title="In-development version">0.1.1.9000</span>
         </div>
       </div>
     </div>
@@ -91,8 +91,8 @@
 <p><code>tidymodels</code> has a set of core packages that are loaded and attached when the <code>tidymodels</code> package is loaded.</p>
 <p>There are other sets of packages that can be attached via <code><a href="../reference/tag_show.html">tidymodels::tag_attach(tag)</a></code> where the <code>tag</code> is a character string. Existing tags are:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit">
-<span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="kw"><a href="https://tidymodels.tidymodels.org">tidymodels</a></span>)
-<span class="fu"><a href="../reference/tag_show.html">tag_show</a></span>()
+<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidymodels.tidymodels.org">tidymodels</a></span><span class="op">)</span>
+<span class="fu"><a href="../reference/tag_show.html">tag_show</a></span><span class="op">(</span><span class="op">)</span>
 <span class="co">#&gt; All tags:</span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt; Bayesian analysis: 'tidyposterior', 'tidybayes'</span>
@@ -101,10 +101,9 @@
 <span class="co">#&gt; parallel processing: 'furrr'</span>
 <span class="co">#&gt; resampling: 'infer', 'tidyposterior'</span>
 <span class="co">#&gt; text analysis: 'tidytext', 'keras', 'textrecipes'</span>
-<span class="co">#&gt; time series: 'timetk', 'tidyquant', 'sweep'</span>
+<span class="co">#&gt; time series: 'timetk', 'tidyquant', 'sweep', 'modeltime', 'tsibble', 'fable'</span>
 <span class="co">#&gt; extra recipes: 'embed', 'textrecipes', 'themis'</span>
-<span class="co">#&gt; extra models: 'discrim'</span>
-</pre></div>
+<span class="co">#&gt; extra models: 'discrim', 'plsmod', 'rules', 'poissonreg', 'baguette'</span></pre></div>
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
@@ -116,7 +115,7 @@
 
 
       <footer><div class="tidyverse">
-  <p><code>tidymodels</code> is a part of the <strong>tidymodels</strong> ecosystem, a collection of modeling packages designed with common APIs and a shared philosophy.</p>
+  <p>tidymodels is a part of the <strong>tidymodels</strong> ecosystem, a collection of modeling packages designed with common APIs and a shared philosophy.</p>
 </div>
 
 <div class="author">
