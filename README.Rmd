@@ -64,7 +64,7 @@ install.packages("tidymodels")
 Install the development version from GitHub with:
 
 ``` r
-require("remotes")
+library("devtools")
 install_github("tidymodels/tidymodels")
 ```
 
