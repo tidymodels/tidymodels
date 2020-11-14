@@ -27,7 +27,7 @@ make_email <- function(to, package) {
   )
 }
 
-tidyverse_dependency_dissuade <- function() {
+tidymodels_dependency_dissuade <- function() {
   pkgs <- tools::package_dependencies("tidymodels",
                                       which = c("Depends", "Imports", "Suggests"),
                                       reverse = TRUE
