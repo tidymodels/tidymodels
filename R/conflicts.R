@@ -30,7 +30,7 @@ tidymodels_conflict_message <- function(x) {
   if (length(x) == 0) return("")
 
   header <- cli::rule(
-    left = crayon::bold("Conflicts"),
+    left = cli::style_bold("Conflicts"),
     right = "tidymodels_conflicts()"
   )
 
@@ -38,13 +38,13 @@ tidymodels_conflict_message <- function(x) {
   others <- pkgs %>% purrr::map(`[`, -1)
   other_calls <- purrr::map2_chr(
     others, names(others),
-    ~ paste0(crayon::blue(.x), "::", .y, "()", collapse = ", ")
+    ~ paste0(cli::col_blue(.x), "::", .y, "()", collapse = ", ")
   )
 
   winner <- pkgs %>% purrr::map_chr(1)
-  funs <- format(paste0(crayon::blue(winner), "::", crayon::green(paste0(names(x), "()"))))
+  funs <- format(paste0(cli::col_blue(winner), "::", cli::col_green(paste0(names(x), "()"))))
   bullets <- paste0(
-    crayon::red(cli::symbol$cross), " ", funs,
+    cli::col_red(cli::symbol$cross), " ", funs,
     " masks ", other_calls,
     collapse = "\n"
   )

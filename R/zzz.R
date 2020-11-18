@@ -3,7 +3,6 @@
   if (length(needed) == 0)
     return()
 
-  crayon::num_colors(TRUE)
   tidymodels_attach()
 
   if (!"package:conflicted" %in% search()) {

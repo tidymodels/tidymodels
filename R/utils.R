@@ -20,7 +20,7 @@ text_col <- function(x) {
 
   theme <- rstudioapi::getThemeInfo()
 
-  if (isTRUE(theme$dark)) crayon::white(x) else crayon::black(x)
+  if (isTRUE(theme$dark)) cli::col_white(x) else cli::col_black(x)
 
 }
 
@@ -49,10 +49,3 @@ invert <- function(x) {
   tapply(as.character(stacked$ind), stacked$values, list)
 }
 
-
-style_grey <- function(level, ...) {
-  crayon::style(
-    paste0(...),
-    crayon::make_style(grDevices::grey(level), grey = TRUE)
-  )
-}
