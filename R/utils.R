@@ -49,3 +49,17 @@ invert <- function(x) {
   tapply(as.character(stacked$ind), stacked$values, list)
 }
 
+
+style_grey <- function(level, ...) {
+  crayon::style(
+    paste0(...),
+    crayon::make_style(grDevices::grey(level), grey = TRUE)
+  )
+}
+
+release_bullets <- function() {
+  c(
+    'Check what `usethis::use_latest_dependencies(TRUE, "CRAN")` might update',
+    'Use `tidymodels_dependency_dissuade()` to send emails'
+  )
+}

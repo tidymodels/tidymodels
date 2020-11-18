@@ -1,6 +1,12 @@
 on:
   push:
-    branches: [main, master]
+    branches:
+      - master
+      - main
+  pull_request:
+    branches:
+      - master
+      - main
 
 name: pkgdown
 
@@ -15,6 +21,9 @@ jobs:
       - uses: r-lib/actions/setup-r@v1
 
       - uses: r-lib/actions/setup-pandoc@v1
+      
+      - name: System dependencies
+        run: brew install harfbuzz fribidi
 
       - name: Query dependencies
         run: |
@@ -33,14 +42,20 @@ jobs:
       - name: Install dependencies
         run: |
           remotes::install_deps(dependencies = TRUE)
-          install.packages("pkgdown", type = "binary")
           remotes::install_github("tidyverse/tidytemplate")
+          install.packages("pkgdown", type = "binary")
         shell: Rscript {0}
 
       - name: Install package
         run: R CMD INSTALL .
 
+      - name: Build site
+        if: github.ref != 'refs/heads/master'
+        run: |
+          Rscript -e 'pkgdown::build_site()'
+
       - name: Deploy package
+        if: github.ref == 'refs/heads/master'
         run: |
           git config --local user.email "actions@github.com"
           git config --local user.name "GitHub Actions"
