@@ -32,10 +32,11 @@ tidymodels_attach <- function(pkg = NULL) {
   )
 
   versions <- vapply(to_load, package_version, character(1))
-  clean_versions <- gsub(cli:::ansi_regex(), "", versions, perl = TRUE)
+  clean_versions <- gsub(cli::ansi_regex(), "", versions, perl = TRUE)
   packages <- paste0(
     cli::col_green(cli::symbol$tick), " ", cli::col_blue(format(to_load)), " ",
-    cli::ansi_align(versions, max(nchar(clean_versions)))
+    cli::ansi_align(versions, max(nchar(clean_versions))
+    )
   )
 
   if (length(packages) %% 2 == 1) {
