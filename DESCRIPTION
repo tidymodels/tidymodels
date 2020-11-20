@@ -1,6 +1,6 @@
 Package: tidymodels
 Title: Easily Install and Load the 'Tidymodels' Packages
-Version: 0.1.1.9000
+Version: 0.1.2
 Authors@R: c(
     person(given = "Max",    family = "Kuhn",    email = "max@rstudio.com",      role = c("aut", "cre")),
     person(given = "Hadley", family = "Wickham", email = "hadley@rstudio.com",   role = c("aut")),

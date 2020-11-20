@@ -1,5 +1,9 @@
-# tidymodels (development version)
+# tidymodels 0.1.2
 
+ * Updated versions
+ 
+ * Removed `crayon` dependency
+ 
 # tidymodels 0.1.1
 
  * Updated versions
