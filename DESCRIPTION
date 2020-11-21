@@ -21,7 +21,7 @@ Imports:
     dplyr (>= 1.0.2),
     ggplot2 (>= 3.3.2),
     infer (>= 0.5.3),
-    magrittr (>= 2.0.1),
+    magrittr (>= 2.0.0),
     modeldata (>= 0.1.0),
     parsnip (>= 0.1.4),
     purrr (>= 0.3.4),

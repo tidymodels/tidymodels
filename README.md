@@ -9,8 +9,8 @@
 status](https://github.com/tidymodels/tidymodels/workflows/R-CMD-check/badge.svg)](https://github.com/tidymodels/tidymodels/actions)
 [![Codecov test
 coverage](https://codecov.io/gh/tidymodels/tidymodels/branch/master/graph/badge.svg)](https://codecov.io/gh/tidymodels/tidymodels?branch=master)
-[![CRAN\_Status\_Badge](https://www.r-pkg.org/badges/version/tidymodels)](https://cran.r-project.org/web/packages/tidymodels)
-[![Downloads](https://cranlogs.r-pkg.org/badges/tidymodels)](https://cran.rstudio.com/package=tidymodels)
+[![CRAN\_Status\_Badge](https://www.r-pkg.org/badges/version/tidymodels)](https://CRAN.r-project.org/package=tidymodels)
+[![Downloads](https://cranlogs.r-pkg.org/badges/tidymodels)](https://CRAN.r-project.org/package=tidymodels)
 [![lifecycle](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
 <!-- badges: end -->
 
@@ -30,19 +30,19 @@ It includes a core set of packages that are loaded on startup:
   - [`dials`](https://dials.tidymodels.org) has tools to create and
     manage values of tuning parameters.
 
-  - [`dplyr`](http://dplyr.tidyverse.org) contains a grammar for data
+  - [`dplyr`](https://dplyr.tidyverse.org) contains a grammar for data
     manipulation.
 
-  - [`ggplot2`](http://ggplot2.tidyverse.org) implements a grammar of
+  - [`ggplot2`](https://ggplot2.tidyverse.org) implements a grammar of
     graphics.
 
-  - [`infer`](http://infer.netlify.com/) is a modern approach to
+  - [`infer`](https://infer.netlify.app/) is a modern approach to
     statistical inference.
 
   - [`parsnip`](https://parsnip.tidymodels.org) is a tidy, unified
     interface to creating models.
 
-  - [`purrr`](http://purrr.tidyverse.org) is a functional programming
+  - [`purrr`](https://purrr.tidyverse.org) is a functional programming
     toolkit.
 
   - [`recipes`](https://recipes.tidymodels.org) is a general data
@@ -54,8 +54,8 @@ It includes a core set of packages that are loaded on startup:
     *resampling* data so that models can be assessed and empirically
     validated.
 
-  - [`tibble`](http://tibble.tidyverse.org) has a modern re-imagining of
-    the data frame.
+  - [`tibble`](https://tibble.tidyverse.org) has a modern re-imagining
+    of the data frame.
 
   - [`tune`](https://tune.tidymodels.org) contains the functions to
     optimize model hyper-parameters.
@@ -67,7 +67,7 @@ It includes a core set of packages that are loaded on startup:
     evaluating models (e.g. accuracy, RMSE, etc.)
 
 You can install the released version of tidymodels from
-[CRAN](https://CRAN.R-project.org) with:
+[CRAN](https://CRAN.r-project.org) with:
 
 ``` r
 install.packages("tidymodels")
@@ -84,14 +84,14 @@ When loading the package, the versions and conflicts are listed:
 
 ``` r
 library(tidymodels)
-#> ── Attaching packages ────────────────────────────────────── tidymodels 0.1.1 ──
-#> ✓ broom     0.7.1      ✓ recipes   0.1.14
+#> ── Attaching packages ────────────────────────────────────── tidymodels 0.1.2 ──
+#> ✓ broom     0.7.2      ✓ recipes   0.1.15
 #> ✓ dials     0.0.9      ✓ rsample   0.0.8 
 #> ✓ dplyr     1.0.2      ✓ tibble    3.0.4 
 #> ✓ ggplot2   3.3.2      ✓ tidyr     1.1.2 
-#> ✓ infer     0.5.3      ✓ tune      0.1.1 
-#> ✓ modeldata 0.0.2      ✓ workflows 0.2.1 
-#> ✓ parsnip   0.1.3      ✓ yardstick 0.0.7 
+#> ✓ infer     0.5.3      ✓ tune      0.1.2 
+#> ✓ modeldata 0.1.0      ✓ workflows 0.2.1 
+#> ✓ parsnip   0.1.4      ✓ yardstick 0.0.7 
 #> ✓ purrr     0.3.4
 #> ── Conflicts ───────────────────────────────────────── tidymodels_conflicts() ──
 #> x purrr::discard() masks scales::discard()
@@ -108,7 +108,7 @@ By contributing to this project, you agree to abide by its terms.
 
   - For questions and discussions about tidymodels packages, modeling,
     and machine learning, please [post on RStudio
-    Community](https://rstd.io/tidymodels-community).
+    Community](https://community.rstudio.com/new-topic?category_id=15&tags=tidymodels,question).
 
   - Most issues will likely belong on the GitHub repo of an individual
     package. If you think you have encountered a bug with the tidymodels
@@ -116,8 +116,9 @@ By contributing to this project, you agree to abide by its terms.
     issue](https://github.com/tidymodels/tidymodels/issues).
 
   - Either way, learn how to create and share a
-    [reprex](https://rstd.io/reprex) (a minimal, reproducible example),
-    to clearly communicate about your code.
+    [reprex](https://reprex.tidyverse.org/articles/articles/learn-reprex.html)
+    (a minimal, reproducible example), to clearly communicate about your
+    code.
 
   - Check out further details on [contributing guidelines for tidymodels
     packages](https://www.tidymodels.org/contribute/) and [how to get
