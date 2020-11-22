@@ -1,8 +1,10 @@
 pandoc: 2.7.3
-pkgdown: 1.5.1.9000
-pkgdown_sha: caf7cc74e008e8d0d6e53eeda93cd3cad3545bf2
-articles: []
-last_built: 2020-07-14T14:55Z
+pkgdown: 1.6.1
+pkgdown_sha: ~
+articles:
+  Tags: Tags.html
+  extras/Functions: Functions.html
+last_built: 2020-11-22T21:46Z
 urls:
   reference: https://tidymodels.tidymodels.org/reference
   article: https://tidymodels.tidymodels.org/articles
