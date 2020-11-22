@@ -11,6 +11,7 @@
 #' @importFrom dials mtry
 #' @importFrom broom tidy
 #' @importFrom tune tune
+#' @importFrom tidyr chop
 #' @importFrom workflows workflow
 
 NULL

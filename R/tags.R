@@ -1,13 +1,17 @@
 tags <- list(
   "Bayesian analysis" =  c("tidyposterior", "tidybayes"),
   "deep learning" = c("keras"),
+  "ensembles" = c("modeltime.ensemble", "stacks"),
   "feature engineering" = c("keras", "textrecipes"),
   "parallel processing" = c("furrr"),
+  "parameter tuning" = c("finetune"),
   "resampling" = c("infer", "tidyposterior"),
   "text analysis" = c("tidytext", "keras", "textrecipes"),
   "time series" = c("timetk", "tidyquant", "sweep", "modeltime", "tsibble", "fable"),
   "extra recipes" = c("embed", "textrecipes", "themis"),
-  "extra models" = c("discrim", "plsmod", "rules", "poissonreg", "baguette")
+  "extra models" = c("discrim", "plsmod", "rules", "poissonreg", "baguette"),
+  "visualization" = c("dotwhisker", "ggforce", "patchwork", "gganimate", "ggrepel"),
+  "interpretation" = c("vip", "lime", "DALEXtra")
 )
 # cat(paste0("'", sort(names(tags)), "'", collapse = ", "))
 
@@ -18,10 +22,10 @@ tags <- list(
 #'  modeling and analysis. These can be used to load packages
 #'  in groups.
 #'
-#' @param tag A character strong for the tag. Current options are 'Bayesian
-#'  analysis', 'deep learning', 'extra models', 'extra recipes', 'feature
-#'  engineering', 'parallel processing', 'resampling', 'text analysis', and
-#'  'time series'.
+#' @param tag A character strong for the tag. Current options are: 'Bayesian
+#'  analysis', 'deep learning', 'ensembles', 'extra models', 'extra recipes',
+#'  'feature engineering', 'interpretation', 'parallel processing', 'parameter
+#'  tuning', 'resampling', 'text analysis', 'time series', and 'visualization'.
 #'
 #' @examples
 #' tag_show()

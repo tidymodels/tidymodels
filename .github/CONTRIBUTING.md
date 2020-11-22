@@ -19,7 +19,7 @@ The [tidymodels packages](https://www.tidymodels.org/packages/) work together. E
 
 *  For pull requests, we recommend that you [create a fork of this repo](https://usethis.r-lib.org/articles/articles/pr-functions.html) with `usethis::create_from_github()`, and then initiate a new branch with `usethis::pr_init()`.
 *  Look at the build status before and after making changes. The `README` contains badges for any continuous integration services used by the package.  
-*  New code should follow the tidyverse [style guide](http://style.tidyverse.org). You can use the [styler](https://CRAN.R-project.org/package=styler) package to apply these styles, but please don't restyle code that has nothing to do with your PR.  
+*  New code should follow the tidyverse [style guide](https://style.tidyverse.org). You can use the [styler](https://CRAN.R-project.org/package=styler) package to apply these styles, but please don't restyle code that has nothing to do with your PR.  
 *  For user-facing changes, add a bullet to the top of `NEWS.md` below the current development version header describing the changes made followed by your GitHub username, and links to relevant issue(s)/PR(s).
 *  We use [testthat](https://cran.r-project.org/package=testthat). Contributions with test cases included are easier to accept.
 *  If your contribution spans the use of more than one package, consider building [extratests](https://github.com/tidymodels/extratests) with your changes to check for breakages and/or adding new tests there. Let us know in your PR if you ran these extra tests.
