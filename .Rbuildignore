@@ -18,3 +18,4 @@ tidymodels_hex.png
 ^codecov\.yml$
 ^\.github$
 
+^LICENSE\.md$

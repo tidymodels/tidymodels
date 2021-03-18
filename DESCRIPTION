@@ -9,7 +9,7 @@ Authors@R: c(
 Description: The tidy modeling "verse" is a collection of packages for 
     modeling and statistical analysis that share the underlying design
     philosophy, grammar, and data structures of the tidyverse.
-License: GPL-3 | file LICENSE
+License: MIT + file LICENSE
 URL: https://tidymodels.tidymodels.org, https://github.com/tidymodels/tidymodels
 BugReports: https://github.com/tidymodels/tidymodels/issues
 Depends: 
