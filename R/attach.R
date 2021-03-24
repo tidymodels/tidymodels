@@ -1,7 +1,7 @@
 core <- c(
   "broom", "dials", "dplyr", "ggplot2", "infer", "modeldata", "parsnip",
   "purrr", "recipes", "rsample",  "tibble",  "tidyr",  "tune", "workflows",
-  "yardstick"
+  "workflowsets", "yardstick"
 )
 
 

@@ -34,6 +34,7 @@ Imports:
     tidyr (>= 1.1.3),
     tune (>= 0.1.3),
     workflows (>= 0.2.2),
+    workflowsets (>= 0.0.1),
     yardstick (>= 0.0.7)
 Suggests: 
     covr,
