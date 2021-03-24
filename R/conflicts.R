@@ -1,7 +1,9 @@
 #' Conflicts between the tidymodels and other packages
 #'
-#' This function lists all the conflicts between packages in the tidymodels
-#' and other packages that you have loaded.
+#' `tidymodels_conflicts()` lists all the conflicts between packages in the
+#' tidymodels and other packages that you have loaded.
+#' `tidymodels_conflict_management()` uses the `conflicted` package to handle
+#' common conflicts with tidymodels and other packages.
 #'
 #' There are four conflicts that are deliberately ignored: \code{intersect},
 #' \code{union}, \code{setequal}, and \code{setdiff} from dplyr. These functions
@@ -12,6 +14,7 @@
 #' @examples
 #' tidymodels_conflicts()
 tidymodels_conflicts <- function() {
+
   envs <- purrr::set_names(search())
   objs <- invert(lapply(envs, ls_env))
 
@@ -25,6 +28,42 @@ tidymodels_conflicts <- function() {
 
   structure(conflict_funs, class = "tidymodels_conflicts")
 }
+
+#' @export
+#' @rdname tidymodels_conflicts
+tidymodels_conflict_management <- function(quiet = TRUE) {
+
+  conflict_msg <- conflict_list(quiet)
+
+  if (!quiet) {
+    header <- cli::rule(
+      left = cli::style_bold("Conflicts"),
+      right = "tidymodels_conflict_management()"
+    )
+    conflict_msg <- paste0(conflict_msg, collapse = "\n")
+    msg(header, startup = TRUE)
+    msg(conflict_msg, startup = TRUE)
+  }
+  invisible(NULL)
+}
+
+conflict_list <- function(quiet) {
+  res <-
+    capture.output({
+      conflicted::conflict_prefer("filter",     winner = "dplyr",    quiet = quiet)
+      conflicted::conflict_prefer("map",        winner = "purrr",    quiet = quiet)
+      conflicted::conflict_prefer("neighbors",  winner = "dials",    quiet = quiet)
+      conflicted::conflict_prefer("pls",        winner = "plsmod",   quiet = quiet)
+      conflicted::conflict_prefer("rename",     winner = "dplyr",    quiet = quiet)
+      conflicted::conflict_prefer("select",     winner = "dplyr",    quiet = quiet)
+      conflicted::conflict_prefer("slice",      winner = "dplyr",    quiet = quiet)
+      conflicted::conflict_prefer("step",       winner = "recipes",  quiet = quiet)
+      conflicted::conflict_prefer("tune",       winner = "tune",     quiet = quiet)
+    },
+    type = "message")
+  gsub("^\\[conflicted\\] ", "", res)
+}
+
 
 tidymodels_conflict_message <- function(x) {
   if (length(x) == 0) return("")

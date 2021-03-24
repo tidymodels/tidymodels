@@ -15,24 +15,25 @@ BugReports: https://github.com/tidymodels/tidymodels/issues
 Depends: 
     R (>= 3.1)
 Imports: 
-    broom (>= 0.7.2),
-    cli (>= 2.2.0),
+    broom (>= 0.7.5),
+    cli (>= 2.3.1),
+    conflicted (>= 1.0.4),
     dials (>= 0.0.9),
-    dplyr (>= 1.0.2),
-    ggplot2 (>= 3.3.2),
-    infer (>= 0.5.3),
-    magrittr (>= 2.0.0),
+    dplyr (>= 1.0.5),
+    ggplot2 (>= 3.3.3),
+    infer (>= 0.5.4),
+    magrittr (>= 2.0.1),
     modeldata (>= 0.1.0),
-    parsnip (>= 0.1.4),
+    parsnip (>= 0.1.5),
     purrr (>= 0.3.4),
     recipes (>= 0.1.15),
-    rlang (>= 0.4.8),
-    rsample (>= 0.0.8),
+    rlang (>= 0.4.10),
+    rsample (>= 0.0.9),
     rstudioapi (>= 0.13),
-    tibble (>= 3.0.4),
-    tidyr (>= 1.1.2),
-    tune (>= 0.1.2),
-    workflows (>= 0.2.1),
+    tibble (>= 3.1.0),
+    tidyr (>= 1.1.3),
+    tune (>= 0.1.3),
+    workflows (>= 0.2.2),
     yardstick (>= 0.0.7)
 Suggests: 
     covr,
@@ -43,5 +44,5 @@ Suggests:
     xml2
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 7.1.1.9000
+RoxygenNote: 7.1.1.9001
 VignetteBuilder: knitr

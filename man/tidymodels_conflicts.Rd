@@ -2,13 +2,18 @@
 % Please edit documentation in R/conflicts.R
 \name{tidymodels_conflicts}
 \alias{tidymodels_conflicts}
+\alias{tidymodels_conflict_management}
 \title{Conflicts between the tidymodels and other packages}
 \usage{
 tidymodels_conflicts()
+
+tidymodels_conflict_management(quiet = TRUE)
 }
 \description{
-This function lists all the conflicts between packages in the tidymodels
-and other packages that you have loaded.
+`tidymodels_conflicts()` lists all the conflicts between packages in the
+tidymodels and other packages that you have loaded.
+`tidymodels_conflict_management()` uses the `conflicted` package to handle
+common conflicts with tidymodels and other packages.
 }
 \details{
 There are four conflicts that are deliberately ignored: \code{intersect},
