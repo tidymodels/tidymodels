@@ -59,9 +59,9 @@ pkg_deps <- function(x = "tidymodels", recursive = FALSE) {
     deps$tidymodels <-
       c(
         "broom", "cli", "dials", "dplyr", "ggplot2", "infer",
-        "magrittr", "modeldata", "parsnip", "pillar", "purrr", "recipes",
+        "modeldata", "parsnip", "pillar", "purrr", "recipes",
         "rlang", "rsample", "rstudioapi", "tibble", "tidyr", "tune",
-        "workflows", "yardstick"
+        "workflows", "workflowsets", "yardstick"
       )
   }
 
