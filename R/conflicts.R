@@ -48,8 +48,15 @@ tidymodels_conflict_message <- function(x) {
     " masks ", other_calls,
     collapse = "\n"
   )
+  prefer_note <-
+    paste(
+      cli::col_blue(cli::symbol$bullet),
+      "Use",
+      cli::col_green("tidymodels_prefer()"),
+      "to resolve common conflicts."
+    )
 
-  paste0(header, "\n", bullets)
+  paste0(header, "\n", bullets, "\n", prefer_note)
 }
 
 #' @export
@@ -57,7 +64,7 @@ print.tidymodels_conflicts <- function(x, ..., startup = FALSE) {
   cli::cat_line(tidymodels_conflict_message(x))
 }
 
-#' @importFrom magrittr %>%
+#' @importFrom dplyr %>%
 confirm_conflict <- function(packages, name) {
   # Only look at functions
   objs <- packages %>%

@@ -2,6 +2,12 @@
 
  * Re-licensed package from GPL-3 to MIT. See [consent from copyright holders here](https://github.com/tidymodels/tidymodels/issues/51).
 
+ * Updated versions
+ 
+ * Added `tidymodels_prefer()` to help resolve name conficts with other packages.
+ 
+ * Added `workflowsets` as a core package. 
+
 # tidymodels 0.1.2
 
  * Updated versions
