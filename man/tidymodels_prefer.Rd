@@ -2,7 +2,7 @@
 % Please edit documentation in R/tidymodels_prefer.R
 \name{tidymodels_prefer}
 \alias{tidymodels_prefer}
-\title{Resolve conflicts between the tidymodels and other packages}
+\title{Resolve conflicts between tidymodels packages and others}
 \usage{
 tidymodels_prefer(quiet = TRUE)
 }
@@ -10,9 +10,13 @@ tidymodels_prefer(quiet = TRUE)
 \item{quiet}{If `TRUE`, all output will be suppressed}
 }
 \description{
-`tidymodels_prefer()` uses the `conflicted` package to handle
-common conflicts with tidymodels and other packages.
+`tidymodels_prefer()` uses the `conflicted` package to handle common
+conflicts with tidymodels and other packages.
+}
+\details{
+The list of conflicts includes about a dozen that are known issues with other
+packages.
 }
 \examples{
-tidymodels_prefer()
+tidymodels_prefer(quiet = FALSE)
 }

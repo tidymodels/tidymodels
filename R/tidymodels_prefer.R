@@ -1,12 +1,14 @@
-#' Resolve conflicts between the tidymodels and other packages
+#' Resolve conflicts between tidymodels packages and others
 #'
-#' `tidymodels_prefer()` uses the `conflicted` package to handle
-#' common conflicts with tidymodels and other packages.
+#' `tidymodels_prefer()` uses the `conflicted` package to handle common
+#' conflicts with tidymodels and other packages.
 #'
+#' The list of conflicts includes about a dozen that are known issues with other
+#' packages.
 #' @param quiet If `TRUE`, all output will be suppressed
 #' @export
 #' @examples
-#' tidymodels_prefer()
+#' tidymodels_prefer(quiet = FALSE)
 tidymodels_prefer <- function(quiet = TRUE) {
   res <-
     utils::capture.output({
