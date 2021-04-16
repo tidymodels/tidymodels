@@ -1,4 +1,4 @@
-# tidymodels (development version)
+# tidymodels 0.1.3
 
  * Re-licensed package from GPL-3 to MIT. See [consent from copyright holders here](https://github.com/tidymodels/tidymodels/issues/51).
 
