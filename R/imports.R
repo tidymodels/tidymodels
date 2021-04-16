@@ -13,5 +13,6 @@
 #' @importFrom tune tune
 #' @importFrom tidyr chop
 #' @importFrom workflows workflow
+#' @importFrom cli rule
 
 NULL
