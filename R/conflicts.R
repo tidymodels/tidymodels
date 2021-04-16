@@ -62,7 +62,6 @@ tidymodels_conflict_message <- function(x) {
 #' @export
 print.tidymodels_conflicts <- function(x, ..., startup = FALSE) {
   cli::cat_line(tidymodels_conflict_message(x))
-  cli::cat_line("Use ", cli::col_green("tidymodels_prefer()"), " to resolve these.")
 }
 
 #' @importFrom dplyr %>%
