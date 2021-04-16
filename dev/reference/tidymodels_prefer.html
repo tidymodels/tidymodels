@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>List all packages in the tidymodels — tidymodels_packages • tidymodels</title>
+<title>Resolve conflicts between tidymodels packages and others — tidymodels_prefer • tidymodels</title>
 
 
 <!-- jquery -->
@@ -42,8 +42,9 @@
 
 
 
-<meta property="og:title" content="List all packages in the tidymodels — tidymodels_packages" />
-<meta property="og:description" content="List all packages in the tidymodels" />
+<meta property="og:title" content="Resolve conflicts between tidymodels packages and others — tidymodels_prefer" />
+<meta property="og:description" content="`tidymodels_prefer()` uses the `conflicted` package to handle common
+conflicts with tidymodels and other packages." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -121,34 +122,35 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>List all packages in the tidymodels</h1>
-    <small class="dont-index">Source: <a href='https://github.com/tidymodels/tidymodels/blob/master/R/utils.R'><code>R/utils.R</code></a></small>
-    <div class="hidden name"><code>tidymodels_packages.Rd</code></div>
+    <h1>Resolve conflicts between tidymodels packages and others</h1>
+    <small class="dont-index">Source: <a href='https://github.com/tidymodels/tidymodels/blob/master/R/tidymodels_prefer.R'><code>R/tidymodels_prefer.R</code></a></small>
+    <div class="hidden name"><code>tidymodels_prefer.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>List all packages in the tidymodels</p>
+    <p>`tidymodels_prefer()` uses the `conflicted` package to handle common
+conflicts with tidymodels and other packages.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>tidymodels_packages</span><span class='op'>(</span>include_self <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span></pre>
+    <pre class="usage"><span class='fu'>tidymodels_prefer</span><span class='op'>(</span>quiet <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>include_self</th>
-      <td><p>Include tidymodels in the list?</p></td>
+      <th>quiet</th>
+      <td><p>If `TRUE`, all output will be suppressed</p></td>
     </tr>
     </table>
 
+    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
+
+    <p>The list of conflicts includes about a dozen that are known issues with other
+packages.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>tidymodels_packages</span><span class='op'>(</span><span class='op'>)</span>
-</div><div class='output co'>#&gt;  [1] "broom"        "cli"          "conflicted"   "dials"        "dplyr"       
-#&gt;  [6] "ggplot2"      "infer"        "modeldata"    "parsnip"      "purrr"       
-#&gt; [11] "recipes"      "rlang"        "rsample"      "rstudioapi"   "tibble"      
-#&gt; [16] "tidyr"        "tune"         "utils"        "workflows"    "workflowsets"
-#&gt; [21] "yardstick"    "tidymodels"  </div></pre>
+    <pre class="examples"><div class='input'><span class='fu'>tidymodels_prefer</span><span class='op'>(</span>quiet <span class='op'>=</span> <span class='cn'>FALSE</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; <span class='message'>[conflicted] Will prefer <span style='color: #0000BB;'>dplyr::filter</span><span> over any other package</span></div><div class='output co'>#&gt; <span class='message'>[conflicted] Will prefer </span><span style='color: #0000BB;'>dplyr::select</span><span> over any other package</span></div><div class='output co'>#&gt; <span class='message'>[conflicted] Will prefer </span><span style='color: #0000BB;'>dplyr::slice</span><span> over any other package</span></div><div class='output co'>#&gt; <span class='message'>[conflicted] Will prefer </span><span style='color: #0000BB;'>dplyr::rename</span><span> over any other package</span></div><div class='output co'>#&gt; <span class='message'>[conflicted] Will prefer </span><span style='color: #0000BB;'>dials::neighbors</span><span> over any other package</span></div><div class='output co'>#&gt; <span class='message'>[conflicted] Will prefer </span><span style='color: #0000BB;'>parsnip::fit</span><span> over any other package</span></div><div class='output co'>#&gt; <span class='message'>[conflicted] Will prefer </span><span style='color: #0000BB;'>plsmod::pls</span><span> over any other package</span></div><div class='output co'>#&gt; <span class='message'>[conflicted] Will prefer </span><span style='color: #0000BB;'>purrr::map</span><span> over any other package</span></div><div class='output co'>#&gt; <span class='message'>[conflicted] Will prefer </span><span style='color: #0000BB;'>recipes::step</span><span> over any other package</span></div><div class='output co'>#&gt; <span class='message'>[conflicted] Will prefer </span><span style='color: #0000BB;'>themis::step_downsample</span><span> over any other package</span></div><div class='output co'>#&gt; <span class='message'>[conflicted] Will prefer </span><span style='color: #0000BB;'>themis::step_upsample</span><span> over any other package</span></div><div class='output co'>#&gt; <span class='message'>[conflicted] Will prefer </span><span style='color: #0000BB;'>tune::tune</span><span> over any other package</span></div><div class='output co'>#&gt; <span class='message'>[conflicted] Will prefer </span><span style='color: #0000BB;'>yardstick::precision</span><span> over any other package</span></div><div class='output co'>#&gt; <span class='message'>[conflicted] Will prefer </span><span style='color: #0000BB;'>yardstick::recall</span><span> over any other package</span></div><div class='output co'>#&gt; <span class='message'>── </span><span style='font-weight: bold;'>Conflicts</span><span> ──────────────────────────────────────────── tidymodels_prefer() ──</span></div><div class='output co'>#&gt; </div></span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
