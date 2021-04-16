@@ -10,17 +10,20 @@
 tidymodels_prefer <- function(quiet = TRUE) {
   res <-
     utils::capture.output({
-      conflicted::conflict_prefer("filter",     winner = "dplyr",     quiet = quiet)
-      conflicted::conflict_prefer("select",     winner = "dplyr",     quiet = quiet)
-      conflicted::conflict_prefer("slice",      winner = "dplyr",     quiet = quiet)
-      conflicted::conflict_prefer("rename",     winner = "dplyr",     quiet = quiet)
-      conflicted::conflict_prefer("neighbors",  winner = "dials",     quiet = quiet)
-      conflicted::conflict_prefer("pls",        winner = "plsmod",    quiet = quiet)
-      conflicted::conflict_prefer("map",        winner = "purrr",     quiet = quiet)
-      conflicted::conflict_prefer("step",       winner = "recipes",   quiet = quiet)
-      conflicted::conflict_prefer("tune",       winner = "tune",      quiet = quiet)
-      conflicted::conflict_prefer("precision",  winner = "yardstick", quiet = quiet)
-      conflicted::conflict_prefer("recall",     winner = "yardstick", quiet = quiet)
+      conflicted::conflict_prefer("filter",          winner = "dplyr",     quiet = quiet)
+      conflicted::conflict_prefer("select",          winner = "dplyr",     quiet = quiet)
+      conflicted::conflict_prefer("slice",           winner = "dplyr",     quiet = quiet)
+      conflicted::conflict_prefer("rename",          winner = "dplyr",     quiet = quiet)
+      conflicted::conflict_prefer("neighbors",       winner = "dials",     quiet = quiet)
+      conflicted::conflict_prefer("fit",             winner = "parsnip",   quiet = quiet)
+      conflicted::conflict_prefer("pls",             winner = "plsmod",    quiet = quiet)
+      conflicted::conflict_prefer("map",             winner = "purrr",     quiet = quiet)
+      conflicted::conflict_prefer("step",            winner = "recipes",   quiet = quiet)
+      conflicted::conflict_prefer("step_downsample", winner = "themis",    quiet = quiet)
+      conflicted::conflict_prefer("step_upsample",   winner = "themis",    quiet = quiet)
+      conflicted::conflict_prefer("tune",            winner = "tune",      quiet = quiet)
+      conflicted::conflict_prefer("precision",       winner = "yardstick", quiet = quiet)
+      conflicted::conflict_prefer("recall",          winner = "yardstick", quiet = quiet)
     },
     type = "message")
   if (!quiet) {
