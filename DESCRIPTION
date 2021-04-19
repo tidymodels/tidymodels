@@ -22,6 +22,7 @@ Imports:
     dplyr (>= 1.0.5),
     ggplot2 (>= 3.3.3),
     infer (>= 0.5.4),
+    modeldata (>= 0.1.0),
     parsnip (>= 0.1.5),
     purrr (>= 0.3.4),
     recipes (>= 0.1.16),
@@ -38,7 +39,6 @@ Suggests:
     covr,
     glue,
     knitr,
-    modeldata (>= 0.1.0),
     rmarkdown,
     testthat,
     xml2
