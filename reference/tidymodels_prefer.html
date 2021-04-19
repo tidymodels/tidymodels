@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>tidymodels: Easily Install and Load the 'Tidymodels' Packages — tidymodels-package • tidymodels</title>
+<title>Resolve conflicts between tidymodels packages and others — tidymodels_prefer • tidymodels</title>
 
 
 <!-- jquery -->
@@ -42,10 +42,9 @@
 
 
 
-<meta property="og:title" content="tidymodels: Easily Install and Load the 'Tidymodels' Packages — tidymodels-package" />
-<meta property="og:description" content="The tidy modeling &quot;verse&quot; is a collection of packages for 
-    modeling and statistical analysis that share the underlying design
-    philosophy, grammar, and data structures of the tidyverse." />
+<meta property="og:title" content="Resolve conflicts between tidymodels packages and others — tidymodels_prefer" />
+<meta property="og:description" content="`tidymodels_prefer()` uses the `conflicted` package to handle common
+conflicts with tidymodels and other packages." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -123,41 +122,35 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>tidymodels: Easily Install and Load the 'Tidymodels' Packages</h1>
-    <small class="dont-index">Source: <a href='https://github.com/tidymodels/tidymodels/blob/master/R/imports.R'><code>R/imports.R</code></a></small>
-    <div class="hidden name"><code>tidymodels-package.Rd</code></div>
+    <h1>Resolve conflicts between tidymodels packages and others</h1>
+    <small class="dont-index">Source: <a href='https://github.com/tidymodels/tidymodels/blob/master/R/tidymodels_prefer.R'><code>R/tidymodels_prefer.R</code></a></small>
+    <div class="hidden name"><code>tidymodels_prefer.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>The tidy modeling "verse" is a collection of packages for 
-    modeling and statistical analysis that share the underlying design
-    philosophy, grammar, and data structures of the tidyverse.</p>
+    <p>`tidymodels_prefer()` uses the `conflicted` package to handle common
+conflicts with tidymodels and other packages.</p>
     </div>
 
+    <pre class="usage"><span class='fu'>tidymodels_prefer</span><span class='op'>(</span>quiet <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span></pre>
 
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>quiet</th>
+      <td><p>If `TRUE`, all output will be suppressed</p></td>
+    </tr>
+    </table>
 
-    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
+    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
-    <div class='dont-index'><p>Useful links:</p><ul>
-<li><p><a href='https://tidymodels.tidymodels.org'>https://tidymodels.tidymodels.org</a></p></li>
-<li><p><a href='https://github.com/tidymodels/tidymodels'>https://github.com/tidymodels/tidymodels</a></p></li>
-<li><p>Report bugs at <a href='https://github.com/tidymodels/tidymodels/issues'>https://github.com/tidymodels/tidymodels/issues</a></p></li>
-</ul>
+    <p>The list of conflicts includes about a dozen that are known issues with other
+packages.</p>
 
-</div>
-    <h2 class="hasAnchor" id="author"><a class="anchor" href="#author"></a>Author</h2>
-
-    <p><strong>Maintainer</strong>: Max Kuhn <a href='mailto:max@rstudio.com'>max@rstudio.com</a></p>
-<p>Authors:</p><ul>
-<li><p>Hadley Wickham <a href='mailto:hadley@rstudio.com'>hadley@rstudio.com</a></p></li>
-</ul>
-
-<p>Other contributors:</p><ul>
-<li><p>RStudio [copyright holder, funder]</p></li>
-</ul>
-
-
-
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'><span class='fu'>tidymodels_prefer</span><span class='op'>(</span>quiet <span class='op'>=</span> <span class='cn'>FALSE</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; <span class='message'>[conflicted] Will prefer <span style='color: #0000BB;'>dplyr::filter</span><span> over any other package</span></div><div class='output co'>#&gt; <span class='message'>[conflicted] Will prefer </span><span style='color: #0000BB;'>dplyr::select</span><span> over any other package</span></div><div class='output co'>#&gt; <span class='message'>[conflicted] Will prefer </span><span style='color: #0000BB;'>dplyr::slice</span><span> over any other package</span></div><div class='output co'>#&gt; <span class='message'>[conflicted] Will prefer </span><span style='color: #0000BB;'>dplyr::rename</span><span> over any other package</span></div><div class='output co'>#&gt; <span class='message'>[conflicted] Will prefer </span><span style='color: #0000BB;'>dials::neighbors</span><span> over any other package</span></div><div class='output co'>#&gt; <span class='message'>[conflicted] Will prefer </span><span style='color: #0000BB;'>parsnip::fit</span><span> over any other package</span></div><div class='output co'>#&gt; <span class='message'>[conflicted] Will prefer </span><span style='color: #0000BB;'>plsmod::pls</span><span> over any other package</span></div><div class='output co'>#&gt; <span class='message'>[conflicted] Will prefer </span><span style='color: #0000BB;'>purrr::map</span><span> over any other package</span></div><div class='output co'>#&gt; <span class='message'>[conflicted] Will prefer </span><span style='color: #0000BB;'>recipes::step</span><span> over any other package</span></div><div class='output co'>#&gt; <span class='message'>[conflicted] Will prefer </span><span style='color: #0000BB;'>themis::step_downsample</span><span> over any other package</span></div><div class='output co'>#&gt; <span class='message'>[conflicted] Will prefer </span><span style='color: #0000BB;'>themis::step_upsample</span><span> over any other package</span></div><div class='output co'>#&gt; <span class='message'>[conflicted] Will prefer </span><span style='color: #0000BB;'>tune::tune</span><span> over any other package</span></div><div class='output co'>#&gt; <span class='message'>[conflicted] Will prefer </span><span style='color: #0000BB;'>yardstick::precision</span><span> over any other package</span></div><div class='output co'>#&gt; <span class='message'>[conflicted] Will prefer </span><span style='color: #0000BB;'>yardstick::recall</span><span> over any other package</span></div><div class='output co'>#&gt; <span class='message'>── </span><span style='font-weight: bold;'>Conflicts</span><span> ──────────────────────────────────────────── tidymodels_prefer() ──</span></div><div class='output co'>#&gt; </div></span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
