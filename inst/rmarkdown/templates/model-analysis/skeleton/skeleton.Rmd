@@ -38,7 +38,7 @@ penguins %>%
 
 ## Build models
 
-Let's consider how to spend our data budget:
+Let's consider how to [spend our data budget](https://www.tmwr.org/splitting.html):
 
 - create training and testing sets
 - create resampling folds from the *training* set
@@ -140,6 +140,5 @@ predict(final_wf, penguin_test[55,])
 ```
 
 You can save this object to use later with new data, for example with `readr::write_rds()`.
-
 
 
