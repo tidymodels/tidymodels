@@ -104,7 +104,7 @@ ranger_rs <- fit_resamples(
 )
 ```
 
-To fit and evaluate _many_ modeling approaches together, consider using [workflowsets](https://workflowsets.tidymodels.org/). How did these two models compare?
+How did these two models compare?
 
 ```{r}
 collect_metrics(glm_rs)
