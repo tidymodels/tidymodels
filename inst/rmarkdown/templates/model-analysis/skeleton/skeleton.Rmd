@@ -69,7 +69,7 @@ ranger_spec <-
 
 To set up your modeling code, consider using the [parsnip addin](https://parsnip.tidymodels.org/reference/parsnip_addin.html) or the [usemodels](https://usemodels.tidymodels.org/) package.
 
-Now let's build a **model workflow** combining each model specification with a data preprocessor:
+Now let's build a [**model workflow**](https://www.tmwr.org/workflows.html) combining each model specification with a data preprocessor:
 
 ```{r}
 glm_wf <-
@@ -140,4 +140,3 @@ predict(final_wf, penguin_test[55,])
 ```
 
 You can save this object to use later with new data, for example with `readr::write_rds()`.
-
