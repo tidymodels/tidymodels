@@ -54,7 +54,7 @@ penguin_folds <- vfold_cv(penguin_train, strata = sex)
 penguin_folds
 ```
 
-Let's create a **model specification** for each model we want to try:
+Let's create a [**model specification**](https://www.tmwr.org/models.html) for each model we want to try:
 
 ```{r}
 glm_spec <-
@@ -140,5 +140,4 @@ predict(final_wf, penguin_test[55,])
 ```
 
 You can save this object to use later with new data, for example with `readr::write_rds()`.
-
 
