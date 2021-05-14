@@ -56,7 +56,18 @@ tidymodels_conflict_message <- function(x) {
       "to resolve common conflicts."
     )
 
-  paste0(header, "\n", bullets, "\n", prefer_note)
+  res <- paste0(header, "\n", bullets, "\n", prefer_note)
+
+  if (show_url_msg()) {
+    url_note <-
+      paste(
+        cli::col_blue(cli::symbol$bullet),
+        "Find functions using",
+        cli::col_green('utils::browseURL("http://bit.ly/tm-funcs")')
+      )
+    res <- paste0(res, "\n", url_note)
+  }
+  res
 }
 
 #' @export

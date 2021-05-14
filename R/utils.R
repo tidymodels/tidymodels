@@ -55,3 +55,7 @@ release_bullets <- function() {
     'Use `tidymodels_dependency_dissuade()` to send emails'
   )
 }
+
+show_url_msg <- function() {
+  as.numeric(format(Sys.time(), "%S")) %% 2 == 0
+}
