@@ -56,6 +56,7 @@ release_bullets <- function() {
   )
 }
 
-show_url_msg <- function() {
-  as.numeric(format(Sys.time(), "%S")) %% 2 == 0
+choose_startup_tip <- function(vec) {
+  ind <- as.numeric(format(Sys.time(), "%S")) %% length(vec) + 1
+  vec[ind]
 }

@@ -48,25 +48,35 @@ tidymodels_conflict_message <- function(x) {
     " masks ", other_calls,
     collapse = "\n"
   )
-  prefer_note <-
+
+
+  possible_tips <- c(
     paste(
-      cli::col_blue(cli::symbol$bullet),
       "Use",
       cli::col_green("tidymodels_prefer()"),
       "to resolve common conflicts."
+    ),
+    paste(
+      "Search for functions across packages at",
+      cli::col_green("https://www.tidymodels.org/find/")
+    ),
+    "Use suppressPackageStartupMessages() to eliminate package startup messages",
+    paste(
+      "Learn how to get started at",
+      cli::col_green("https://www.tidymodels.org/start/")
+    ),
+    paste(
+      "Dig deeper into tidy modeling with R at",
+      cli::col_green("https://www.tmwr.org")
     )
+  )
 
-  res <- paste0(header, "\n", bullets, "\n", prefer_note)
+  tip <- paste(
+    cli::col_blue(cli::symbol$bullet),
+    choose_startup_tip(possible_tips)
+  )
 
-  if (show_url_msg()) {
-    url_note <-
-      paste(
-        cli::col_blue(cli::symbol$bullet),
-        "Find functions using",
-        cli::col_green('utils::browseURL("http://bit.ly/tm-funcs")')
-      )
-    res <- paste0(res, "\n", url_note)
-  }
+  res <- paste0(header, "\n", bullets, "\n", tip)
   res
 }
 
