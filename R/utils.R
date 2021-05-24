@@ -55,3 +55,8 @@ release_bullets <- function() {
     'Use `tidymodels_dependency_dissuade()` to send emails'
   )
 }
+
+choose_startup_tip <- function(vec) {
+  ind <- as.numeric(format(Sys.time(), "%S")) %% length(vec) + 1
+  vec[ind]
+}
