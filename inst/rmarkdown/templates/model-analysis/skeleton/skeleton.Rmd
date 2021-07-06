@@ -135,8 +135,8 @@ collect_metrics(final_fitted)  ## metrics evaluated on the *testing* data
 This object contains a fitted workflow that we can use for prediction.
 
 ```{r}
-final_wf <- final_fitted$.workflow[[1]]
+final_wf <- extract_workflow(final_fitted)
 predict(final_wf, penguin_test[55,])
 ```
 
-You can save this object to use later with new data, for example with `readr::write_rds()`.
+You can save this fitted `final_wf` object to use later with new data, for example with `readr::write_rds()`.
