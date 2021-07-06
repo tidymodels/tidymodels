@@ -20,6 +20,7 @@ Imports:
     conflicted (>= 1.0.4),
     dials (>= 0.0.9),
     dplyr (>= 1.0.5),
+    hardhat (>= 0.1.5.9000),
     ggplot2 (>= 3.3.3),
     infer (>= 0.5.4),
     modeldata (>= 0.1.0),
@@ -46,4 +47,5 @@ Encoding: UTF-8
 RoxygenNote: 7.1.1.9001
 VignetteBuilder: knitr
 Remotes:  
-    tidymodels/workflows
+    tidymodels/workflows,
+    tidymodels/hardhat
