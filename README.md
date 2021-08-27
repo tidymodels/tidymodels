@@ -88,14 +88,14 @@ library(tidymodels)
 #>   method                   from   
 #>   required_pkgs.model_spec parsnip
 #> ── Attaching packages ────────────────────────────────────── tidymodels 0.1.3 ──
-#> ✓ broom        0.7.9         ✓ recipes      0.1.16   
-#> ✓ dials        0.0.9         ✓ rsample      0.1.0    
-#> ✓ dplyr        1.0.7         ✓ tibble       3.1.3    
-#> ✓ ggplot2      3.3.5         ✓ tidyr        1.1.3    
-#> ✓ infer        1.0.0         ✓ tune         0.1.6    
-#> ✓ modeldata    0.1.1         ✓ workflows    0.2.3    
-#> ✓ parsnip      0.1.7.900     ✓ workflowsets 0.1.0    
-#> ✓ purrr        0.3.4         ✓ yardstick    0.0.8
+#> ✓ broom        0.7.9      ✓ recipes      0.1.16
+#> ✓ dials        0.0.9      ✓ rsample      0.1.0 
+#> ✓ dplyr        1.0.7      ✓ tibble       3.1.4 
+#> ✓ ggplot2      3.3.5      ✓ tidyr        1.1.3 
+#> ✓ infer        1.0.0      ✓ tune         0.1.6 
+#> ✓ modeldata    0.1.1      ✓ workflows    0.2.3 
+#> ✓ parsnip      0.1.7      ✓ workflowsets 0.1.0 
+#> ✓ purrr        0.3.4      ✓ yardstick    0.0.8
 #> ── Conflicts ───────────────────────────────────────── tidymodels_conflicts() ──
 #> x purrr::discard() masks scales::discard()
 #> x dplyr::filter()  masks stats::filter()
