@@ -84,9 +84,6 @@ When loading the package, the versions and conflicts are listed:
 
 ``` r
 library(tidymodels)
-#> Registered S3 method overwritten by 'tune':
-#>   method                   from   
-#>   required_pkgs.model_spec parsnip
 #> ── Attaching packages ────────────────────────────────────── tidymodels 0.1.3 ──
 #> ✓ broom        0.7.6      ✓ recipes      0.1.16
 #> ✓ dials        0.0.9      ✓ rsample      0.0.9 
