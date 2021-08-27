@@ -11,7 +11,7 @@ status](https://github.com/tidymodels/tidymodels/workflows/R-CMD-check/badge.svg
 coverage](https://codecov.io/gh/tidymodels/tidymodels/branch/master/graph/badge.svg)](https://codecov.io/gh/tidymodels/tidymodels?branch=master)
 [![CRAN\_Status\_Badge](https://www.r-pkg.org/badges/version/tidymodels)](https://CRAN.r-project.org/package=tidymodels)
 [![Downloads](https://cranlogs.r-pkg.org/badges/tidymodels)](https://CRAN.r-project.org/package=tidymodels)
-[![lifecycle](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://lifecycle.r-lib.org/articles/stages.html)
+[![lifecycle](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html)
 <!-- badges: end -->
 
 ## Overview
@@ -84,21 +84,24 @@ When loading the package, the versions and conflicts are listed:
 
 ``` r
 library(tidymodels)
+#> Registered S3 method overwritten by 'tune':
+#>   method                   from   
+#>   required_pkgs.model_spec parsnip
 #> ── Attaching packages ────────────────────────────────────── tidymodels 0.1.3 ──
-#> ✓ broom        0.7.6      ✓ recipes      0.1.16
-#> ✓ dials        0.0.9      ✓ rsample      0.0.9 
-#> ✓ dplyr        1.0.5      ✓ tibble       3.1.0 
-#> ✓ ggplot2      3.3.3      ✓ tidyr        1.1.3 
-#> ✓ infer        0.5.4      ✓ tune         0.1.3 
-#> ✓ modeldata    0.1.0      ✓ workflows    0.2.2 
-#> ✓ parsnip      0.1.5      ✓ workflowsets 0.0.2 
-#> ✓ purrr        0.3.4      ✓ yardstick    0.0.8
+#> ✓ broom        0.7.9         ✓ recipes      0.1.16   
+#> ✓ dials        0.0.9         ✓ rsample      0.1.0    
+#> ✓ dplyr        1.0.7         ✓ tibble       3.1.3    
+#> ✓ ggplot2      3.3.5         ✓ tidyr        1.1.3    
+#> ✓ infer        1.0.0         ✓ tune         0.1.6    
+#> ✓ modeldata    0.1.1         ✓ workflows    0.2.3    
+#> ✓ parsnip      0.1.7.900     ✓ workflowsets 0.1.0    
+#> ✓ purrr        0.3.4         ✓ yardstick    0.0.8
 #> ── Conflicts ───────────────────────────────────────── tidymodels_conflicts() ──
 #> x purrr::discard() masks scales::discard()
 #> x dplyr::filter()  masks stats::filter()
 #> x dplyr::lag()     masks stats::lag()
 #> x recipes::step()  masks stats::step()
-#> ● Use tidymodels_prefer() to resolve common conflicts.
+#> • Use tidymodels_prefer() to resolve common conflicts.
 ```
 
 ## Contributing
