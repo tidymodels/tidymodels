@@ -72,15 +72,10 @@ To set up your modeling code, consider using the [parsnip addin](https://parsnip
 Now let's build a [**model workflow**](https://www.tmwr.org/workflows.html) combining each model specification with a data preprocessor:
 
 ```{r}
-glm_wf <-
-  workflow() %>%
-  add_formula(sex ~ .) %>%
-  add_model(glm_spec)
+penguin_formula <- sex ~ .
 
-ranger_wf <-
-  workflow() %>%
-  add_formula(sex ~ .) %>%
-  add_model(ranger_spec)
+glm_wf    <- workflow(penguin_formula, glm_spec)
+ranger_wf <- workflow(penguin_formula, ranger_spec)
 ```
 
 If your feature engineering needs are more complex than provided by a formula like `sex ~ .`, use a [recipe](https://www.tidymodels.org/start/recipes/). [Read more about feature engineering with recipes](https://www.tmwr.org/recipes.html) to learn how they work.
@@ -91,16 +86,18 @@ If your feature engineering needs are more complex than provided by a formula li
 These models have no tuning parameters so we can evaluate them as they are. [Learn about tuning hyperparameters here.](https://www.tidymodels.org/start/tuning/)
 
 ```{r}
+contrl_preds <- control_resamples(save_pred = TRUE)
+
 glm_rs <- fit_resamples(
   glm_wf,
   resamples = penguin_folds,
-  control = control_resamples(save_pred = TRUE)
+  control = contrl_preds
 )
 
 ranger_rs <- fit_resamples(
   ranger_wf,
   resamples = penguin_folds,
-  control = control_resamples(save_pred = TRUE)
+  control = contrl_preds
 )
 ```
 
