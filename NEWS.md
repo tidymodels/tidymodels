@@ -2,6 +2,8 @@
 
  * Added five package startup messages to point users to helpful documentation. These startup messages are chosen via modulo of the time, _not_ using the RNG, so these messages will not affect reproducibility (#59).
 
+ * Added R Markdown template for a tidymodels analysis (#58).
+
 # tidymodels 0.1.3
 
  * Re-licensed package from GPL-3 to MIT. See [consent from copyright holders here](https://github.com/tidymodels/tidymodels/issues/51).
