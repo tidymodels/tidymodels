@@ -1,0 +1,4 @@
+name: Model Analysis
+description: >
+   Train and evaluate with tidymodels
+create_dir: FALSE

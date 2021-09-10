@@ -1,0 +1,139 @@
+---
+title: "Train and evaluate models with tidymodels"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, fig.width = 8, fig.height = 5)
+```
+
+
+*This template offers an opinionated guide on how to structure a modeling analysis. Your individual modeling analysis may require you to add to, subtract from, or otherwise change this structure, but consider this a general framework to start from. If you want to learn more about using tidymodels, check out our [Getting Started](https://www.tidymodels.org/start/) guide.*
+
+In this example analysis, let's fit a model to predict [the sex of penguins](https://allisonhorst.github.io/palmerpenguins/) from species and measurement information.
+
+```{r}
+library(tidymodels)
+
+data(penguins)
+glimpse(penguins)
+
+penguins <- na.omit(penguins)
+```
+
+
+## Explore data
+
+Exploratory data analysis (EDA) is an [important part of the modeling process](https://www.tmwr.org/software-modeling.html#model-phases).
+
+```{r}
+penguins %>%
+  ggplot(aes(bill_depth_mm, bill_length_mm, color = sex, size = body_mass_g)) +
+  geom_point(alpha = 0.5) +
+  facet_wrap(~species) +
+  theme_bw()
+```
+
+
+## Build models
+
+Let's consider how to [spend our data budget](https://www.tmwr.org/splitting.html):
+
+- create training and testing sets
+- create resampling folds from the *training* set
+
+```{r}
+set.seed(123)
+penguin_split <- initial_split(penguins, strata = sex)
+penguin_train <- training(penguin_split)
+penguin_test <- testing(penguin_split)
+
+set.seed(234)
+penguin_folds <- vfold_cv(penguin_train, strata = sex)
+penguin_folds
+```
+
+Let's create a [**model specification**](https://www.tmwr.org/models.html) for each model we want to try:
+
+```{r}
+glm_spec <-
+  logistic_reg() %>%
+  set_engine("glm")
+
+ranger_spec <-
+  rand_forest(trees = 1e3) %>%
+  set_engine("ranger") %>%
+  set_mode("classification")
+```
+
+To set up your modeling code, consider using the [parsnip addin](https://parsnip.tidymodels.org/reference/parsnip_addin.html) or the [usemodels](https://usemodels.tidymodels.org/) package.
+
+Now let's build a [**model workflow**](https://www.tmwr.org/workflows.html) combining each model specification with a data preprocessor:
+
+```{r}
+penguin_formula <- sex ~ .
+
+glm_wf    <- workflow(penguin_formula, glm_spec)
+ranger_wf <- workflow(penguin_formula, ranger_spec)
+```
+
+If your feature engineering needs are more complex than provided by a formula like `sex ~ .`, use a [recipe](https://www.tidymodels.org/start/recipes/). [Read more about feature engineering with recipes](https://www.tmwr.org/recipes.html) to learn how they work.
+
+
+## Evaluate models
+
+These models have no tuning parameters so we can evaluate them as they are. [Learn about tuning hyperparameters here.](https://www.tidymodels.org/start/tuning/)
+
+```{r}
+contrl_preds <- control_resamples(save_pred = TRUE)
+
+glm_rs <- fit_resamples(
+  glm_wf,
+  resamples = penguin_folds,
+  control = contrl_preds
+)
+
+ranger_rs <- fit_resamples(
+  ranger_wf,
+  resamples = penguin_folds,
+  control = contrl_preds
+)
+```
+
+How did these two models compare?
+
+```{r}
+collect_metrics(glm_rs)
+collect_metrics(ranger_rs)
+```
+
+We can visualize these results using an ROC curve (or a confusion matrix via `conf_mat()`):
+
+```{r}
+bind_rows(
+  collect_predictions(glm_rs) %>%
+    mutate(mod = "glm"),
+  collect_predictions(ranger_rs) %>%
+    mutate(mod = "ranger")
+) %>%
+  group_by(mod) %>%
+  roc_curve(sex, .pred_female) %>%
+  autoplot()
+```
+
+These models perform very similarly, so perhaps we would choose the simpler, linear model. The function `last_fit()` *fits* one final time on the training data and *evaluates* on the testing data. This is the first time we have used the testing data.
+
+```{r}
+final_fitted <- last_fit(glm_wf, penguin_split)
+collect_metrics(final_fitted)  ## metrics evaluated on the *testing* data
+```
+
+This object contains a fitted workflow that we can use for prediction.
+
+```{r}
+final_wf <- extract_workflow(final_fitted)
+predict(final_wf, penguin_test[55,])
+```
+
+You can save this fitted `final_wf` object to use later with new data, for example with `readr::write_rds()`.
