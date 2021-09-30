@@ -6,7 +6,7 @@
 \alias{tidymodels-package}
 \title{tidymodels: Easily Install and Load the 'Tidymodels' Packages}
 \description{
-The tidy modeling "verse" is a collection of packages for 
+The tidy modeling "verse" is a collection of packages for
     modeling and statistical analysis that share the underlying design
     philosophy, grammar, and data structures of the tidyverse.
 }
