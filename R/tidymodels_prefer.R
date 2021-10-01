@@ -19,7 +19,7 @@ tidymodels_prefer <- function(quiet = TRUE) {
       conflicted::conflict_prefer("neighbors",       winner = "dials",     quiet = quiet)
       conflicted::conflict_prefer("fit",             winner = "parsnip",   quiet = quiet)
       conflicted::conflict_prefer("bart",            winner = "parsnip",   quiet = quiet)
-      conflicted::conflict_prefer("pls",             losers = "mixOmics",  quiet = quiet)
+      conflicted::conflict_prefer("pls",             winner = "parsnip",   quiet = quiet)
       conflicted::conflict_prefer("map",             winner = "purrr",     quiet = quiet)
       conflicted::conflict_prefer("step",            winner = "recipes",   quiet = quiet)
       conflicted::conflict_prefer("step_downsample", winner = "themis",    quiet = quiet)
