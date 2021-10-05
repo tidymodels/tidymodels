@@ -1,4 +1,6 @@
-# tidymodels (development version)
+# tidymodels 0.1.4
+
+ * Updated versions
 
  * Added five package startup messages to point users to helpful documentation. These startup messages are chosen via modulo of the time, _not_ using the RNG, so these messages will not affect reproducibility (#59).
 

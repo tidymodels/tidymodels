@@ -1,40 +1,47 @@
 Package: tidymodels
 Title: Easily Install and Load the 'Tidymodels' Packages
-Version: 0.1.3.9000
-Authors@R: c(
-    person(given = "Max",    family = "Kuhn",    email = "max@rstudio.com",      role = c("aut", "cre")),
-    person(given = "Hadley", family = "Wickham", email = "hadley@rstudio.com",   role = c("aut")),
-    person("RStudio", role = c("cph", "fnd"))
-  )
-Description: The tidy modeling "verse" is a collection of packages for 
+Version: 0.1.4
+Authors@R: 
+    c(person(given = "Max",
+             family = "Kuhn",
+             role = c("aut", "cre"),
+             email = "max@rstudio.com"),
+      person(given = "Hadley",
+             family = "Wickham",
+             role = "aut",
+             email = "hadley@rstudio.com"),
+      person(given = "RStudio",
+             role = c("cph", "fnd")))
+Description: The tidy modeling "verse" is a collection of packages for
     modeling and statistical analysis that share the underlying design
     philosophy, grammar, and data structures of the tidyverse.
 License: MIT + file LICENSE
-URL: https://tidymodels.tidymodels.org, https://github.com/tidymodels/tidymodels
+URL: https://tidymodels.tidymodels.org,
+    https://github.com/tidymodels/tidymodels
 BugReports: https://github.com/tidymodels/tidymodels/issues
 Depends: 
     R (>= 3.1)
 Imports: 
-    broom (>= 0.7.6),
-    cli (>= 2.4.0),
+    broom (>= 0.7.9),
+    cli (>= 3.0.1),
     conflicted (>= 1.0.4),
-    dials (>= 0.0.9),
-    dplyr (>= 1.0.5),
+    dials (>= 0.0.10),
+    dplyr (>= 1.0.7),
+    ggplot2 (>= 3.3.5),
     hardhat (>= 0.1.6),
-    ggplot2 (>= 3.3.3),
-    infer (>= 0.5.4),
-    modeldata (>= 0.1.0),
-    parsnip (>= 0.1.5),
+    infer (>= 1.0.0),
+    modeldata (>= 0.1.1),
+    parsnip (>= 0.1.7),
     purrr (>= 0.3.4),
-    recipes (>= 0.1.16),
-    rlang (>= 0.4.10),
-    rsample (>= 0.0.9),
+    recipes (>= 0.1.17),
+    rlang (>= 0.4.11),
+    rsample (>= 0.1.0),
     rstudioapi (>= 0.13),
-    tibble (>= 3.1.0),
-    tidyr (>= 1.1.3),
-    tune (>= 0.1.3),
+    tibble (>= 3.1.5),
+    tidyr (>= 1.1.4),
+    tune (>= 0.1.6),
     workflows (>= 0.2.3),
-    workflowsets (>= 0.0.2),
+    workflowsets (>= 0.1.0),
     yardstick (>= 0.0.8)
 Suggests: 
     covr,
@@ -43,6 +50,7 @@ Suggests:
     rmarkdown,
     testthat,
     xml2
+VignetteBuilder: 
+    knitr
 Encoding: UTF-8
-RoxygenNote: 7.1.1.9001
-VignetteBuilder: knitr
+RoxygenNote: 7.1.2

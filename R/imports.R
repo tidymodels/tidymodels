@@ -14,5 +14,6 @@
 #' @importFrom tidyr chop
 #' @importFrom workflows workflow
 #' @importFrom cli rule
+#' @importFrom workflowsets as_workflow_set
 
 NULL
