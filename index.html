@@ -82,6 +82,7 @@
 
 <!-- badges: start -->
 
+<!-- badges: end -->
 <div id="overview" class="section level2">
 <h2 class="hasAnchor">
 <a href="#overview" class="anchor"></a>Overview</h2>
@@ -112,21 +113,24 @@
 <p>When loading the package, the versions and conflicts are listed:</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidymodels.tidymodels.org">tidymodels</a></span><span class="op">)</span>
-<span class="co">#&gt; ── Attaching packages ────────────────────────────────────── tidymodels 0.1.3 ──</span>
-<span class="co">#&gt; ✓ broom        0.7.6      ✓ recipes      0.1.16</span>
-<span class="co">#&gt; ✓ dials        0.0.9      ✓ rsample      0.0.9 </span>
-<span class="co">#&gt; ✓ dplyr        1.0.5      ✓ tibble       3.1.0 </span>
-<span class="co">#&gt; ✓ ggplot2      3.3.3      ✓ tidyr        1.1.3 </span>
-<span class="co">#&gt; ✓ infer        0.5.4      ✓ tune         0.1.3 </span>
-<span class="co">#&gt; ✓ modeldata    0.1.0      ✓ workflows    0.2.2 </span>
-<span class="co">#&gt; ✓ parsnip      0.1.5      ✓ workflowsets 0.0.2 </span>
-<span class="co">#&gt; ✓ purrr        0.3.4      ✓ yardstick    0.0.8</span>
+<span class="co">#&gt; Registered S3 method overwritten by 'tune':</span>
+<span class="co">#&gt;   method                   from   </span>
+<span class="co">#&gt;   required_pkgs.model_spec parsnip</span>
+<span class="co">#&gt; ── Attaching packages ────────────────────────────────────── tidymodels 0.1.4 ──</span>
+<span class="co">#&gt; ✓ broom        0.7.9          ✓ recipes      0.1.17    </span>
+<span class="co">#&gt; ✓ dials        0.0.10         ✓ rsample      0.1.0     </span>
+<span class="co">#&gt; ✓ dplyr        1.0.7          ✓ tibble       3.1.5     </span>
+<span class="co">#&gt; ✓ ggplot2      3.3.5          ✓ tidyr        1.1.4     </span>
+<span class="co">#&gt; ✓ infer        1.0.0          ✓ tune         0.1.6.9000</span>
+<span class="co">#&gt; ✓ modeldata    0.1.1          ✓ workflows    0.2.3     </span>
+<span class="co">#&gt; ✓ parsnip      0.1.7          ✓ workflowsets 0.1.0     </span>
+<span class="co">#&gt; ✓ purrr        0.3.4          ✓ yardstick    0.0.8</span>
 <span class="co">#&gt; ── Conflicts ───────────────────────────────────────── tidymodels_conflicts() ──</span>
 <span class="co">#&gt; x purrr::discard() masks scales::discard()</span>
 <span class="co">#&gt; x dplyr::filter()  masks stats::filter()</span>
 <span class="co">#&gt; x dplyr::lag()     masks stats::lag()</span>
 <span class="co">#&gt; x recipes::step()  masks stats::step()</span>
-<span class="co">#&gt; • Use tidymodels_prefer() to resolve common conflicts.</span></code></pre></div>
+<span class="co">#&gt; • Use suppressPackageStartupMessages() to eliminate package startup messages</span></code></pre></div>
 </div>
 <div id="contributing" class="section level2">
 <h2 class="hasAnchor">
@@ -188,7 +192,7 @@
   <div class="dev-status">
 <h2>Dev status</h2>
 <ul class="list-unstyled">
-<li><a href="https://github.com/tidymodels/tidymodels/actions"><img src="https://github.com/tidymodels/tidymodels/workflows/R-CMD-check/badge.svg" alt="R build status"></a></li>
+<li><a href="https://github.com/tidymodels/tidymodels/actions"><img src="https://github.com/tidymodels/tidymodels/workflows/R-CMD-check/badge.svg" alt="R-CMD-check"></a></li>
 <li><a href="https://codecov.io/gh/tidymodels/tidymodels?branch=master"><img src="https://codecov.io/gh/tidymodels/tidymodels/branch/master/graph/badge.svg" alt="Codecov test coverage"></a></li>
 <li><a href="https://CRAN.r-project.org/package=tidymodels"><img src="https://www.r-pkg.org/badges/version/tidymodels" alt="CRAN_Status_Badge"></a></li>
 <li><a href="https://CRAN.r-project.org/package=tidymodels"><img src="https://cranlogs.r-pkg.org/badges/tidymodels" alt="Downloads"></a></li>
