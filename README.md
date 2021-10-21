@@ -36,7 +36,7 @@ It includes a core set of packages that are loaded on startup:
 -   [`ggplot2`](https://ggplot2.tidyverse.org) implements a grammar of
     graphics.
 
--   [`infer`](https://infer.tidymodels.org/) is a modern approach to
+-   [`infer`](https://infer.tidymodels.org) is a modern approach to
     statistical inference.
 
 -   [`parsnip`](https://parsnip.tidymodels.org) is a tidy, unified
