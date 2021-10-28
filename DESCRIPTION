@@ -1,17 +1,11 @@
 Package: tidymodels
 Title: Easily Install and Load the 'Tidymodels' Packages
 Version: 0.1.4.9000
-Authors@R: 
-    c(person(given = "Max",
-             family = "Kuhn",
-             role = c("aut", "cre"),
-             email = "max@rstudio.com"),
-      person(given = "Hadley",
-             family = "Wickham",
-             role = "aut",
-             email = "hadley@rstudio.com"),
-      person(given = "RStudio",
-             role = c("cph", "fnd")))
+Authors@R: c(
+    person("Max", "Kuhn", , "max@rstudio.com", role = c("aut", "cre")),
+    person("Hadley", "Wickham", , "hadley@rstudio.com", role = "aut"),
+    person("RStudio", role = c("cph", "fnd"))
+  )
 Description: The tidy modeling "verse" is a collection of packages for
     modeling and statistical analysis that share the underlying design
     philosophy, grammar, and data structures of the tidyverse.
@@ -52,6 +46,7 @@ Suggests:
     xml2
 VignetteBuilder: 
     knitr
+Config/Needs/website: 
+    tidyverse/tidytemplate
 Encoding: UTF-8
 RoxygenNote: 7.1.2
-Config/Needs/website: tidyverse/tidytemplate
