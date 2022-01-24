@@ -17,7 +17,7 @@ coverage](https://codecov.io/gh/tidymodels/tidymodels/branch/main/graph/badge.sv
 ## Overview
 
 [tidymodels](https://www.tidymodels.org/) is a “meta-package” for
-modeling and statistical analysis that share the underlying design
+modeling and statistical analysis that shares the underlying design
 philosophy, grammar, and data structures of the
 [tidyverse](https://www.tidyverse.org/).
 
@@ -64,7 +64,7 @@ It includes a core set of packages that are loaded on startup:
     combine pre-processing steps and models into a single object.
 
 -   [`yardstick`](https://yardstick.tidymodels.org) contains tools for
-    evaluating models (e.g. accuracy, RMSE, etc.)
+    evaluating models (e.g. accuracy, RMSE, etc.).
 
 You can install the released version of tidymodels from
 [CRAN](https://CRAN.r-project.org) with:
