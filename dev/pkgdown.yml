@@ -4,7 +4,7 @@ pkgdown_sha: ~
 articles:
   Tags: Tags.html
   Functions: extras/Functions.html
-last_built: 2022-01-24T16:14Z
+last_built: 2022-02-16T17:59Z
 urls:
   reference: https://tidymodels.tidymodels.org/reference
   article: https://tidymodels.tidymodels.org/articles
