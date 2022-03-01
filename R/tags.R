@@ -52,9 +52,8 @@ tag_attach <- function(tag) {
   installed <- rownames(installed.packages())
   is_installed <- pkgs %in% installed
   if (any(!is_installed)) {
-    stop("Some pacakges are not installed: ",
-      quote_pkg(pkgs[!is_installed]),
-      call. = FALSE
+    rlang::abort(
+      "Some packages are not installed: ", quote_pkg(pkgs[!is_installed])
     )
   }
   tidymodels_attach(unique(pkgs))
@@ -74,9 +73,9 @@ quote_pkg <- function(x) {
 
 tag_validate <- function(tag) {
   if (!is.character(tag) || length(tag) != 1) {
-    stop("`tag` should be one of: ",
-      paste0("'", names(tags), "'", collapse = ", "),
-      call. = FALSE
+    rlang::abort(
+      "`tag` should be one of: ",
+      paste0("'", names(tags), "'", collapse = ", ")
     )
   }
 }
