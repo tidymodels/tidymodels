@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# tidymodels <a href='https://tidymodels.tidymodels.org'><img src='tidymodels_hex.png' align="right" height="139" /></a>
+# tidymodels <a href='https://tidymodels.tidymodels.org'><img src='man/figures/logo.png' align="right" height="139" /></a>
 
 <!-- badges: start -->
 
@@ -65,6 +65,8 @@ It includes a core set of packages that are loaded on startup:
 -   [`yardstick`](https://yardstick.tidymodels.org) contains tools for
     evaluating models (e.g. accuracy, RMSE, etc.).
 
+A list of all tidymodels functions across different CRAN packages can be found at <https://www.tidymodels.org/find/>.
+
 You can install the released version of tidymodels from
 [CRAN](https://CRAN.r-project.org) with:
 
@@ -106,7 +108,7 @@ library(tidymodels)
 ## Contributing
 
 This project is released with a [Contributor Code of
-Conduct](https://contributor-covenant.org/version/2/0/CODE_OF_CONDUCT.html).
+Conduct](https://contributor-covenant.org/version/2/1/CODE_OF_CONDUCT.html).
 By contributing to this project, you agree to abide by its terms.
 
 -   For questions and discussions about tidymodels packages, modeling,
