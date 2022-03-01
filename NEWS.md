@@ -1,5 +1,7 @@
 # tidymodels (development version)
 
+ * Updated to testthat 3e
+
 # tidymodels 0.1.4
 
  * Updated versions
