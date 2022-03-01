@@ -22,15 +22,15 @@ make_email <- function(to, package) {
   get("gm_mime", asNamespace("gmailr"))(
     from = "max@rstudio.com",
     to = to,
-    subject = glue::glue('{package} and tidymodels'),
+    subject = glue::glue("{package} and tidymodels"),
     body = body
   )
 }
 
 tidymodels_dependency_dissuade <- function() {
   pkgs <- tools::package_dependencies("tidymodels",
-                                      which = c("Depends", "Imports", "Suggests"),
-                                      reverse = TRUE
+    which = c("Depends", "Imports", "Suggests"),
+    reverse = TRUE
   )[[1]]
 
   db <- tools::CRAN_package_db()

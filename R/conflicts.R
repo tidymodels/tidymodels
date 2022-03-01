@@ -3,8 +3,8 @@
 #' This function lists all the conflicts between packages in the tidymodels
 #' and other packages that you have loaded.
 #'
-#' There are four conflicts that are deliberately ignored: \code{intersect},
-#' \code{union}, \code{setequal}, and \code{setdiff} from dplyr. These functions
+#' There are four conflicts that are deliberately ignored: `intersect`,
+#' `union`, `setequal`, and `setdiff` from dplyr. These functions
 #' make the base equivalents generic, so shouldn't negatively affect any
 #' existing code.
 #'
@@ -27,7 +27,9 @@ tidymodels_conflicts <- function() {
 }
 
 tidymodels_conflict_message <- function(x) {
-  if (length(x) == 0) return("")
+  if (length(x) == 0) {
+    return("")
+  }
 
   header <- cli::rule(
     left = cli::style_bold("Conflicts"),
@@ -92,14 +94,16 @@ confirm_conflict <- function(packages, name) {
     purrr::map(~ get(name, pos = .)) %>%
     purrr::keep(is.function)
 
-  if (length(objs) <= 1)
+  if (length(objs) <= 1) {
     return()
+  }
 
   # Remove identical functions
   objs <- objs[!duplicated(objs)]
   packages <- packages[!duplicated(packages)]
-  if (length(objs) == 1)
+  if (length(objs) == 1) {
     return()
+  }
 
   packages
 }

@@ -21,7 +21,6 @@ text_col <- function(x) {
   theme <- rstudioapi::getThemeInfo()
 
   if (isTRUE(theme$dark)) cli::col_white(x) else cli::col_black(x)
-
 }
 
 #' List all packages in the tidymodels
@@ -44,7 +43,9 @@ tidymodels_packages <- function(include_self = TRUE) {
 }
 
 invert <- function(x) {
-  if (length(x) == 0) return()
+  if (length(x) == 0) {
+    return()
+  }
   stacked <- utils::stack(x)
   tapply(as.character(stacked$ind), stacked$values, list)
 }
@@ -52,7 +53,7 @@ invert <- function(x) {
 release_bullets <- function() {
   c(
     'Check what `usethis::use_latest_dependencies(TRUE, "CRAN")` might update',
-    'Use `tidymodels_dependency_dissuade()` to send emails'
+    "Use `tidymodels_dependency_dissuade()` to send emails"
   )
 }
 

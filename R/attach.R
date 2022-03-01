@@ -1,27 +1,30 @@
 core <- c(
   "broom", "dials", "dplyr", "ggplot2", "infer", "modeldata", "parsnip",
-  "purrr", "recipes", "rsample",  "tibble",  "tidyr",  "tune", "workflows",
+  "purrr", "recipes", "rsample", "tibble", "tidyr", "tune", "workflows",
   "workflowsets", "yardstick"
 )
 
 
 pkg_loaded <- function(pkg = NULL) {
-  if (is.null(pkg))
+  if (is.null(pkg)) {
     pkg <- core
+  }
   search <- paste0("package:", pkg)
   pkg[search %in% search()]
 }
 pkg_unloaded <- function(pkg = NULL) {
-  if (is.null(pkg))
+  if (is.null(pkg)) {
     pkg <- core
+  }
   search <- paste0("package:", pkg)
   pkg[!search %in% search()]
 }
 
 tidymodels_attach <- function(pkg = NULL) {
   to_load <- pkg_unloaded(pkg = pkg)
-  if (length(to_load) == 0)
+  if (length(to_load) == 0) {
     return(invisible())
+  }
 
   msg(
     cli::rule(
@@ -35,8 +38,7 @@ tidymodels_attach <- function(pkg = NULL) {
   clean_versions <- gsub(cli::ansi_regex(), "", versions, perl = TRUE)
   packages <- paste0(
     cli::col_green(cli::symbol$tick), " ", cli::col_blue(format(to_load)), " ",
-    cli::ansi_align(versions, max(nchar(clean_versions))
-    )
+    cli::ansi_align(versions, max(nchar(clean_versions)))
   )
 
   if (length(packages) %% 2 == 1) {

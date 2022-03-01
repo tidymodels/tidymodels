@@ -6,6 +6,8 @@
 \alias{tidymodels-package}
 \title{tidymodels: Easily Install and Load the 'Tidymodels' Packages}
 \description{
+\if{html}{\figure{logo.png}{options: align='right' alt='logo' width='120'}}
+
 The tidy modeling "verse" is a collection of packages for modeling and statistical analysis that share the underlying design philosophy, grammar, and data structures of the tidyverse.
 }
 \seealso{

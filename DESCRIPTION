@@ -14,7 +14,7 @@ URL: https://tidymodels.tidymodels.org,
     https://github.com/tidymodels/tidymodels
 BugReports: https://github.com/tidymodels/tidymodels/issues
 Depends: 
-    R (>= 3.1)
+    R (>= 3.4)
 Imports: 
     broom (>= 0.7.9),
     cli (>= 3.0.1),
@@ -42,11 +42,13 @@ Suggests:
     glue,
     knitr,
     rmarkdown,
-    testthat,
+    testthat (>= 3.0.0),
     xml2
 VignetteBuilder: 
     knitr
 Config/Needs/website: 
     tidyverse/tidytemplate
 Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.2
+Config/testthat/edition: 3

@@ -18,7 +18,7 @@ tags <- list(
 
 #' Facilities for loading and updating other packages
 #'
-#' `tidymodels` contains a set of tags for specific topics in
+#' The tidymodels metapackage contains a set of tags for specific topics in
 #'  modeling and analysis. These can be used to load packages
 #'  in groups.
 #'
@@ -35,7 +35,8 @@ tag_show <- function() {
   all_tags <- vapply(
     tags,
     function(x) quote_pkg(x),
-    character(1))
+    character(1)
+  )
   all_tags <- paste0(names(all_tags), ": ", all_tags, "\n")
   cat("All tags:\n\n")
   cat(all_tags, sep = "")
@@ -51,9 +52,9 @@ tag_attach <- function(tag) {
   installed <- rownames(installed.packages())
   is_installed <- pkgs %in% installed
   if (any(!is_installed)) {
-    stop("Some pacakges are not installed: ",
-         quote_pkg(pkgs[!is_installed]),
-         call. = FALSE)
+    rlang::abort(
+      "Some packages are not installed: ", quote_pkg(pkgs[!is_installed])
+    )
   }
   tidymodels_attach(unique(pkgs))
 }
@@ -66,12 +67,15 @@ tag_update <- function(tag) {
   tidymodels_update(unique(unlist(pkgs)))
 }
 
-quote_pkg <- function(x)
+quote_pkg <- function(x) {
   paste0("'", x, "'", collapse = ", ")
+}
 
 tag_validate <- function(tag) {
-  if (!is.character(tag) || length(tag) != 1)
-    stop("`tag` should be one of: ",
-         paste0("'", names(tags), "'", collapse = ", "),
-         call. = FALSE)
+  if (!is.character(tag) || length(tag) != 1) {
+    rlang::abort(
+      "`tag` should be one of: ",
+      paste0("'", names(tags), "'", collapse = ", ")
+    )
+  }
 }

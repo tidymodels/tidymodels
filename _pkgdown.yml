@@ -2,26 +2,17 @@ url: https://tidymodels.tidymodels.org
 
 template:
   package: tidytemplate
-  params:
-    part_of: <a href="https://github.com/tidymodels">tidymodels</a>
-    footer: tidymodels is a part of the <strong>tidymodels</strong> ecosystem, a collection of modeling packages designed with common APIs and a shared philosophy.
-
+  bootstrap: 5
+  bslib:
+    danger: "#CA225E"
+    primary: "#CA225E"
+  includes:
+    in_header: |
+      <script defer data-domain="tidymodels.tidymodels.org,all.tidymodels.org" src="https://plausible.io/js/plausible.js"></script>
 
 development:
   mode: auto
 
-home:
-  strip_header: true
-
 figures:
   fig.width: 8
   fig.height: 5.75
-
-navbar:
-  left:
-  - text: All tidymodels Functions Across Packages
-    href: articles/extras/Functions.html
-  - text: Using Tags
-    href: articles/Tags.html
-  - text: News
-    href: news/index.html
