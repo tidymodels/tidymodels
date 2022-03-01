@@ -5,10 +5,9 @@
 
 <!-- badges: start -->
 
-[![R-CMD-check](https://github.com/tidymodels/tidymodels/workflows/R-CMD-check/badge.svg)](https://github.com/tidymodels/tidymodels/actions)
-[![Codecov test
-coverage](https://codecov.io/gh/tidymodels/tidymodels/branch/main/graph/badge.svg)](https://codecov.io/gh/tidymodels/tidymodels?branch=main)
-[![CRAN\_Status\_Badge](https://www.r-pkg.org/badges/version/tidymodels)](https://CRAN.r-project.org/package=tidymodels)
+[![R-CMD-check](https://github.com/tidymodels/tidymodels/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/tidymodels/tidymodels/actions/workflows/R-CMD-check.yaml)
+[![Codecov test coverage](https://codecov.io/gh/tidymodels/tidymodels/branch/main/graph/badge.svg)](https://app.codecov.io/gh/tidymodels/tidymodels?branch=main)
+[![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/tidymodels)](https://CRAN.r-project.org/package=tidymodels)
 [![Downloads](https://cranlogs.r-pkg.org/badges/tidymodels)](https://CRAN.r-project.org/package=tidymodels)
 [![lifecycle](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html)
 
