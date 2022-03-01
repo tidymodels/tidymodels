@@ -1,8 +1,8 @@
 ---
-title: "Using Tags"
+title: "Using tags"
 vignette: >
   %\VignetteEngine{knitr::rmarkdown}
-  %\VignetteIndexEntry{Using Tags}
+  %\VignetteIndexEntry{Using tags}
 output:
   knitr:::html_vignette:
     toc: yes
@@ -19,7 +19,7 @@ options(digits = 3)
 library(tidymodels)
 ```
 
-`tidymodels` has a set of core packages that are loaded and attached when the `tidymodels` package is loaded. 
+The tidymodels framework has a set of core packages that are loaded and attached when the tidymodels package is loaded. 
 
 There are other sets of packages that can be attached via `tidymodels::tag_attach(tag)` where the `tag` is a character string. Existing tags are:
 
