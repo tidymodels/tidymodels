@@ -3,8 +3,8 @@
 #' This function lists all the conflicts between packages in the tidymodels
 #' and other packages that you have loaded.
 #'
-#' There are four conflicts that are deliberately ignored: \code{intersect},
-#' \code{union}, \code{setequal}, and \code{setdiff} from dplyr. These functions
+#' There are four conflicts that are deliberately ignored: `intersect`,
+#' `union`, `setequal`, and `setdiff` from dplyr. These functions
 #' make the base equivalents generic, so shouldn't negatively affect any
 #' existing code.
 #'

@@ -20,9 +20,9 @@ analysis', 'deep learning', 'ensembles', 'extra models', 'extra recipes',
 tuning', 'resampling', 'text analysis', 'time series', and 'visualization'.}
 }
 \description{
-`tidymodels` contains a set of tags for specific topics in
- modeling and analysis. These can be used to load packages
- in groups.
+The tidymodels metapackage contains a set of tags for specific topics in
+modeling and analysis. These can be used to load packages
+in groups.
 }
 \examples{
 tag_show()

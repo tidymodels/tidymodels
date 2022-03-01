@@ -18,7 +18,7 @@ tags <- list(
 
 #' Facilities for loading and updating other packages
 #'
-#' `tidymodels` contains a set of tags for specific topics in
+#' The tidymodels metapackage contains a set of tags for specific topics in
 #'  modeling and analysis. These can be used to load packages
 #'  in groups.
 #'

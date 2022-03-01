@@ -7,10 +7,10 @@
 tidymodels_prefer(quiet = TRUE)
 }
 \arguments{
-\item{quiet}{If `TRUE`, all output will be suppressed}
+\item{quiet}{If \code{TRUE}, all output will be suppressed}
 }
 \description{
-`tidymodels_prefer()` uses the `conflicted` package to handle common
+\code{tidymodels_prefer()} uses the \code{conflicted} package to handle common
 conflicts with tidymodels and other packages.
 }
 \details{

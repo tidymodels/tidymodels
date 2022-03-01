@@ -50,3 +50,4 @@ Config/Needs/website:
     tidyverse/tidytemplate
 Encoding: UTF-8
 RoxygenNote: 7.1.2
+Roxygen: list(markdown = TRUE)

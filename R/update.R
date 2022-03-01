@@ -5,7 +5,7 @@
 #' confirmation.
 #'
 #' @param pkg A character string for the model being updated.
-#' @param recursive If \code{TRUE}, will also check all dependencies of
+#' @param recursive If `TRUE`, will also check all dependencies of
 #'   tidymodels packages.
 #' @param ... Extra arguments to pass to [utils::install.packages()]
 #' @return Nothing is returned but a message is printed to the
@@ -47,7 +47,7 @@ tidymodels_update <- function(pkg = "tidymodels", recursive = FALSE, ...) {
 #' List all dependencies
 #'
 #' @param x A character string for the packages being evaluated.
-#' @param recursive If \code{TRUE}, will also list all dependencies of
+#' @param recursive If `TRUE`, will also list all dependencies of
 #'   tidymodels packages.
 #' @export
 pkg_deps <- function(x = "tidymodels", recursive = FALSE) {
