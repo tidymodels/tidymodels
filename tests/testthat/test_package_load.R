@@ -1,7 +1,3 @@
-library(testthat)
-
-context("Loading packages")
-
 test_that("loaded packages", {
   loaded <- names(sessionInfo()$otherPkgs)
   expect_true(
