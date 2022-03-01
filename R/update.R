@@ -19,7 +19,6 @@
 #' @import rlang
 #' @importFrom utils install.packages
 tidymodels_update <- function(pkg = "tidymodels", recursive = FALSE, ...) {
-
   deps <- pkg_deps(pkg, recursive)
   behind <- dplyr::filter(deps, behind)
 
