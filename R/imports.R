@@ -15,5 +15,6 @@
 #' @importFrom workflows workflow
 #' @importFrom cli rule
 #' @importFrom workflowsets as_workflow_set
+#' @importFrom hardhat add_intercept_column
 
 NULL
