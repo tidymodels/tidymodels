@@ -2,8 +2,10 @@ Package: tidymodels
 Title: Easily Install and Load the 'Tidymodels' Packages
 Version: 0.2.0.9000
 Authors@R: c(
-    person("Max", "Kuhn", , "max@rstudio.com", role = c("aut", "cre")),
+    person("Max", "Kuhn", , "max@rstudio.com", role = "aut"),
     person("Hadley", "Wickham", , "hadley@rstudio.com", role = "aut"),
+    person("Julia", "Silge", , "julia.silge@gmail.com", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0002-3671-836X")),
     person("RStudio", role = c("cph", "fnd"))
   )
 Description: The tidy modeling "verse" is a collection of packages for
@@ -48,7 +50,7 @@ VignetteBuilder:
     knitr
 Config/Needs/website: 
     tidyverse/tidytemplate
+Config/testthat/edition: 3
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.2
-Config/testthat/edition: 3
