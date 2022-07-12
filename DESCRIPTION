@@ -36,7 +36,7 @@ Imports:
     tidyr (>= 1.2.0),
     tune (>= 1.0.0),
     workflows (>= 1.0.0),
-    workflowsets (>= 0.2.1),
+    workflowsets (>= 1.0.0),
     yardstick (>= 1.0.0)
 Suggests: 
     covr,
@@ -51,4 +51,4 @@ Config/Needs/website: tidyverse/tidytemplate
 Config/testthat/edition: 3
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.1.2
+RoxygenNote: 7.2.0
