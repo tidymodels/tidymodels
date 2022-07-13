@@ -6,11 +6,11 @@
 <!-- badges: start -->
 
 [![R-CMD-check](https://github.com/tidymodels/tidymodels/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/tidymodels/tidymodels/actions/workflows/R-CMD-check.yaml)
-[![Codecov test coverage](https://codecov.io/gh/tidymodels/tidymodels/branch/main/graph/badge.svg)](https://app.codecov.io/gh/tidymodels/tidymodels?branch=main)
+[![Codecov test
+coverage](https://codecov.io/gh/tidymodels/tidymodels/branch/main/graph/badge.svg)](https://app.codecov.io/gh/tidymodels/tidymodels?branch=main)
 [![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/tidymodels)](https://CRAN.r-project.org/package=tidymodels)
 [![Downloads](https://cranlogs.r-pkg.org/badges/tidymodels)](https://CRAN.r-project.org/package=tidymodels)
 [![lifecycle](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html)
-
 <!-- badges: end -->
 
 ## Overview
@@ -65,7 +65,8 @@ It includes a core set of packages that are loaded on startup:
 -   [`yardstick`](https://yardstick.tidymodels.org) contains tools for
     evaluating models (e.g. accuracy, RMSE, etc.).
 
-A list of all tidymodels functions across different CRAN packages can be found at <https://www.tidymodels.org/find/>.
+A list of all tidymodels functions across different CRAN packages can be
+found at <https://www.tidymodels.org/find/>.
 
 You can install the released version of tidymodels from
 [CRAN](https://CRAN.r-project.org) with:
@@ -85,23 +86,20 @@ When loading the package, the versions and conflicts are listed:
 
 ``` r
 library(tidymodels)
-#> Registered S3 method overwritten by 'tune':
-#>   method                   from   
-#>   required_pkgs.model_spec parsnip
-#> ── Attaching packages ────────────────────────────────────── tidymodels 0.1.4 ──
-#> ✓ broom        0.7.9          ✓ recipes      0.1.17    
-#> ✓ dials        0.0.10         ✓ rsample      0.1.0     
-#> ✓ dplyr        1.0.7          ✓ tibble       3.1.5     
-#> ✓ ggplot2      3.3.5          ✓ tidyr        1.1.4     
-#> ✓ infer        1.0.0          ✓ tune         0.1.6.9000
-#> ✓ modeldata    0.1.1          ✓ workflows    0.2.3     
-#> ✓ parsnip      0.1.7          ✓ workflowsets 0.1.0     
-#> ✓ purrr        0.3.4          ✓ yardstick    0.0.8
+#> ── Attaching packages ────────────────────────────────────── tidymodels 1.0.0 ──
+#> ✔ broom        1.0.0     ✔ recipes      1.0.1
+#> ✔ dials        1.0.0     ✔ rsample      1.0.0
+#> ✔ dplyr        1.0.9     ✔ tibble       3.1.7
+#> ✔ ggplot2      3.3.6     ✔ tidyr        1.2.0
+#> ✔ infer        1.0.2     ✔ tune         1.0.0
+#> ✔ modeldata    1.0.0     ✔ workflows    1.0.0
+#> ✔ parsnip      1.0.0     ✔ workflowsets 1.0.0
+#> ✔ purrr        0.3.4     ✔ yardstick    1.0.0
 #> ── Conflicts ───────────────────────────────────────── tidymodels_conflicts() ──
-#> x purrr::discard() masks scales::discard()
-#> x dplyr::filter()  masks stats::filter()
-#> x dplyr::lag()     masks stats::lag()
-#> x recipes::step()  masks stats::step()
+#> ✖ purrr::discard() masks scales::discard()
+#> ✖ dplyr::filter()  masks stats::filter()
+#> ✖ dplyr::lag()     masks stats::lag()
+#> ✖ recipes::step()  masks stats::step()
 #> • Use suppressPackageStartupMessages() to eliminate package startup messages
 ```
 
