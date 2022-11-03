@@ -20,7 +20,10 @@ For a model denotes as `{model}` with a specific `{engine}`:
 
 * [ ] Make sure that the `rmd_pkgs` listed in `parsnip/man/rmd/aaa.Rmd` are also installed. [(example)](https://github.com/tidymodels/parsnip/blob/main/man/rmd/aaa.Rmd#L20:L21)
 
-* [ ] Run `knit_engine_docs()`. There is an optional `pattern` argument to filter which documentation files are being processed. 
+
+* [ ] Restart your R session (with `Shift + Cmd + 0` on MacOS)
+
+* [ ] Run `parsnip:::knit_engine_docs()`. There is an optional `pattern` argument to filter which documentation files are being processed. 
 
 * [ ] Check output for errors. 
 
