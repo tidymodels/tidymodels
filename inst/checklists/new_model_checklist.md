@@ -1,27 +1,23 @@
-* [ ] Create the main modeling function (e.g. `nearest_neighbors()`). 
+All these items should be added to *parsnip*, unless otherwise specified.
+
+* [ ] Create the main modeling function (e.g. `nearest_neighbors()`). When choosing argument names, check for existing ones across other model types which could be reused, e.g., `trees` for the number of trees is used across different tree-based models like `rand_forest()` and `boost_tree()`.
 
 * [ ] Register the model and a mode in the parsnip model “database” with `parsnip::set_new_model()` and `parsnip::set_mode_mode()`. [(example)](https://github.com/tidymodels/parsnip/blob/c54f07b7e1f7ce164aab8f95bc7b1356b68558c8/R/proportional_hazards_data.R)
 
-
 * [ ] Create an `update()` method.
 
-* [ ] _[new tuning parameters]_ Make sure that there are not existing argument names that can be used.
-
-* [ ] _[new tuning parameters]_ Are there possible engine arguments that users will tune? If so, document them and plan for their use.
-
-* [ ] _[new tuning parameters]_ Make dials functions for main or engine parameters, if needed. 
-
+* [ ] Add parameter objects for main parameters to *dials*, if needed. See [How to create a tuning parameter function](https://www.tidymodels.org/learn/develop/parameters/) for more details.
 
 * [ ] Write unit tests for the basic modeling function (independent of the engines). 
 
-* [ ] _[in parsnip]_ Add a pkgdown entry
+* [ ] Add a pkgdown entry.
 
-* [ ] _[in parsnip]_ Add model description to the internal `model_descs` tibble
+* [ ] Add model description to the internal `model_descs` tibble.
 
-* [ ] _[in parsnip]_ Run `purrr::map(parsnip:::extensions(), ~ library(.x, character.only = TRUE))`
+* [ ] Run `purrr::map(parsnip:::extensions(), ~ library(.x, character.only = TRUE))`.
 
-* [ ] _[in parsnip]_ Run `parsnip:::update_model_info_file()` 
+* [ ] Run `parsnip:::update_model_info_file()`.
 
-* [ ] _[in parsnip]_ Make sure that no entries are removed from `inst/models.tsv`.
+* [ ] Make sure that no entries are removed from `inst/models.tsv`.
 
 * [ ] Add a documentation entry in NEWS.md
