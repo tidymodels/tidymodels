@@ -66,8 +66,8 @@ install.packages("tidymodels")
 Install the development version from GitHub with:
 
 ``` r
-library("devtools")
-install_github("tidymodels/tidymodels")
+# install.packages("pak")
+pak::pak("tidymodels/tidymodels")
 ```
 
 When loading the package, the versions and conflicts are listed:
