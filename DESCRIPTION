@@ -2,10 +2,10 @@ Package: tidymodels
 Title: Easily Install and Load the 'Tidymodels' Packages
 Version: 1.0.0.9000
 Authors@R: c(
-    person("Max", "Kuhn", , "max@rstudio.com", role = c("aut", "cre"),
+    person("Max", "Kuhn", , "max@posit.co", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0003-2402-136X")),
-    person("Hadley", "Wickham", , "hadley@rstudio.com", role = "aut"),
-    person("RStudio", role = c("cph", "fnd"))
+    person("Hadley", "Wickham", , "hadley@posit.co", role = "aut"),
+    person(given = "Posit, PBC", role = c("cph", "fnd"))
   )
 Description: The tidy modeling "verse" is a collection of packages for
     modeling and statistical analysis that share the underlying design

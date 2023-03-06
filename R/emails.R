@@ -20,7 +20,7 @@ make_email <- function(to, package) {
   ")
 
   get("gm_mime", asNamespace("gmailr"))(
-    from = "max@rstudio.com",
+    from = "max@posit.co",
     to = to,
     subject = glue::glue("{package} and tidymodels"),
     body = body
