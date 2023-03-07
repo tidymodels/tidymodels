@@ -114,20 +114,20 @@
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"tidymodels"</span><span class="op">)</span></span></code></pre></div>
 <p>Install the development version from GitHub with:</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st"><a href="https://devtools.r-lib.org/" class="external-link">"devtools"</a></span><span class="op">)</span></span>
-<span><span class="fu">install_github</span><span class="op">(</span><span class="st">"tidymodels/tidymodels"</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="co"># install.packages("pak")</span></span>
+<span><span class="fu">pak</span><span class="fu">::</span><span class="fu"><a href="http://pak.r-lib.org/reference/pak.html" class="external-link">pak</a></span><span class="op">(</span><span class="st">"tidymodels/tidymodels"</span><span class="op">)</span></span></code></pre></div>
 <p>When loading the package, the versions and conflicts are listed:</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://tidymodels.tidymodels.org">tidymodels</a></span><span class="op">)</span></span>
-<span><span class="co">#&gt; ── Attaching packages ────────────────────────────────────── tidymodels 1.0.0 ──</span></span>
-<span><span class="co">#&gt; ✔ broom        1.0.0     ✔ recipes      1.0.1</span></span>
-<span><span class="co">#&gt; ✔ dials        1.0.0     ✔ rsample      1.0.0</span></span>
-<span><span class="co">#&gt; ✔ dplyr        1.0.9     ✔ tibble       3.1.7</span></span>
-<span><span class="co">#&gt; ✔ ggplot2      3.3.6     ✔ tidyr        1.2.0</span></span>
-<span><span class="co">#&gt; ✔ infer        1.0.2     ✔ tune         1.0.0</span></span>
-<span><span class="co">#&gt; ✔ modeldata    1.0.0     ✔ workflows    1.0.0</span></span>
-<span><span class="co">#&gt; ✔ parsnip      1.0.0     ✔ workflowsets 1.0.0</span></span>
-<span><span class="co">#&gt; ✔ purrr        0.3.4     ✔ yardstick    1.0.0</span></span>
+<span><span class="co">#&gt; ── Attaching packages ───────────────────────────────── tidymodels 1.0.0.9000 ──</span></span>
+<span><span class="co">#&gt; ✔ broom        1.0.3          ✔ recipes      1.0.5.9000</span></span>
+<span><span class="co">#&gt; ✔ dials        1.1.0.9000     ✔ rsample      1.1.1     </span></span>
+<span><span class="co">#&gt; ✔ dplyr        1.1.0          ✔ tibble       3.1.8     </span></span>
+<span><span class="co">#&gt; ✔ ggplot2      3.4.1          ✔ tidyr        1.3.0     </span></span>
+<span><span class="co">#&gt; ✔ infer        1.0.4          ✔ tune         1.0.1.9003</span></span>
+<span><span class="co">#&gt; ✔ modeldata    1.1.0          ✔ workflows    1.1.3     </span></span>
+<span><span class="co">#&gt; ✔ parsnip      1.0.4.9000     ✔ workflowsets 1.0.0     </span></span>
+<span><span class="co">#&gt; ✔ purrr        1.0.1          ✔ yardstick    1.1.0.9000</span></span>
 <span><span class="co">#&gt; ── Conflicts ───────────────────────────────────────── tidymodels_conflicts() ──</span></span>
 <span><span class="co">#&gt; ✖ purrr::discard() masks scales::discard()</span></span>
 <span><span class="co">#&gt; ✖ dplyr::filter()  masks stats::filter()</span></span>
@@ -187,7 +187,7 @@
 <li>
 <a href="http://hadley.nz" class="external-link">Hadley Wickham</a> <br><small class="roles"> Author </small>  </li>
 <li>
-<a href="https://www.rstudio.com" class="external-link"><img src="https://www.tidyverse.org/rstudio-logo.svg" alt="RStudio" width="72"></a> <br><small class="roles"> Copyright holder, funder </small>  </li>
+<a href="https://www.posit.co" class="external-link"><img src="https://www.tidyverse.org/posit-logo.svg" alt="Posit" height="16" style="margin-bottom: 3px;"></a> <br><small class="roles"> Copyright holder, funder </small>  </li>
 </ul>
 </div>
 
@@ -210,7 +210,7 @@
   <footer><div class="container">
   <div class="pkgdown-footer-left">
   <p></p>
-<p>Developed by <a href="https://github.com/topepo" class="external-link">Max Kuhn</a>, <a href="http://hadley.nz" class="external-link">Hadley Wickham</a>, <a href="https://www.rstudio.com" class="external-link"><img src="https://www.tidyverse.org/rstudio-logo.svg" alt="RStudio" width="72"></a>.</p>
+<p>Developed by <a href="https://github.com/topepo" class="external-link">Max Kuhn</a>, <a href="http://hadley.nz" class="external-link">Hadley Wickham</a>, <a href="https://www.posit.co" class="external-link"><img src="https://www.tidyverse.org/posit-logo.svg" alt="Posit" height="16" style="margin-bottom: 3px;"></a>.</p>
 </div>
 
 <div class="pkgdown-footer-right">
