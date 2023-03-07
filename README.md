@@ -22,48 +22,48 @@ philosophy, grammar, and data structures of the
 
 It includes a core set of packages that are loaded on startup:
 
--   [`broom`](https://broom.tidymodels.org/) takes the messy output of
-    built-in functions in R, such as `lm`, `nls`, or `t.test`, and turns
-    them into tidy data frames.
+- [`broom`](https://broom.tidymodels.org/) takes the messy output of
+  built-in functions in R, such as `lm`, `nls`, or `t.test`, and turns
+  them into tidy data frames.
 
--   [`dials`](https://dials.tidymodels.org) has tools to create and
-    manage values of tuning parameters.
+- [`dials`](https://dials.tidymodels.org) has tools to create and manage
+  values of tuning parameters.
 
--   [`dplyr`](https://dplyr.tidyverse.org) contains a grammar for data
-    manipulation.
+- [`dplyr`](https://dplyr.tidyverse.org) contains a grammar for data
+  manipulation.
 
--   [`ggplot2`](https://ggplot2.tidyverse.org) implements a grammar of
-    graphics.
+- [`ggplot2`](https://ggplot2.tidyverse.org) implements a grammar of
+  graphics.
 
--   [`infer`](https://infer.tidymodels.org) is a modern approach to
-    statistical inference.
+- [`infer`](https://infer.tidymodels.org) is a modern approach to
+  statistical inference.
 
--   [`parsnip`](https://parsnip.tidymodels.org) is a tidy, unified
-    interface to creating models.
+- [`parsnip`](https://parsnip.tidymodels.org) is a tidy, unified
+  interface to creating models.
 
--   [`purrr`](https://purrr.tidyverse.org) is a functional programming
-    toolkit.
+- [`purrr`](https://purrr.tidyverse.org) is a functional programming
+  toolkit.
 
--   [`recipes`](https://recipes.tidymodels.org) is a general data
-    preprocessor with a modern interface. It can create model matrices
-    that incorporate feature engineering, imputation, and other help
-    tools.
+- [`recipes`](https://recipes.tidymodels.org) is a general data
+  preprocessor with a modern interface. It can create model matrices
+  that incorporate feature engineering, imputation, and other help
+  tools.
 
--   [`rsample`](https://rsample.tidymodels.org) has infrastructure for
-    *resampling* data so that models can be assessed and empirically
-    validated.
+- [`rsample`](https://rsample.tidymodels.org) has infrastructure for
+  *resampling* data so that models can be assessed and empirically
+  validated.
 
--   [`tibble`](https://tibble.tidyverse.org) has a modern re-imagining
-    of the data frame.
+- [`tibble`](https://tibble.tidyverse.org) has a modern re-imagining of
+  the data frame.
 
--   [`tune`](https://tune.tidymodels.org) contains the functions to
-    optimize model hyper-parameters.
+- [`tune`](https://tune.tidymodels.org) contains the functions to
+  optimize model hyper-parameters.
 
--   [`workflows`](https://workflows.tidymodels.org) has methods to
-    combine pre-processing steps and models into a single object.
+- [`workflows`](https://workflows.tidymodels.org) has methods to combine
+  pre-processing steps and models into a single object.
 
--   [`yardstick`](https://yardstick.tidymodels.org) contains tools for
-    evaluating models (e.g. accuracy, RMSE, etc.).
+- [`yardstick`](https://yardstick.tidymodels.org) contains tools for
+  evaluating models (e.g. accuracy, RMSE, etc.).
 
 A list of all tidymodels functions across different CRAN packages can be
 found at <https://www.tidymodels.org/find/>.
@@ -78,23 +78,23 @@ install.packages("tidymodels")
 Install the development version from GitHub with:
 
 ``` r
-library("devtools")
-install_github("tidymodels/tidymodels")
+# install.packages("pak")
+pak::pak("tidymodels/tidymodels")
 ```
 
 When loading the package, the versions and conflicts are listed:
 
 ``` r
 library(tidymodels)
-#> ── Attaching packages ────────────────────────────────────── tidymodels 1.0.0 ──
-#> ✔ broom        1.0.0     ✔ recipes      1.0.1
-#> ✔ dials        1.0.0     ✔ rsample      1.0.0
-#> ✔ dplyr        1.0.9     ✔ tibble       3.1.7
-#> ✔ ggplot2      3.3.6     ✔ tidyr        1.2.0
-#> ✔ infer        1.0.2     ✔ tune         1.0.0
-#> ✔ modeldata    1.0.0     ✔ workflows    1.0.0
-#> ✔ parsnip      1.0.0     ✔ workflowsets 1.0.0
-#> ✔ purrr        0.3.4     ✔ yardstick    1.0.0
+#> ── Attaching packages ───────────────────────────────── tidymodels 1.0.0.9000 ──
+#> ✔ broom        1.0.3          ✔ recipes      1.0.5.9000
+#> ✔ dials        1.1.0.9000     ✔ rsample      1.1.1     
+#> ✔ dplyr        1.1.0          ✔ tibble       3.1.8     
+#> ✔ ggplot2      3.4.1          ✔ tidyr        1.3.0     
+#> ✔ infer        1.0.4          ✔ tune         1.0.1.9003
+#> ✔ modeldata    1.1.0          ✔ workflows    1.1.3     
+#> ✔ parsnip      1.0.4.9000     ✔ workflowsets 1.0.0     
+#> ✔ purrr        1.0.1          ✔ yardstick    1.1.0.9000
 #> ── Conflicts ───────────────────────────────────────── tidymodels_conflicts() ──
 #> ✖ purrr::discard() masks scales::discard()
 #> ✖ dplyr::filter()  masks stats::filter()
@@ -109,20 +109,20 @@ This project is released with a [Contributor Code of
 Conduct](https://contributor-covenant.org/version/2/1/CODE_OF_CONDUCT.html).
 By contributing to this project, you agree to abide by its terms.
 
--   For questions and discussions about tidymodels packages, modeling,
-    and machine learning, please [post on RStudio
-    Community](https://community.rstudio.com/new-topic?category_id=15&tags=tidymodels,question).
+- For questions and discussions about tidymodels packages, modeling, and
+  machine learning, please [post on RStudio
+  Community](https://community.rstudio.com/new-topic?category_id=15&tags=tidymodels,question).
 
--   Most issues will likely belong on the GitHub repo of an individual
-    package. If you think you have encountered a bug with the tidymodels
-    metapackage itself, please [submit an
-    issue](https://github.com/tidymodels/tidymodels/issues).
+- Most issues will likely belong on the GitHub repo of an individual
+  package. If you think you have encountered a bug with the tidymodels
+  metapackage itself, please [submit an
+  issue](https://github.com/tidymodels/tidymodels/issues).
 
--   Either way, learn how to create and share a
-    [reprex](https://reprex.tidyverse.org/articles/articles/learn-reprex.html)
-    (a minimal, reproducible example), to clearly communicate about your
-    code.
+- Either way, learn how to create and share a
+  [reprex](https://reprex.tidyverse.org/articles/articles/learn-reprex.html)
+  (a minimal, reproducible example), to clearly communicate about your
+  code.
 
--   Check out further details on [contributing guidelines for tidymodels
-    packages](https://www.tidymodels.org/contribute/) and [how to get
-    help](https://www.tidymodels.org/help/).
+- Check out further details on [contributing guidelines for tidymodels
+  packages](https://www.tidymodels.org/contribute/) and [how to get
+  help](https://www.tidymodels.org/help/).
