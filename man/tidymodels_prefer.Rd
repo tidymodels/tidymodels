@@ -14,8 +14,12 @@ tidymodels_prefer(quiet = TRUE)
 conflicts with tidymodels and other packages.
 }
 \details{
-The list of conflicts includes about a dozen that are known issues with other
+The list of conflicts includes several dozen that are known issues with other
 packages.
+
+Note that the \pkg{conflicted} package is used to manage which packages take
+precedence. Using \code{tidymodels_prefer()} will turn on general conflict
+resolution during the R session.
 }
 \examples{
 tidymodels_prefer(quiet = FALSE)
