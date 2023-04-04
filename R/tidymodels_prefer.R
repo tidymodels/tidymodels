@@ -55,7 +55,7 @@ tidymodels_prefer <- function(quiet = TRUE) {
       conflicted::conflict_prefer("recall",          winner = "yardstick", quiet = quiet)
       conflicted::conflict_prefer("spec",            winner = "yardstick", quiet = quiet)
 
-      conflicted::conflict_prefer("update", winner = "stats", loser = "Matrix",     quiet = quiet)
+      conflicted::conflict_prefer("update", winner = "recipes", loser = "Matrix",     quiet = quiet)
     },
     type = "message")
   if (!quiet) {
