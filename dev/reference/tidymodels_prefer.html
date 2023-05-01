@@ -71,29 +71,54 @@ conflicts with tidymodels and other packages.</p>
 </dl></div>
     <div class="section level2">
     <h2 id="details">Details<a class="anchor" aria-label="anchor" href="#details"></a></h2>
-    <p>The list of conflicts includes about a dozen that are known issues with other
+    <p>The list of conflicts includes several dozen that are known issues with other
 packages.</p>
+<p>Note that the <span class="pkg">conflicted</span> package is used to manage which packages take
+precedence. Using <code>tidymodels_prefer()</code> will turn on general conflict
+resolution during the R session.</p>
     </div>
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu">tidymodels_prefer</span><span class="op">(</span>quiet <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #555555;">[conflicted]</span> Will prefer <span style="color: #0000BB; font-weight: bold;">agua</span>::refit over any other package.</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #555555;">[conflicted]</span> Will prefer <span style="color: #0000BB; font-weight: bold;">dials</span>::Laplace over any other package.</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #555555;">[conflicted]</span> Will prefer <span style="color: #0000BB; font-weight: bold;">dials</span>::max_rules over any other package.</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #555555;">[conflicted]</span> Will prefer <span style="color: #0000BB; font-weight: bold;">dials</span>::neighbors over any other package.</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #555555;">[conflicted]</span> Will prefer <span style="color: #0000BB; font-weight: bold;">dials</span>::prune over any other package.</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #555555;">[conflicted]</span> Will prefer <span style="color: #0000BB; font-weight: bold;">dials</span>::smoothness over any other package.</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #555555;">[conflicted]</span> Will prefer <span style="color: #0000BB; font-weight: bold;">dplyr</span>::collapse over any other package.</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #555555;">[conflicted]</span> Will prefer <span style="color: #0000BB; font-weight: bold;">dplyr</span>::combine over any other package.</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #555555;">[conflicted]</span> Will prefer <span style="color: #0000BB; font-weight: bold;">dplyr</span>::filter over any other package.</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #555555;">[conflicted]</span> Will prefer <span style="color: #0000BB; font-weight: bold;">dplyr</span>::rename over any other package.</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #555555;">[conflicted]</span> Will prefer <span style="color: #0000BB; font-weight: bold;">dplyr</span>::select over any other package.</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #555555;">[conflicted]</span> Will prefer <span style="color: #0000BB; font-weight: bold;">dplyr</span>::slice over any other package.</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #555555;">[conflicted]</span> Will prefer <span style="color: #0000BB; font-weight: bold;">dplyr</span>::rename over any other package.</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #555555;">[conflicted]</span> Will prefer <span style="color: #0000BB; font-weight: bold;">dials</span>::neighbors over any other package.</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #555555;">[conflicted]</span> Will prefer <span style="color: #0000BB; font-weight: bold;">parsnip</span>::fit over any other package.</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #555555;">[conflicted]</span> Will prefer <span style="color: #0000BB; font-weight: bold;">ggplot2</span>::`%+%` over any other package.</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #555555;">[conflicted]</span> Will prefer <span style="color: #0000BB; font-weight: bold;">ggplot2</span>::margin over any other package.</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #555555;">[conflicted]</span> Will prefer <span style="color: #0000BB; font-weight: bold;">parsnip</span>::bart over any other package.</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #555555;">[conflicted]</span> Will prefer <span style="color: #0000BB; font-weight: bold;">parsnip</span>::fit over any other package.</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #555555;">[conflicted]</span> Will prefer <span style="color: #0000BB; font-weight: bold;">parsnip</span>::mars over any other package.</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #555555;">[conflicted]</span> Will prefer <span style="color: #0000BB; font-weight: bold;">parsnip</span>::pls over any other package.</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #555555;">[conflicted]</span> Will prefer <span style="color: #0000BB; font-weight: bold;">purrr</span>::cross over any other package.</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #555555;">[conflicted]</span> Will prefer <span style="color: #0000BB; font-weight: bold;">purrr</span>::invoke over any other package.</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #555555;">[conflicted]</span> Will prefer <span style="color: #0000BB; font-weight: bold;">purrr</span>::map over any other package.</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #555555;">[conflicted]</span> Will prefer <span style="color: #0000BB; font-weight: bold;">recipes</span>::discretize over any other package.</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #555555;">[conflicted]</span> Will prefer <span style="color: #0000BB; font-weight: bold;">recipes</span>::step over any other package.</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #555555;">[conflicted]</span> Will prefer <span style="color: #0000BB; font-weight: bold;">rsample</span>::populate over any other package.</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #555555;">[conflicted]</span> Will prefer <span style="color: #0000BB; font-weight: bold;">scales</span>::rescale over any other package.</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #555555;">[conflicted]</span> Will prefer <span style="color: #0000BB; font-weight: bold;">themis</span>::step_downsample over any other package.</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #555555;">[conflicted]</span> Will prefer <span style="color: #0000BB; font-weight: bold;">themis</span>::step_upsample over any other package.</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #555555;">[conflicted]</span> Will prefer <span style="color: #0000BB; font-weight: bold;">tidyr</span>::expand over any other package.</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #555555;">[conflicted]</span> Will prefer <span style="color: #0000BB; font-weight: bold;">tidyr</span>::extract over any other package.</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #555555;">[conflicted]</span> Will prefer <span style="color: #0000BB; font-weight: bold;">tidyr</span>::pack over any other package.</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #555555;">[conflicted]</span> Will prefer <span style="color: #0000BB; font-weight: bold;">tidyr</span>::unpack over any other package.</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #555555;">[conflicted]</span> Will prefer <span style="color: #0000BB; font-weight: bold;">tune</span>::parameters over any other package.</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #555555;">[conflicted]</span> Will prefer <span style="color: #0000BB; font-weight: bold;">tune</span>::tune over any other package.</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #555555;">[conflicted]</span> Will prefer <span style="color: #0000BB; font-weight: bold;">yardstick</span>::get_weights over any other package.</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #555555;">[conflicted]</span> Will prefer <span style="color: #0000BB; font-weight: bold;">yardstick</span>::precision over any other package.</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #555555;">[conflicted]</span> Will prefer <span style="color: #0000BB; font-weight: bold;">yardstick</span>::recall over any other package.</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #555555;">[conflicted]</span> Will prefer <span style="color: #0000BB; font-weight: bold;">yardstick</span>::spec over any other package.</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #555555;">[conflicted]</span> Will prefer <span style="color: #0000BB; font-weight: bold;">recipes</span>::update over <span style="color: #0000BB;">Matrix</span>::update.</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> ── <span style="font-weight: bold;">Conflicts</span> ────────────────────────────────────── tidymodels_prefer() ──</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> </span>
 </code></pre></div>
