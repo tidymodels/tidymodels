@@ -1,6 +1,6 @@
 Package: tidymodels
 Title: Easily Install and Load the 'Tidymodels' Packages
-Version: 1.0.0.9000
+Version: 1.1.0
 Authors@R: c(
     person("Max", "Kuhn", , "max@posit.co", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0003-2402-136X")),
