@@ -1,6 +1,8 @@
-# tidymodels (development version)
+# tidymodels 1.1.0
 
  * Updated `tidymodels_prefer()` for new conflicts. 
+ 
+ * Updated versions
  
 # tidymodels 1.0.0
 
