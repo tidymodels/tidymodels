@@ -5,7 +5,7 @@ Authors@R: c(
     person("Max", "Kuhn", , "max@posit.co", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0003-2402-136X")),
     person("Hadley", "Wickham", , "hadley@posit.co", role = "aut"),
-    person(given = "Posit Software, PBC", role = c("cph", "fnd"))
+    person("Posit Software, PBC", role = c("cph", "fnd"))
   )
 Description: The tidy modeling "verse" is a collection of packages for
     modeling and statistical analysis that share the underlying design
@@ -17,27 +17,27 @@ BugReports: https://github.com/tidymodels/tidymodels/issues
 Depends: 
     R (>= 3.4)
 Imports: 
-    broom (>= 1.0.0),
-    cli (>= 3.3.0),
-    conflicted (>= 1.1.0),
-    dials (>= 1.0.0),
-    dplyr (>= 1.0.9),
-    ggplot2 (>= 3.3.6),
-    hardhat (>= 1.2.0),
-    infer (>= 1.0.2),
-    modeldata (>= 1.0.0),
-    parsnip (>= 1.0.0),
-    purrr (>= 0.3.4),
-    recipes (>= 1.0.1),
-    rlang (>= 1.0.3),
-    rsample (>= 1.0.0),
-    rstudioapi (>= 0.13),
-    tibble (>= 3.1.7),
-    tidyr (>= 1.2.0),
-    tune (>= 1.0.0),
-    workflows (>= 1.0.0),
-    workflowsets (>= 1.0.0),
-    yardstick (>= 1.0.0)
+    broom (>= 1.0.4),
+    cli (>= 3.6.1),
+    conflicted (>= 1.2.0),
+    dials (>= 1.2.0),
+    dplyr (>= 1.1.2),
+    ggplot2 (>= 3.4.2),
+    hardhat (>= 1.3.0),
+    infer (>= 1.0.4),
+    modeldata (>= 1.1.0),
+    parsnip (>= 1.1.0),
+    purrr (>= 1.0.1),
+    recipes (>= 1.0.6),
+    rlang (>= 1.1.0),
+    rsample (>= 1.1.1),
+    rstudioapi (>= 0.14),
+    tibble (>= 3.2.1),
+    tidyr (>= 1.3.0),
+    tune (>= 1.1.1),
+    workflows (>= 1.1.3),
+    workflowsets (>= 1.0.1),
+    yardstick (>= 1.2.0)
 Suggests: 
     covr,
     glue,
