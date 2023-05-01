@@ -87,20 +87,20 @@ When loading the package, the versions and conflicts are listed:
 ``` r
 library(tidymodels)
 #> ── Attaching packages ───────────────────────────────── tidymodels 1.0.0.9000 ──
-#> ✔ broom        1.0.3          ✔ recipes      1.0.5.9000
-#> ✔ dials        1.1.0.9000     ✔ rsample      1.1.1     
-#> ✔ dplyr        1.1.0          ✔ tibble       3.1.8     
-#> ✔ ggplot2      3.4.1          ✔ tidyr        1.3.0     
-#> ✔ infer        1.0.4          ✔ tune         1.0.1.9003
-#> ✔ modeldata    1.1.0          ✔ workflows    1.1.3     
-#> ✔ parsnip      1.0.4.9000     ✔ workflowsets 1.0.0     
-#> ✔ purrr        1.0.1          ✔ yardstick    1.1.0.9000
+#> ✔ broom        1.0.4     ✔ recipes      1.0.6
+#> ✔ dials        1.2.0     ✔ rsample      1.1.1
+#> ✔ dplyr        1.1.2     ✔ tibble       3.2.1
+#> ✔ ggplot2      3.4.2     ✔ tidyr        1.3.0
+#> ✔ infer        1.0.4     ✔ tune         1.1.1
+#> ✔ modeldata    1.1.0     ✔ workflows    1.1.3
+#> ✔ parsnip      1.1.0     ✔ workflowsets 1.0.1
+#> ✔ purrr        1.0.1     ✔ yardstick    1.2.0
 #> ── Conflicts ───────────────────────────────────────── tidymodels_conflicts() ──
 #> ✖ purrr::discard() masks scales::discard()
 #> ✖ dplyr::filter()  masks stats::filter()
 #> ✖ dplyr::lag()     masks stats::lag()
 #> ✖ recipes::step()  masks stats::step()
-#> • Use suppressPackageStartupMessages() to eliminate package startup messages
+#> • Search for functions across packages at https://www.tidymodels.org/find/
 ```
 
 ## Contributing
