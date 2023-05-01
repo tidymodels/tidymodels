@@ -1,5 +1,7 @@
 # tidymodels (development version)
 
+ * Updated `tidymodels_prefer()` for new conflicts. 
+ 
 # tidymodels 1.0.0
 
  * Updated versions
@@ -24,7 +26,7 @@
 
  * Updated versions
  
- * Added `tidymodels_prefer()` to help resolve name conficts with other packages.
+ * Added `tidymodels_prefer()` to help resolve name conflicts with other packages.
  
  * Added `workflowsets` as a core package. 
 
