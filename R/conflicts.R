@@ -8,6 +8,10 @@
 #' make the base equivalents generic, so shouldn't negatively affect any
 #' existing code.
 #'
+#' To manage conflicts, you can use the conflicted package. To prefer tidymodels
+#' functions over other functions, use [tidymodels_prefer()].
+#'
+#' @seealso [tidymodels_prefer()]
 #' @export
 #' @examples
 #' tidymodels_conflicts()
