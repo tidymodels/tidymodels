@@ -11,6 +11,7 @@
 #' resolution during the R session.
 #'
 #' @param quiet If `TRUE`, all output will be suppressed
+#' @seealso [tidymodels_conflicts()]
 #' @export
 #' @examples
 #' tidymodels_prefer(quiet = FALSE)

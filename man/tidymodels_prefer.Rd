@@ -24,3 +24,6 @@ resolution during the R session.
 \examples{
 tidymodels_prefer(quiet = FALSE)
 }
+\seealso{
+\code{\link[=tidymodels_conflicts]{tidymodels_conflicts()}}
+}
