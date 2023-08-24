@@ -3,7 +3,7 @@ pkgdown: 2.0.7
 pkgdown_sha: ~
 articles:
   Tags: Tags.html
-last_built: 2023-05-01T16:37Z
+last_built: 2023-08-24T21:20Z
 urls:
   reference: https://tidymodels.tidymodels.org/reference
   article: https://tidymodels.tidymodels.org/articles
