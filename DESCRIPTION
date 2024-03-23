@@ -15,7 +15,7 @@ URL: https://tidymodels.tidymodels.org,
     https://github.com/tidymodels/tidymodels
 BugReports: https://github.com/tidymodels/tidymodels/issues
 Depends: 
-    R (>= 3.4)
+    R (>= 3.6)
 Imports: 
     broom (>= 1.0.5),
     cli (>= 3.6.2),
@@ -26,7 +26,7 @@ Imports:
     hardhat (>= 1.3.1),
     infer (>= 1.0.6),
     modeldata (>= 1.3.0),
-    parsnip (>= 1.2.0),
+    parsnip (>= 1.2.1),
     purrr (>= 1.0.2),
     recipes (>= 1.0.10),
     rlang (>= 1.1.3),
