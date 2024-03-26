@@ -86,21 +86,21 @@ When loading the package, the versions and conflicts are listed:
 
 ``` r
 library(tidymodels)
-#> ── Attaching packages ───────────────────────────────── tidymodels 1.0.0.9000 ──
-#> ✔ broom        1.0.4     ✔ recipes      1.0.6
-#> ✔ dials        1.2.0     ✔ rsample      1.1.1
-#> ✔ dplyr        1.1.2     ✔ tibble       3.2.1
-#> ✔ ggplot2      3.4.2     ✔ tidyr        1.3.0
-#> ✔ infer        1.0.4     ✔ tune         1.1.1
-#> ✔ modeldata    1.1.0     ✔ workflows    1.1.3
-#> ✔ parsnip      1.1.0     ✔ workflowsets 1.0.1
-#> ✔ purrr        1.0.1     ✔ yardstick    1.2.0
+#> ── Attaching packages ────────────────────────────────────── tidymodels 1.2.0 ──
+#> ✔ broom        1.0.5      ✔ recipes      1.0.10
+#> ✔ dials        1.2.1      ✔ rsample      1.2.0 
+#> ✔ dplyr        1.1.4      ✔ tibble       3.2.1 
+#> ✔ ggplot2      3.5.0      ✔ tidyr        1.3.1 
+#> ✔ infer        1.0.6      ✔ tune         1.2.0 
+#> ✔ modeldata    1.3.0      ✔ workflows    1.1.4 
+#> ✔ parsnip      1.2.1      ✔ workflowsets 1.1.0 
+#> ✔ purrr        1.0.2      ✔ yardstick    1.3.1
 #> ── Conflicts ───────────────────────────────────────── tidymodels_conflicts() ──
 #> ✖ purrr::discard() masks scales::discard()
 #> ✖ dplyr::filter()  masks stats::filter()
 #> ✖ dplyr::lag()     masks stats::lag()
 #> ✖ recipes::step()  masks stats::step()
-#> • Search for functions across packages at https://www.tidymodels.org/find/
+#> • Learn how to get started at https://www.tidymodels.org/start/
 ```
 
 ## Contributing
@@ -111,7 +111,7 @@ By contributing to this project, you agree to abide by its terms.
 
 - For questions and discussions about tidymodels packages, modeling, and
   machine learning, please [post on RStudio
-  Community](https://community.rstudio.com/new-topic?category_id=15&tags=tidymodels,question).
+  Community](https://forum.posit.co/new-topic?category_id=15&tags=tidymodels,question).
 
 - Most issues will likely belong on the GitHub repo of an individual
   package. If you think you have encountered a bug with the tidymodels
