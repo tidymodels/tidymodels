@@ -55,34 +55,39 @@ tidymodels_conflict_message <- function(x) {
     collapse = "\n"
   )
 
-
-  possible_tips <- c(
-    paste(
-      "Use",
-      cli::col_green("tidymodels_prefer()"),
-      "to resolve common conflicts."
-    ),
-    paste(
-      "Search for functions across packages at",
-      cli::col_green("https://www.tidymodels.org/find/")
-    ),
-    "Use suppressPackageStartupMessages() to eliminate package startup messages",
-    paste(
-      "Learn how to get started at",
-      cli::col_green("https://www.tidymodels.org/start/")
-    ),
-    paste(
-      "Dig deeper into tidy modeling with R at",
-      cli::col_green("https://www.tmwr.org")
+  res <- paste0(header, "\n", bullets)
+  
+  if (interactive()) {
+    
+    possible_tips <- c(
+      paste(
+        "Use",
+        cli::col_green("tidymodels_prefer()"),
+        "to resolve common conflicts."
+      ),
+      paste(
+        "Search for functions across packages at",
+        cli::col_green("https://www.tidymodels.org/find/")
+      ),
+      "Use suppressPackageStartupMessages() to eliminate package startup messages",
+      paste(
+        "Learn how to get started at",
+        cli::col_green("https://www.tidymodels.org/start/")
+      ),
+      paste(
+        "Dig deeper into tidy modeling with R at",
+        cli::col_green("https://www.tmwr.org")
+      )
     )
-  )
-
-  tip <- paste(
-    cli::col_blue(cli::symbol$bullet),
-    choose_startup_tip(possible_tips)
-  )
-
-  res <- paste0(header, "\n", bullets, "\n", tip)
+    
+    tip <- paste(
+      cli::col_blue(cli::symbol$bullet),
+      choose_startup_tip(possible_tips)
+    )
+    
+    res <- paste0(res, "\n", tip)
+    
+  }
   res
 }
 
