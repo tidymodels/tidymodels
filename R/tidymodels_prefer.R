@@ -19,6 +19,7 @@ tidymodels_prefer <- function(quiet = TRUE) {
   res <-
     utils::capture.output({
       conflicted::conflict_prefer("refit",           winner = "agua",      quiet = quiet)
+      conflicted::conflict_prefer("explain",         winner = "DALEX",     quiet = quiet)
       conflicted::conflict_prefer("Laplace",         winner = "dials",     quiet = quiet)
       conflicted::conflict_prefer("max_rules",       winner = "dials",     quiet = quiet)
       conflicted::conflict_prefer("neighbors",       winner = "dials",     quiet = quiet)

@@ -1,5 +1,7 @@
 # tidymodels (development version)
 
+ * Prefer `DALEX::explains()` over `dplyr::explains()` when you use tidymodels_prefer() [#113](https://github.com/tidymodels/tidymodels/issues/113)
+
 # tidymodels 1.2.0
 
  * Updated versions
