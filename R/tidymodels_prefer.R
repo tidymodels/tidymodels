@@ -42,6 +42,7 @@ tidymodels_prefer <- function(quiet = TRUE) {
       conflicted::conflict_prefer("map",             winner = "purrr",     quiet = quiet)
       conflicted::conflict_prefer("discretize",      winner = "recipes",   quiet = quiet)
       conflicted::conflict_prefer("step",            winner = "recipes",   quiet = quiet)
+      conflicted::conflict_prefer("update",          winner = "recipes",   quiet = quiet)
       conflicted::conflict_prefer("populate",        winner = "rsample",   quiet = quiet)
       conflicted::conflict_prefer("rescale",         winner = "scales",    quiet = quiet)
       conflicted::conflict_prefer("step_downsample", winner = "themis",    quiet = quiet)
