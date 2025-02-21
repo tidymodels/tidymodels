@@ -1,57 +1,21 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://tidymodels.tidymodels.org/404.html</loc>
-  </url>
-  <url>
-    <loc>https://tidymodels.tidymodels.org/CODE_OF_CONDUCT.html</loc>
-  </url>
-  <url>
-    <loc>https://tidymodels.tidymodels.org/CONTRIBUTING.html</loc>
-  </url>
-  <url>
-    <loc>https://tidymodels.tidymodels.org/LICENSE-text.html</loc>
-  </url>
-  <url>
-    <loc>https://tidymodels.tidymodels.org/LICENSE.html</loc>
-  </url>
-  <url>
-    <loc>https://tidymodels.tidymodels.org/articles/Tags.html</loc>
-  </url>
-  <url>
-    <loc>https://tidymodels.tidymodels.org/articles/index.html</loc>
-  </url>
-  <url>
-    <loc>https://tidymodels.tidymodels.org/authors.html</loc>
-  </url>
-  <url>
-    <loc>https://tidymodels.tidymodels.org/index.html</loc>
-  </url>
-  <url>
-    <loc>https://tidymodels.tidymodels.org/news/index.html</loc>
-  </url>
-  <url>
-    <loc>https://tidymodels.tidymodels.org/reference/index.html</loc>
-  </url>
-  <url>
-    <loc>https://tidymodels.tidymodels.org/reference/pkg_deps.html</loc>
-  </url>
-  <url>
-    <loc>https://tidymodels.tidymodels.org/reference/tag_show.html</loc>
-  </url>
-  <url>
-    <loc>https://tidymodels.tidymodels.org/reference/tidymodels-package.html</loc>
-  </url>
-  <url>
-    <loc>https://tidymodels.tidymodels.org/reference/tidymodels_conflicts.html</loc>
-  </url>
-  <url>
-    <loc>https://tidymodels.tidymodels.org/reference/tidymodels_packages.html</loc>
-  </url>
-  <url>
-    <loc>https://tidymodels.tidymodels.org/reference/tidymodels_prefer.html</loc>
-  </url>
-  <url>
-    <loc>https://tidymodels.tidymodels.org/reference/tidymodels_update.html</loc>
-  </url>
+<urlset xmlns = 'http://www.sitemaps.org/schemas/sitemap/0.9'>
+<url><loc>https://tidymodels.tidymodels.org/404.html</loc></url>
+<url><loc>https://tidymodels.tidymodels.org/CODE_OF_CONDUCT.html</loc></url>
+<url><loc>https://tidymodels.tidymodels.org/CONTRIBUTING.html</loc></url>
+<url><loc>https://tidymodels.tidymodels.org/LICENSE-text.html</loc></url>
+<url><loc>https://tidymodels.tidymodels.org/LICENSE.html</loc></url>
+<url><loc>https://tidymodels.tidymodels.org/articles/Tags.html</loc></url>
+<url><loc>https://tidymodels.tidymodels.org/articles/index.html</loc></url>
+<url><loc>https://tidymodels.tidymodels.org/authors.html</loc></url>
+<url><loc>https://tidymodels.tidymodels.org/index.html</loc></url>
+<url><loc>https://tidymodels.tidymodels.org/news/index.html</loc></url>
+<url><loc>https://tidymodels.tidymodels.org/reference/index.html</loc></url>
+<url><loc>https://tidymodels.tidymodels.org/reference/pkg_deps.html</loc></url>
+<url><loc>https://tidymodels.tidymodels.org/reference/tag_show.html</loc></url>
+<url><loc>https://tidymodels.tidymodels.org/reference/tidymodels-package.html</loc></url>
+<url><loc>https://tidymodels.tidymodels.org/reference/tidymodels_conflicts.html</loc></url>
+<url><loc>https://tidymodels.tidymodels.org/reference/tidymodels_packages.html</loc></url>
+<url><loc>https://tidymodels.tidymodels.org/reference/tidymodels_prefer.html</loc></url>
+<url><loc>https://tidymodels.tidymodels.org/reference/tidymodels_update.html</loc></url>
 </urlset>
+
