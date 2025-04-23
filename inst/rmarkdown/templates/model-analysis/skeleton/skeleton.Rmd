@@ -28,7 +28,7 @@ penguins <- na.omit(penguins)
 Exploratory data analysis (EDA) is an [important part of the modeling process](https://www.tmwr.org/software-modeling.html#model-phases).
 
 ```{r}
-penguins %>%
+penguins |>
   ggplot(aes(bill_depth_mm, bill_length_mm, color = sex, size = body_mass_g)) +
   geom_point(alpha = 0.5) +
   facet_wrap(~species) +
@@ -58,12 +58,12 @@ Let's create a [**model specification**](https://www.tmwr.org/models.html) for e
 
 ```{r}
 glm_spec <-
-  logistic_reg() %>%
+  logistic_reg() |>
   set_engine("glm")
 
 ranger_spec <-
-  rand_forest(trees = 1e3) %>%
-  set_engine("ranger") %>%
+  rand_forest(trees = 1e3) |>
+  set_engine("ranger") |>
   set_mode("classification")
 ```
 
@@ -112,13 +112,13 @@ We can visualize these results using an ROC curve (or a confusion matrix via `co
 
 ```{r}
 bind_rows(
-  collect_predictions(glm_rs) %>%
+  collect_predictions(glm_rs) |>
     mutate(mod = "glm"),
-  collect_predictions(ranger_rs) %>%
+  collect_predictions(ranger_rs) |>
     mutate(mod = "ranger")
-) %>%
-  group_by(mod) %>%
-  roc_curve(sex, .pred_female) %>%
+) |>
+  group_by(mod) |>
+  roc_curve(sex, .pred_female) |>
   autoplot()
 ```
 

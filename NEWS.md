@@ -1,5 +1,7 @@
 # tidymodels (development version)
 
+* Transition from the magrittr pipe to the base R pipe.
+
 # tidymodels 1.3.0
 
  * Updated versions

@@ -40,14 +40,14 @@ tidymodels_conflict_message <- function(x) {
     right = "tidymodels_conflicts()"
   )
 
-  pkgs <- x %>% purrr::map(~ gsub("^package:", "", .))
-  others <- pkgs %>% purrr::map(`[`, -1)
+  pkgs <- x |> purrr::map(~ gsub("^package:", "", .))
+  others <- pkgs |> purrr::map(`[`, -1)
   other_calls <- purrr::map2_chr(
     others, names(others),
     ~ paste0(cli::col_blue(.x), "::", .y, "()", collapse = ", ")
   )
 
-  winner <- pkgs %>% purrr::map_chr(1)
+  winner <- pkgs |> purrr::map_chr(1)
   funs <- format(paste0(cli::col_blue(winner), "::", cli::col_green(paste0(names(x), "()"))))
   bullets <- paste0(
     cli::col_red(cli::symbol$cross), " ", funs,
@@ -56,9 +56,9 @@ tidymodels_conflict_message <- function(x) {
   )
 
   res <- paste0(header, "\n", bullets)
-  
+
   if (interactive()) {
-    
+
     possible_tips <- c(
       paste(
         "Use",
@@ -79,14 +79,14 @@ tidymodels_conflict_message <- function(x) {
         cli::col_green("https://www.tmwr.org")
       )
     )
-    
+
     tip <- paste(
       cli::col_blue(cli::symbol$bullet),
       choose_startup_tip(possible_tips)
     )
-    
+
     res <- paste0(res, "\n", tip)
-    
+
   }
   res
 }
@@ -96,11 +96,10 @@ print.tidymodels_conflicts <- function(x, ..., startup = FALSE) {
   cli::cat_line(tidymodels_conflict_message(x))
 }
 
-#' @importFrom dplyr %>%
 confirm_conflict <- function(packages, name) {
   # Only look at functions
-  objs <- packages %>%
-    purrr::map(~ get(name, pos = .)) %>%
+  objs <- packages |>
+    purrr::map(~ get(name, pos = .)) |>
     purrr::keep(is.function)
 
   if (length(objs) <= 1) {

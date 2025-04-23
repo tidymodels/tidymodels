@@ -82,8 +82,8 @@ pkg_deps <- function(x = "tidymodels", recursive = FALSE) {
 
   tibble::tibble(
     package = pkg_deps,
-    cran = cran_version %>% purrr::map_chr(as.character),
-    local = local_version %>% purrr::map_chr(as.character),
+    cran = cran_version |> purrr::map_chr(as.character),
+    local = local_version |> purrr::map_chr(as.character),
     behind = behind
   )
 }
