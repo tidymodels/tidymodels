@@ -4,7 +4,9 @@ date: "`r Sys.Date()`"
 output: html_document
 ---
 
-```{r setup, include=FALSE}
+```{r}
+#| label: setup
+#| include: false
 knitr::opts_chunk$set(echo = TRUE, fig.width = 8, fig.height = 5)
 ```
 

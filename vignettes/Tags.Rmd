@@ -8,7 +8,9 @@ output:
     toc: yes
 ---
 
-```{r ex_setup, include=FALSE}
+```{r}
+#| label: ex_setup
+#| include: false
 knitr::opts_chunk$set(
   message = FALSE,
   digits = 3,
@@ -23,7 +25,8 @@ The tidymodels framework has a set of core packages that are loaded and attached
 
 There are other sets of packages that can be attached via `tidymodels::tag_attach(tag)` where the `tag` is a character string. Existing tags are:
 
-```{r tags}
+```{r}
+#| label: tags
 library(tidymodels)
 tag_show()
 ```
