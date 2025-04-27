@@ -18,3 +18,5 @@ tidymodels_hex.png
 ^\.github$
 
 ^LICENSE\.md$
+^[\.]?air\.toml$
+^\.vscode$

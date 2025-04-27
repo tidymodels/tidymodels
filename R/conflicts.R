@@ -43,22 +43,29 @@ tidymodels_conflict_message <- function(x) {
   pkgs <- x |> purrr::map(~ gsub("^package:", "", .))
   others <- pkgs |> purrr::map(`[`, -1)
   other_calls <- purrr::map2_chr(
-    others, names(others),
+    others,
+    names(others),
     ~ paste0(cli::col_blue(.x), "::", .y, "()", collapse = ", ")
   )
 
   winner <- pkgs |> purrr::map_chr(1)
-  funs <- format(paste0(cli::col_blue(winner), "::", cli::col_green(paste0(names(x), "()"))))
+  funs <- format(paste0(
+    cli::col_blue(winner),
+    "::",
+    cli::col_green(paste0(names(x), "()"))
+  ))
   bullets <- paste0(
-    cli::col_red(cli::symbol$cross), " ", funs,
-    " masks ", other_calls,
+    cli::col_red(cli::symbol$cross),
+    " ",
+    funs,
+    " masks ",
+    other_calls,
     collapse = "\n"
   )
 
   res <- paste0(header, "\n", bullets)
 
   if (interactive()) {
-
     possible_tips <- c(
       paste(
         "Use",
@@ -86,7 +93,6 @@ tidymodels_conflict_message <- function(x) {
     )
 
     res <- paste0(res, "\n", tip)
-
   }
   res
 }

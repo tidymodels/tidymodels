@@ -29,7 +29,14 @@ tidymodels_update <- function(pkg = "tidymodels", recursive = FALSE, ...) {
 
   cli::cat_line("The following packages are out of date:")
   cli::cat_line()
-  cli::cat_bullet(format(behind$package), " (", behind$local, " -> ", behind$cran, ")")
+  cli::cat_bullet(
+    format(behind$package),
+    " (",
+    behind$local,
+    " -> ",
+    behind$cran,
+    ")"
+  )
 
   cli::cat_line()
   cli::cat_line("Start a clean R session then run:")
@@ -57,10 +64,26 @@ pkg_deps <- function(x = "tidymodels", recursive = FALSE) {
   if ("tidymodels" %in% x && is.null(deps$tidymodels)) {
     deps$tidymodels <-
       c(
-        "broom", "cli", "dials", "dplyr", "ggplot2", "infer",
-        "modeldata", "parsnip", "pillar", "purrr", "recipes",
-        "rlang", "rsample", "rstudioapi", "tibble", "tidyr", "tune",
-        "workflows", "workflowsets", "yardstick"
+        "broom",
+        "cli",
+        "dials",
+        "dplyr",
+        "ggplot2",
+        "infer",
+        "modeldata",
+        "parsnip",
+        "pillar",
+        "purrr",
+        "recipes",
+        "rlang",
+        "rsample",
+        "rstudioapi",
+        "tibble",
+        "tidyr",
+        "tune",
+        "workflows",
+        "workflowsets",
+        "yardstick"
       )
   }
 
@@ -69,8 +92,19 @@ pkg_deps <- function(x = "tidymodels", recursive = FALSE) {
   pkg_deps <- pkg_deps[pkg_deps %in% pkgs]
 
   base_pkgs <- c(
-    "base", "compiler", "datasets", "graphics", "grDevices", "grid",
-    "methods", "parallel", "splines", "stats", "stats4", "tools", "tcltk",
+    "base",
+    "compiler",
+    "datasets",
+    "graphics",
+    "grDevices",
+    "grid",
+    "methods",
+    "parallel",
+    "splines",
+    "stats",
+    "stats4",
+    "tools",
+    "tcltk",
     "utils"
   )
   pkg_deps <- setdiff(pkg_deps, base_pkgs)
