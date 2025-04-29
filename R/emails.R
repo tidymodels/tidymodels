@@ -1,7 +1,8 @@
 make_email <- function(to, package) {
   name <- gsub(" <.*>", "", to)
 
-  body <- glue::glue("
+  body <- glue::glue(
+    "
   Dear {name},
 
   Your package, {package}, lists tidymodels in either Depends, Imports, or
@@ -17,7 +18,8 @@ make_email <- function(to, package) {
 
   Thanks,
   Max
-  ")
+  "
+  )
 
   get("gm_mime", asNamespace("gmailr"))(
     from = "max@posit.co",
@@ -28,7 +30,8 @@ make_email <- function(to, package) {
 }
 
 tidymodels_dependency_dissuade <- function() {
-  pkgs <- tools::package_dependencies("tidymodels",
+  pkgs <- tools::package_dependencies(
+    "tidymodels",
     which = c("Depends", "Imports", "Suggests"),
     reverse = TRUE
   )[[1]]

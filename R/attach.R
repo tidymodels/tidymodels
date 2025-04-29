@@ -1,7 +1,20 @@
 core <- c(
-  "broom", "dials", "dplyr", "ggplot2", "infer", "modeldata", "parsnip",
-  "purrr", "recipes", "rsample", "tibble", "tidyr", "tune", "workflows",
-  "workflowsets", "yardstick"
+  "broom",
+  "dials",
+  "dplyr",
+  "ggplot2",
+  "infer",
+  "modeldata",
+  "parsnip",
+  "purrr",
+  "recipes",
+  "rsample",
+  "tibble",
+  "tidyr",
+  "tune",
+  "workflows",
+  "workflowsets",
+  "yardstick"
 )
 
 
@@ -37,7 +50,10 @@ tidymodels_attach <- function(pkg = NULL) {
   versions <- vapply(to_load, package_version, character(1))
   clean_versions <- gsub(cli::ansi_regex(), "", versions, perl = TRUE)
   packages <- paste0(
-    cli::col_green(cli::symbol$tick), " ", cli::col_blue(format(to_load)), " ",
+    cli::col_green(cli::symbol$tick),
+    " ",
+    cli::col_blue(format(to_load)),
+    " ",
     cli::ansi_align(versions, max(nchar(clean_versions)))
   )
 
@@ -60,7 +76,9 @@ package_version <- function(x) {
   version <- as.character(unclass(utils::packageVersion(x))[[1]])
 
   if (length(version) > 3) {
-    version[4:length(version)] <- cli::col_red(as.character(version[4:length(version)]))
+    version[4:length(version)] <- cli::col_red(as.character(version[
+      4:length(version)
+    ]))
   }
   paste0(version, collapse = ".")
 }
