@@ -1,9 +1,9 @@
 pandoc: 3.1.11
-pkgdown: 2.1.1
+pkgdown: 2.1.2
 pkgdown_sha: ~
 articles:
   Tags: Tags.html
-last_built: 2025-04-23T00:45Z
+last_built: 2025-04-29T17:23Z
 urls:
   reference: https://tidymodels.tidymodels.org/reference
   article: https://tidymodels.tidymodels.org/articles
