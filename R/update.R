@@ -114,7 +114,7 @@ pkg_deps <- function(x = "tidymodels", recursive = FALSE) {
 
   behind <- purrr::map2_lgl(cran_version, local_version, `>`)
 
-  tibble::tibble(
+  dplyr::tibble(
     package = pkg_deps,
     cran = cran_version |> purrr::map_chr(as.character),
     local = local_version |> purrr::map_chr(as.character),
