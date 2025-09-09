@@ -1,4 +1,6 @@
-# tidymodels (development version)
+# tidymodels 1.4.1
+
+* Bug fix for omitted attached packages. 
 
 # tidymodels 1.4.0
 

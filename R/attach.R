@@ -9,7 +9,7 @@ core <- c(
   "purrr",
   "recipes",
   "rsample",
-  "tibble",
+  "tailor",
   "tidyr",
   "tune",
   "workflows",
