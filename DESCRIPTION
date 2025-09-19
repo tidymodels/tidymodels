@@ -46,7 +46,7 @@ Suggests:
     rmarkdown,
     testthat (>= 3.0.0),
     xml2
-VignetteBuilder: knitr, quarto
+VignetteBuilder: quarto
 Config/Needs/website: tidyverse/tidytemplate
 Config/testthat/edition: 3
 Config/usethis/last-upkeep: 2025-04-27
