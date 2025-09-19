@@ -28,3 +28,5 @@ docs
 revdep/checks.noindex
 revdep/library.noindex
 
+inst/doc
+**/.quarto/
