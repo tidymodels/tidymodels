@@ -1,11 +1,13 @@
 ---
 title: "Using tags"
 vignette: >
-  %\VignetteEngine{knitr::rmarkdown}
   %\VignetteIndexEntry{Using tags}
-output:
-  knitr:::html_vignette:
-    toc: yes
+  %\VignetteEngine{quarto::html}
+  %\VignetteEncoding{UTF-8}
+knitr:
+  opts_chunk:
+    collapse: true
+    comment: '#>'
 ---
 
 ```{r}
