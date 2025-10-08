@@ -47,6 +47,7 @@ jobs:
           dependencies: '"hard"'
           cache: false
           extra-packages: |
+            local::.
             any::rcmdcheck
             any::testthat
             any::knitr
