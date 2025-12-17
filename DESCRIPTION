@@ -42,12 +42,11 @@ Imports:
 Suggests: 
     covr,
     glue,
-    knitr,
+    quarto,
     rmarkdown,
     testthat (>= 3.0.0),
     xml2
-VignetteBuilder: 
-    knitr
+VignetteBuilder: quarto
 Config/Needs/website: tidyverse/tidytemplate
 Config/testthat/edition: 3
 Config/usethis/last-upkeep: 2025-04-27

@@ -20,3 +20,5 @@ tidymodels_hex.png
 ^LICENSE\.md$
 ^[\.]?air\.toml$
 ^\.vscode$
+^vignettes/\.quarto$
+^vignettes/*_files$
