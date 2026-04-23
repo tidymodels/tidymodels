@@ -26,7 +26,7 @@ knitr::opts_chunk$set(
 
 ## Overview
 
-[tidymodels](https://www.tidymodels.org/) is a "meta-package" for modeling and statistical analysis that shares the underlying design philosophy, grammar, and data structures of the [tidyverse](https://www.tidyverse.org/).
+[tidymodels](https://www.tidymodels.org/) is a "meta-package" for modeling and statistical analysis that shares the underlying design philosophy, grammar, and data structures of the [tidyverse](https://tidyverse.org/).
 
 It includes a core set of packages that are loaded on startup:
 
