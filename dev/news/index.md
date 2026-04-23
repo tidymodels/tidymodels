@@ -2,6 +2,12 @@
 
 ## tidymodels (development version)
 
+## tidymodels 1.5.0
+
+CRAN release: 2026-04-23
+
+- Updated versions
+
 ## tidymodels 1.4.1
 
 CRAN release: 2025-09-08
