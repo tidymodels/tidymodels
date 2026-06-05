@@ -59,12 +59,14 @@ You can install the released version of tidymodels from
 [CRAN](https://CRAN.r-project.org) with:
 
 ``` r
+
 install.packages("tidymodels")
 ```
 
 Install the development version from GitHub with:
 
 ``` r
+
 # install.packages("pak")
 pak::pak("tidymodels/tidymodels")
 ```
@@ -72,6 +74,7 @@ pak::pak("tidymodels/tidymodels")
 When loading the package, the versions and conflicts are listed:
 
 ``` r
+
 library(tidymodels)
 #> ── Attaching packages ────────────────────────────────────── tidymodels 1.5.0 ──
 #> ✔ broom        1.0.12     ✔ recipes      1.3.2 
