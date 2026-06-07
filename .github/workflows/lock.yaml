@@ -4,25 +4,27 @@ on:
   schedule:
     - cron: '0 0 * * *'
 
+permissions:
+  issues: write
+  pull-requests: write
+
 jobs:
   lock:
     runs-on: ubuntu-latest
     steps:
-      - uses: dessant/lock-threads@v5
+      - uses: dessant/lock-threads@v6
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          issue-lock-inactive-days: '14'
-#          issue-exclude-labels: ''
-#          issue-lock-labels: 'outdated'
-          issue-lock-comment: >
+          issue-inactive-days: '14'
+#          exclude-any-issue-labels: ''
+#          include-any-issue-labels: 'outdated'
+          issue-comment: >
             This issue has been automatically locked. If you believe you have
             found a related problem, please file a new issue (with a reprex:
             <https://reprex.tidyverse.org>) and link to this issue.
           issue-lock-reason: ''
-          pr-lock-inactive-days: '14'
-#          pr-exclude-labels: 'wip'
-          pr-lock-labels: ''
-          pr-lock-comment: >
+          pr-inactive-days: '14'
+#          exclude-any-pr-labels: 'wip'
+          pr-comment: >
             This pull request has been automatically locked. If you believe you
             have found a related problem, please file a new issue (with a reprex:
             <https://reprex.tidyverse.org>) and link to this issue.
