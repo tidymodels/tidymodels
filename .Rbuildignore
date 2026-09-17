@@ -22,3 +22,5 @@ tidymodels_hex.png
 ^\.vscode$
 ^\.positai$
 ^\.claude$
+^vignettes/\.quarto$
+^vignettes/*_files$
