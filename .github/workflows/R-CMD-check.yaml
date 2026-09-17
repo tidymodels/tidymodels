@@ -49,7 +49,10 @@ jobs:
         with:
           r-version: ${{ matrix.config.r }}
           http-user-agent: ${{ matrix.config.http-user-agent }}
-          use-public-rspm: true
+# P3M's macOS binaries are built with OpenMP enabled, but the runners
+          # have no libomp, so e.g. gower fails to load. CRAN's own macOS
+          # binaries are built without it, so use those instead.
+          use-public-rspm: ${{ matrix.config.os != 'macos-latest' }}
 
       - uses: r-lib/actions/setup-r-dependencies@v2
         with:
