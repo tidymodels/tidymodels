@@ -1,22 +1,18 @@
 ---
 title: "Using tags"
 vignette: >
-  %\VignetteEngine{knitr::rmarkdown}
   %\VignetteIndexEntry{Using tags}
-output:
-  knitr:::html_vignette:
-    toc: yes
+  %\VignetteEngine{quarto::html}
+  %\VignetteEncoding{UTF-8}
+knitr:
+  opts_chunk:
+    collapse: true
+    comment: '#>'
 ---
 
 ```{r}
 #| label: ex_setup
 #| include: false
-knitr::opts_chunk$set(
-  message = FALSE,
-  digits = 3,
-  collapse = TRUE,
-  comment = "#>"
-  )
 options(digits = 3)
 library(tidymodels)
 ```

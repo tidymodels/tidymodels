@@ -23,8 +23,10 @@ importFrom(rsample,analysis)
 importFrom(tailor,tailor)
 importFrom(tidyr,chop)
 importFrom(tune,tune)
-importFrom(utils,install.packages)
-importFrom(utils,installed.packages)
+importFrom(utils,
+  install.packages,
+  installed.packages
+)
 importFrom(workflows,workflow)
 importFrom(workflowsets,as_workflow_set)
 importFrom(yardstick,accuracy)
