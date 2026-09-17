@@ -59,6 +59,7 @@ jobs:
           extra-packages: 
             any::rcmdcheck
             any::quarto
+            local::.
           needs: check
 
       - uses: r-lib/actions/check-r-package@v2
